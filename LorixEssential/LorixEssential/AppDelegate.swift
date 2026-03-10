@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LEALRootCoordinator.LEALShared.LEALWindow = LEALMainFrame
         
-        let LEALCurrentSessionActive = UserDefaults.standard.bool(forKey: "LEAL_USER_SESSION_STABLE")
+        let LEALCurrentSessionActive = LEALVisualEchoPulseColorix.LEALSceneEnergyPulseColorix
         
-        LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: LEALCurrentSessionActive)
+        LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: LEALCurrentSessionActive != nil)
         return true
     }
 

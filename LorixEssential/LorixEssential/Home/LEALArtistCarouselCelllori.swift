@@ -2,74 +2,104 @@
 //  LEALArtistCarouselCelllori.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
 
-
+//artist
 class LEALArtistCarouselCelllori: UICollectionViewCell {
+     let LEALAvatarVisualior = UIImageView()
+    
     private let LEALContentBackinglori = UIView()
-    private let LEALAvatarVisualior = UIImageView()
-    private let LEALArtistNamelori = UILabel()
+    
+     let LEALArtistNamelori = UILabel()
+    
+    lazy var LEALFollowlori: UILabel = {
+        let LEALFollowlori = UILabel.init()
+        LEALFollowlori.translatesAutoresizingMaskIntoConstraints = false
+        LEALFollowlori.textColor = .white
+        LEALFollowlori.font = UIFont.systemFont(ofSize: 14)
+        LEALFollowlori.text = "0 Followers"
+        return LEALFollowlori
+    }()
+    
+    lazy var LEALFhotolori: UILabel = {
+        let LEALFollowlori = UILabel.init()
+        LEALFollowlori.translatesAutoresizingMaskIntoConstraints = false
+        LEALFollowlori.textColor = .white
+        LEALFollowlori.font = UIFont.systemFont(ofSize: 14)
+        LEALFollowlori.text = "0 Photos"
+        return LEALFollowlori
+    }()
+    
+    
     private let LEALMetricStacklori = UIStackView()
-    private let LEALVoiceCallActionlori = UIButton()
+    private let LEALVoiceCallActionlori = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         LEALArchitectCelllori()
+        
     }
     
     private func LEALArchitectCelllori() {
         contentView.addSubview(LEALContentBackinglori)
-        LEALContentBackinglori.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
-        LEALContentBackinglori.layer.cornerRadius = 30
+        LEALContentBackinglori.backgroundColor = UIColor(red: 0.22, green: 0.07, blue: 0.53, alpha: 1)
+        LEALContentBackinglori.layer.cornerRadius = 20
         LEALContentBackinglori.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(LEALAvatarVisualior)
         
-        LEALAvatarVisualior.layer.cornerRadius = 45
+        LEALAvatarVisualior.layer.cornerRadius = 34
         LEALAvatarVisualior.clipsToBounds = true
-        LEALAvatarVisualior.layer.borderWidth = 3
+        LEALAvatarVisualior.layer.borderWidth = 2
         LEALAvatarVisualior.layer.borderColor = UIColor.systemPurple.cgColor
         LEALAvatarVisualior.translatesAutoresizingMaskIntoConstraints = false
-        LEALContentBackinglori.addSubview(LEALAvatarVisualior)
+        contentView.addSubview(LEALAvatarVisualior)
+        
         
         LEALArtistNamelori.textColor = .white
         LEALArtistNamelori.font = .boldSystemFont(ofSize: 22)
         LEALArtistNamelori.translatesAutoresizingMaskIntoConstraints = false
         LEALContentBackinglori.addSubview(LEALArtistNamelori)
         
-        LEALVoiceCallActionlori.setImage(UIImage(systemName: "phone.fill"), for: .normal)
-        LEALVoiceCallActionlori.backgroundColor = .systemPurple
-        LEALVoiceCallActionlori.layer.cornerRadius = 20
-        LEALVoiceCallActionlori.tintColor = .white
+        LEALVoiceCallActionlori.image = UIImage(named: "LEALGcall")
+        
         LEALVoiceCallActionlori.translatesAutoresizingMaskIntoConstraints = false
         LEALContentBackinglori.addSubview(LEALVoiceCallActionlori)
-        
+        LEALContentBackinglori.addSubview(LEALFollowlori)
+        LEALContentBackinglori.addSubview(LEALFhotolori)
         NSLayoutConstraint.activate([
-            LEALContentBackinglori.topAnchor.constraint(equalTo: contentView.topAnchor),
-            LEALContentBackinglori.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            LEALContentBackinglori.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            LEALContentBackinglori.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            LEALContentBackinglori.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 34),
             LEALContentBackinglori.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            LEALContentBackinglori.heightAnchor.constraint(equalToConstant: 100),
             
-            LEALAvatarVisualior.leadingAnchor.constraint(equalTo: LEALContentBackinglori.leadingAnchor, constant: 15),
-            LEALAvatarVisualior.centerYAnchor.constraint(equalTo: LEALContentBackinglori.centerYAnchor),
-            LEALAvatarVisualior.widthAnchor.constraint(equalToConstant: 90),
-            LEALAvatarVisualior.heightAnchor.constraint(equalToConstant: 90),
-            
-            LEALArtistNamelori.leadingAnchor.constraint(equalTo: LEALAvatarVisualior.trailingAnchor, constant: 15),
-            LEALArtistNamelori.topAnchor.constraint(equalTo: LEALAvatarVisualior.topAnchor, constant: 10),
+            LEALAvatarVisualior.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            LEALAvatarVisualior.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            LEALAvatarVisualior.widthAnchor.constraint(equalToConstant: 68),
+            LEALAvatarVisualior.heightAnchor.constraint(equalToConstant: 68),
+            LEALArtistNamelori.widthAnchor.constraint(equalToConstant: 100),
+            LEALArtistNamelori.leadingAnchor.constraint(equalTo: LEALContentBackinglori.leadingAnchor, constant: 44),
+            LEALArtistNamelori.topAnchor.constraint(equalTo: LEALContentBackinglori.topAnchor, constant: 22),
             
             LEALVoiceCallActionlori.trailingAnchor.constraint(equalTo: LEALContentBackinglori.trailingAnchor, constant: -20),
-            LEALVoiceCallActionlori.centerYAnchor.constraint(equalTo: LEALContentBackinglori.centerYAnchor),
-            LEALVoiceCallActionlori.widthAnchor.constraint(equalToConstant: 50),
-            LEALVoiceCallActionlori.heightAnchor.constraint(equalToConstant: 45)
+            LEALVoiceCallActionlori.topAnchor.constraint(equalTo: LEALContentBackinglori.topAnchor,constant: 18),
+            LEALVoiceCallActionlori.widthAnchor.constraint(equalToConstant: 51),
+            LEALVoiceCallActionlori.heightAnchor.constraint(equalToConstant: 32),
+            
+            LEALFollowlori.leadingAnchor.constraint(equalTo: LEALArtistNamelori.leadingAnchor, constant: 10),
+            LEALFollowlori.bottomAnchor.constraint(equalTo: LEALAvatarVisualior.bottomAnchor, constant: 0),
+            
+            LEALFhotolori.leadingAnchor.constraint(equalTo: LEALFollowlori.trailingAnchor, constant: 10),
+            LEALFhotolori.centerYAnchor.constraint(equalTo: LEALFollowlori.centerYAnchor)
         ])
     }
     
-    func LEALConfigureAcousticCelllori(_ model: LEALRhythmArtistlori) {
-        LEALArtistNamelori.text = model.LEALArtistIdentitylori
-        LEALAvatarVisualior.image = UIImage(named: model.LEALArtistAvatarlori)
-    }
+//    func LEALConfigureAcousticCelllori(_ model: LEALRhythmArtistlori) {
+//        LEALArtistNamelori.text = model.LEALArtistIdentitylori
+//        LEALAvatarVisualior.image = UIImage(named: model.LEALArtistAvatarlori)
+//    }
     
     required init?(coder: NSCoder) { fatalError() }
 }

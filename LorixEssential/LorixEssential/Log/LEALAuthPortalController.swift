@@ -2,7 +2,7 @@
 //  LEALAuthPortalController.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
@@ -204,18 +204,69 @@ class LEALAuthPortalController: UIViewController {
     }
     
     @objc private func LEALShowLegalVault(sender: UIButton) {
-        let LEALViewer = LEALLegalContentDisplay()
+        let LEALViewer = PerformMomentController.init(stageWave: LEALAArtPerceptionlorix.streetVibe,urbanJourneyer:true)
        
         self.present(LEALViewer, animated: true)
     }
     
     @objc private func LEALInitiateRhythmSession() {
         guard LEALAgreementToggle.isSelected else {
-            
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please read our terms and privacy at first!", on: self.view)
             return
         }
         
-        LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
+        
+        guard let LEALEmail = LEALEmailInputField.text,
+        LEALEmail.isEmpty == false,
+        LEALEmail.contains("@") == true
+        else {
+          
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please enter the email in the correct format first!", on: self.view)
+            return
+        }
+      
+        
+        guard let LEALPass = LEALPassInputField.text,
+              LEALPass.isEmpty == false
+        else {
+         
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please enter your password first!", on: self.view)
+            return
+        }
+      
+        
+        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+        
+        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/eqqabz/fqmbcweb", creativeMoment: ["audioLeafLor":LEALEmail,"beatBloomRix":LEALEmail,"rhythmHarvestLor":"64343767"]) { rhythmicStemLor in
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: false, message: "")
+          
+            guard let trendWeave = rhythmicStemLor as? [String: Any],
+                  let craftAura = trendWeave["data"] as? [String: Any]
+            else {
+              
+                LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(
+                                isPositive: true,
+                                message: "Account or password error"
+                            )
+                return
+            }
+       
+            LEALVisualEchoPulseColorix.LEALSceneEnergyPulseColorix = craftAura["vocalCoreLor"] as? String
+            LEALVisualEchoPulseColorix.LEALStreetTonePulseColorix = craftAura["audioPaletteLor"] as? Int
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: "Log in successful!", on: self.view)
+         
+            LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
+           
+        } urbanBeat: { vocalCoreLor in
+
+            
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: vocalCoreLor.localizedDescription, on: self.view)
+        }
+
+        
+        
+        
+        
         
     }
 }

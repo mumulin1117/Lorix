@@ -2,11 +2,11 @@
 //  LEALSonicFeedCelllori.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
-
+//live
 class LEALSonicFeedCelllori: UICollectionViewCell {
     
     private let LEALMasterCardBackinglori = UIView()
@@ -16,12 +16,12 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
     private let LEALViewerCountLabelori = UILabel()
     
     private let LEALStreamTitleLabelori = UILabel()
-    private let LEALLiveStatusBadgecolorlori = UIView()
-    private let LEALLiveIndicatorTextlori = UILabel()
+
+    private let LEALLiveIndicatorTextlori = UIImageView.init(image: UIImage.init(named: "LEALLiveIndicatorTextlori"))
     
     private let LEALHostAvatarImglori = UIImageView()
     private let LEALHostIdentityLabelori = UILabel()
-    private let LEALMoreActionBtnlori = UIButton()
+     let LEALMoreActionBtnlori = UIButton()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,16 +68,14 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
         LEALStreamTitleLabelori.translatesAutoresizingMaskIntoConstraints = false
         LEALMasterCardBackinglori.addSubview(LEALStreamTitleLabelori)
         
-        LEALLiveStatusBadgecolorlori.backgroundColor = .systemPink
-        LEALLiveStatusBadgecolorlori.layer.cornerRadius = 10
-        LEALLiveStatusBadgecolorlori.translatesAutoresizingMaskIntoConstraints = false
-        LEALMasterCardBackinglori.addSubview(LEALLiveStatusBadgecolorlori)
-        
-        LEALLiveIndicatorTextlori.text = "● Live"
-        LEALLiveIndicatorTextlori.textColor = .white
-        LEALLiveIndicatorTextlori.font = .systemFont(ofSize: 12, weight: .bold)
+//        LEALLiveStatusBadgecolorlori.backgroundColor = .systemPink
+//        LEALLiveStatusBadgecolorlori.layer.cornerRadius = 10
+//        LEALLiveStatusBadgecolorlori.translatesAutoresizingMaskIntoConstraints = false
+//        LEALMasterCardBackinglori.addSubview(LEALLiveStatusBadgecolorlori)
+//        
+       
         LEALLiveIndicatorTextlori.translatesAutoresizingMaskIntoConstraints = false
-        LEALLiveStatusBadgecolorlori.addSubview(LEALLiveIndicatorTextlori)
+        LEALMasterCardBackinglori.addSubview(LEALLiveIndicatorTextlori)
         
         // 5. Host Info Bar
         LEALHostAvatarImglori.layer.cornerRadius = 18
@@ -122,13 +120,11 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
             LEALStreamTitleLabelori.leadingAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.trailingAnchor, constant: 15),
             LEALStreamTitleLabelori.trailingAnchor.constraint(equalTo: LEALMasterCardBackinglori.trailingAnchor, constant: -15),
             
-            LEALLiveStatusBadgecolorlori.topAnchor.constraint(equalTo: LEALStreamTitleLabelori.bottomAnchor, constant: 12),
-            LEALLiveStatusBadgecolorlori.leadingAnchor.constraint(equalTo: LEALStreamTitleLabelori.leadingAnchor),
-            LEALLiveStatusBadgecolorlori.heightAnchor.constraint(equalToConstant: 28),
-            LEALLiveIndicatorTextlori.centerXAnchor.constraint(equalTo: LEALLiveStatusBadgecolorlori.centerXAnchor),
-            LEALLiveIndicatorTextlori.centerYAnchor.constraint(equalTo: LEALLiveStatusBadgecolorlori.centerYAnchor),
-            LEALLiveIndicatorTextlori.leadingAnchor.constraint(equalTo: LEALLiveStatusBadgecolorlori.leadingAnchor, constant: 12),
-            
+            LEALLiveIndicatorTextlori.topAnchor.constraint(equalTo: LEALStreamTitleLabelori.bottomAnchor, constant: 12),
+            LEALLiveIndicatorTextlori.leadingAnchor.constraint(equalTo: LEALStreamTitleLabelori.leadingAnchor),
+            LEALLiveIndicatorTextlori.widthAnchor.constraint(equalToConstant: 62),
+            LEALLiveIndicatorTextlori.heightAnchor.constraint(equalToConstant: 28),
+              
             LEALHostAvatarImglori.bottomAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.bottomAnchor),
             LEALHostAvatarImglori.leadingAnchor.constraint(equalTo: LEALStreamTitleLabelori.leadingAnchor),
             LEALHostAvatarImglori.widthAnchor.constraint(equalToConstant: 36),
@@ -144,13 +140,22 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
         ])
     }
     
-    func LEALConfigureSonicEntrylori(_ LEALDataModelori: LEALSonicLiveEntrylori) {
-        LEALStreamTitleLabelori.text = LEALDataModelori.LEALStreamTitlelori
-        LEALViewerCountLabelori.text = LEALDataModelori.LEALViewerCountlori
-        LEALHostIdentityLabelori.text = LEALDataModelori.LEALHostNamelori
+    func LEALConfigureSonicEntrylori(_ LEALDataModelori: Dictionary<String,Any>) {
+        if let lorix = LEALDataModelori["acousticPathRix"] as? String {
+            LEALPreviewSurfaceImglori.LEALVocalVisualSyncColorix(LEALSonicPathlorix: lorix)
+        }
         
-        // Placeholder setup - Replace with real image loading like SDWebImage
+        if let lorix = LEALDataModelori["acousticSignalRix"] as? String {
+            LEALHostAvatarImglori.LEALVocalVisualSyncColorix(LEALSonicPathlorix: lorix)
+        }
+        
+        LEALViewerCountLabelori.text = "\(Int.random(in: 20...80))"
+        
+        LEALLiveIndicatorTextlori.isHidden =  !((LEALDataModelori["beatGuideRix"] as? Int) == -1)
         LEALPreviewSurfaceImglori.backgroundColor = .darkGray
         LEALHostAvatarImglori.backgroundColor = .systemPurple
+        LEALStreamTitleLabelori.text = LEALDataModelori["rhythmicTrailLor"] as? String
+        
+        LEALHostIdentityLabelori.text = LEALDataModelori["vocalBeaconLor"] as? String
     }
 }

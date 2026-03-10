@@ -2,7 +2,7 @@
 //  LEALMainTabContainer.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
@@ -21,13 +21,13 @@ class LEALMainTabContainer: UITabBarController {
         let LEALStream = LEALNavigationWrapper(rootViewController: LEALStreamGallery())
         LEALStream.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor0")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor0ba")?.withRenderingMode(.alwaysOriginal))
         
-        let LEALLab = LEALNavigationWrapper(rootViewController: UIViewController())
+        let LEALLab = LEALNavigationWrapper(rootViewController: LEALCommunityViewController())
         LEALLab.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor1")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor1ba")?.withRenderingMode(.alwaysOriginal))
         
-        let LEALExplore = LEALNavigationWrapper(rootViewController: UIViewController())
+        let LEALExplore = LEALNavigationWrapper(rootViewController: LEALDiscoverExchangeViewController())
         LEALExplore.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor2")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor2ba")?.withRenderingMode(.alwaysOriginal))
         
-        let LEALArtist = LEALNavigationWrapper(rootViewController: UIViewController())
+        let LEALArtist = LEALNavigationWrapper(rootViewController: LEALUserStagelViewController())
         LEALArtist.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor3")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor3ba")?.withRenderingMode(.alwaysOriginal))
         
         viewControllers = [LEALStream, LEALLab, LEALExplore, LEALArtist]

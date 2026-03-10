@@ -2,7 +2,7 @@
 //  LEALrhythmicCadence.swift
 //  LorixEssential
 //
-//  Created by mumu on 2026/3/6.
+//  Created by LorixEssential on 2026/3/6.
 //
 
 import UIKit
