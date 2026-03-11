@@ -37,9 +37,9 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         contentView.layer.insertSublayer(coForinLayer, at: 0)//.addSublayer()
         LEALCoinBalancePlateColorix.setTitleColor(.white, for: .normal)
         LEALCoinBalancePlateColorix.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        LEALCoinBalancePlateColorix.setImage(UIImage.init(named: "leadCoingold"), for: .normal)
+        LEALCoinBalancePlateColorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "leadCoingold"), for: .normal)
         LEALCoinBalancePlateColorix.setTitle(" My Blance  ->", for: .normal)
-        LEALEditPencilTriggerColorix.setImage(UIImage.init(named: "sujiEdit"), for: .normal)
+        LEALEditPencilTriggerColorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "sujiEdit"), for: .normal)
         
         LEALAvatarVisualNodeColorix.layer.cornerRadius = 60
         LEALAvatarVisualNodeColorix.layer.borderWidth = 4
@@ -82,12 +82,12 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         contentView.addSubview(LEALEditPencilTriggerColorix)
         contentView.addSubview(LEALStatStackHublorix)
         
-        let LEALFollowNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Follow")
+        let LEALFollowNodelorix = LEALCreateStatUnitlorix(value: "0", title: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "4Ryk+o+fGC7Pbbsa5qkKcWP1uG9D/iTqImvfQzcFdnxYKXk82Xo="))
         self.MyrealattensionLeal = LEALFollowNodelorix
-        let LEALFansNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Fans")
+        let LEALFansNodelorix = LEALCreateStatUnitlorix(value: "0", title: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "YKdvUqkzDor4Y1C2Mbun6dHTL0302XSj0IXMgxCVBTFYnWaU"))
         self.attensionLealMy = LEALFansNodelorix
         
-        let LEALLikesNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Posts")
+        let LEALLikesNodelorix = LEALCreateStatUnitlorix(value: "0", title: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "EZmwh4FDiT0FAncIb0BU/N5XxRlt7d+MMfU/7YFwVeT4HYvxJg=="))
         self.MyLiakoLealMy = LEALLikesNodelorix
             [LEALFollowNodelorix, LEALFansNodelorix, LEALLikesNodelorix].forEach {
                 LEALStatStackHublorix.addArrangedSubview($0)

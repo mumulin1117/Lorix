@@ -22,7 +22,7 @@ class LEALAuthPortalController: UIViewController {
     private let LEALPassInputField = UITextField()
     lazy var LEALinuting: UILabel = {
         let LEALPassTitleLabel = UILabel()
-        LEALPassTitleLabel.text = "If no account,we will  create one for you automiclly!"
+        LEALPassTitleLabel.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "dgDJkNpoOqEflZ2hSb712p2Izd5U6ZE6mUyf/jX48R1b4e6n4XD0QLDW0fLY57yBPqRBRUFPhftCNw7fKGxQ07JguOg7H5xXE1ULaeR63hLz+sTq2g==")
         LEALPassTitleLabel.textColor = .white
         LEALPassTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         LEALPassTitleLabel.font = .systemFont(ofSize: 12)
@@ -48,15 +48,15 @@ class LEALAuthPortalController: UIViewController {
         
         view.backgroundColor = UIColor(red: 0.02, green: 0.02, blue: 0.08, alpha: 1.0)
         
-        LEALHeaderAcousticIcon.image = UIImage(named: "mowertDribbble") // Asset matching your design
+        LEALHeaderAcousticIcon.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "mowertDribbble") // Asset matching your design
         LEALHeaderAcousticIcon.contentMode = .scaleAspectFill
         LEALHeaderAcousticIcon.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(LEALHeaderAcousticIcon)
         
-        LEALeartTitleLabel.text = "By continuing you agree to our"
+        LEALeartTitleLabel.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "9Zl+UKBpg1CD8AD1wqgcKkKqGogT//UERA3JAkQz2P+XLOmNIl3YZAtFn2cPO8cLNrQqK257olXnbrbxVRg=")
         LEALeartTitleLabel.textColor = .white
         LEALeartTitleLabel.font = .systemFont(ofSize: 13)
-        LEALEmailTitleLabel.text = "Email"
+        LEALEmailTitleLabel.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "rUri8DAXb8+lm10laQjKzbivTJwP8yJ/s10US67Po4SWGxIMnA==")
         LEALEmailTitleLabel.textColor = .lightGray
         LEALEmailTitleLabel.font = .systemFont(ofSize: 16)
         LEALEmailTitleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -67,17 +67,17 @@ class LEALAuthPortalController: UIViewController {
         LEALEmailInputContainer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(LEALEmailInputContainer)
         
-        LEALEmailIcon.image = UIImage(named: "envelopeentile")
+        LEALEmailIcon.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "envelopeentile")
         LEALEmailIcon.translatesAutoresizingMaskIntoConstraints = false
         LEALEmailInputContainer.addSubview(LEALEmailIcon)
         
-        LEALEmailInputField.attributedPlaceholder = NSAttributedString(string: "Enter your email address", attributes: [.foregroundColor: UIColor.gray])
+        LEALEmailInputField.attributedPlaceholder = NSAttributedString(string: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal:"7vhXGobxqfE3EmCKw8LPxlNm5i4E7wKaNydYundhWHO3T9mWSRA4KX8d9G/oPRovkZS9j5HJrfw=") , attributes: [.foregroundColor: UIColor.gray])
         LEALEmailInputField.textColor = .white
         LEALEmailInputField.translatesAutoresizingMaskIntoConstraints = false
         LEALEmailInputContainer.addSubview(LEALEmailInputField)
         
         // 4. Password Section
-        LEALPassTitleLabel.text = "Password"
+        LEALPassTitleLabel.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "t3D4R9nnHHO03XcHL1+T5c80G2PA1prkOTe2QPbhYSv4/Q/aBKqt2Q==")
         LEALPassTitleLabel.textColor = .lightGray
         LEALPassTitleLabel.font = .systemFont(ofSize: 16)
         LEALPassTitleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -93,28 +93,28 @@ class LEALAuthPortalController: UIViewController {
         LEALPassIcon.translatesAutoresizingMaskIntoConstraints = false
         LEALPassInputContainer.addSubview(LEALPassIcon)
         
-        LEALPassInputField.attributedPlaceholder = NSAttributedString(string: "Password(6-12 characters)", attributes: [.foregroundColor: UIColor.gray])
+        LEALPassInputField.attributedPlaceholder = NSAttributedString(string: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "A8FD6KO0s5LPMyY2sjM3b2Kjmj0vMzuutBgqW0IEJnKlKMlpbmjIC7bn6Lq/2AyrvzqOZsv7KOlH"), attributes: [.foregroundColor: UIColor.gray])
         LEALPassInputField.isSecureTextEntry = true
         LEALPassInputField.textColor = .white
         LEALPassInputField.translatesAutoresizingMaskIntoConstraints = false
         LEALPassInputContainer.addSubview(LEALPassInputField)
         
         // 5. Login Button
-        LEALLoginTriggerBtn.setTitle("Login", for: .normal)
+        LEALLoginTriggerBtn.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "8Hp9N2CLSyeXLu+AgU/PbmtpPKkx8vRKNJnJH0PrPDWnVclWSQ=="), for: .normal)
         LEALLoginTriggerBtn.titleLabel?.font = .boldSystemFont(ofSize: 18)
-        LEALLoginTriggerBtn.setBackgroundImage(UIImage.init(named: "putingalcle"), for: .normal)
+        LEALLoginTriggerBtn.setBackgroundImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "putingalcle"), for: .normal)
         LEALLoginTriggerBtn.addTarget(self, action: #selector(LEALInitiateRhythmSession), for: .touchUpInside)
         LEALLoginTriggerBtn.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(LEALLoginTriggerBtn)
         
     
-        LEALAgreementToggle.setImage(UIImage(named: "LEALAgreementToggleno"), for: .normal)
-        LEALAgreementToggle.setImage(UIImage(named: "LEALAgreementTogglesel"), for: .selected)
+        LEALAgreementToggle.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALAgreementToggleno"), for: .normal)
+        LEALAgreementToggle.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALAgreementTogglesel"), for: .selected)
         
         LEALAgreementToggle.addTarget(self, action: #selector(LEALToggleConsentState), for: .touchUpInside)
         
-        LEALPrivacyLinkBtn.setTitle("Privacy Policy", for: .normal)
-        LEALTermsLinkBtn.setTitle("Terms of Service", for: .normal)
+        LEALPrivacyLinkBtn.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "jbtuqHepfG9asHcpUazFzdJJXbuSIuNdm1nInpNxA3TNQWNiv27qbNDRMfJxRg=="), for: .normal)
+        LEALTermsLinkBtn.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "q3Cjr62+oCGzcxl8JDYAmfopNYxsgycc2+ecdNdxNqHw1ji64Q4p55gtauwRdyjA"), for: .normal)
         
         [LEALPrivacyLinkBtn, LEALTermsLinkBtn].forEach {
             $0.titleLabel?.font = .systemFont(ofSize: 11)
@@ -212,7 +212,7 @@ class LEALAuthPortalController: UIViewController {
     
     @objc private func LEALInitiateRhythmSession() {
         guard LEALAgreementToggle.isSelected else {
-            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please read our terms and privacy at first!", on: self.view)
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "18WBht9F22G/+dVBHauIit5FeHIW7dXb2lo/gvl/m8Qnk3LvXPGLqAYV9hXce6X1gDFalKTfsyuBA7lzsjRKCbFd9OZtrNkCtK/g"), on: self.view)
             return
         }
         
@@ -222,7 +222,7 @@ class LEALAuthPortalController: UIViewController {
         LEALEmail.contains("@") == true
         else {
           
-            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please enter the email in the correct format first!", on: self.view)
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message:LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "KNiy1JXBCmQFH/TvwSzFXr2LUTWbemf5f36LtsAD4sRV0l42OjCkiLjHFScug45uCKir6obuj3c1Mf+yTKilsNzCyf/jOU1gL8r/HIwMcedgAdw=") , on: self.view)
             return
         }
       
@@ -231,7 +231,7 @@ class LEALAuthPortalController: UIViewController {
               LEALPass.isEmpty == false
         else {
          
-            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: "Please enter your password first!", on: self.view)
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "0jSc87v7rlQcbgy7X1WZZNS3L0SOB94o9t8kuevIAY4vRHNK0Fr0OBsJgDzYCgZN3vJ69z1m+jYc+uji032EjO0="), on: self.view)
             return
         }
       
@@ -242,19 +242,19 @@ class LEALAuthPortalController: UIViewController {
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: false, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? [String: Any]
+                  let craftAura = trendWeave[aksingLEALE] as? [String: Any]
             else {
               
                 LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(
                                 isPositive: true,
-                                message: "Account or password error"
+                                message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "C/FVc66MtVid1wkj0nzZo4qQngdxdm1PFsul/gZVjekG0IlGS6kt0U3EF2VZl8sTisZ2O13zBMT0")
                             )
                 return
             }
        
             LEALAcalSignatureLorrix.palatalFrictionLor = craftAura["vocalCoreLor"] as? String
             LEALAcalSignatureLorrix.subharmonicToneRix = craftAura["audioPaletteLor"] as? Int
-            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: "Log in successful!", on: self.view)
+            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Rzd7//LsARsYgDmwKL1l3BlqHLWmtLozfH1fE1Klf7jmok4zWhHxlKEM8Kmd33bMBL4="), on: self.view)
          
             LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
            

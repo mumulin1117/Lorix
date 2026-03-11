@@ -32,13 +32,13 @@ class LEALioalHeader: UICollectionReusableView, UICollectionViewDelegate,UIColle
         
         velll.LEALFollowlori.text = "\(leaddata["articulationPointLor"] as? Int ?? 0) Followers"
         
-        velll.LEALFhotolori.text = "0 Photos"
+        velll.LEALFhotolori.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "UBmjKzgPt0bOFQKHRYtJE6+labooKKexUF2c8LJ75g7OpZ7sSklnWw==")
         return velll
     }
     
     lazy var LEALGostrem: UIButton = {
         let LEALGos = UIButton.init()
-        LEALGos.setBackgroundImage(UIImage.init(named: "LEALGostrem"), for: .normal)
+        LEALGos.setBackgroundImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALGostrem"), for: .normal)
         LEALGos.translatesAutoresizingMaskIntoConstraints = false
         return LEALGos
     }()

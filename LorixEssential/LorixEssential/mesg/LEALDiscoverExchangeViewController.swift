@@ -9,7 +9,7 @@ import UIKit
 
 class LEALDiscoverExchangeViewController: UIViewController {
     private  lazy var LEALtoptitle: UIImageView = {
-        let bauiod = UIImageView.init(image: UIImage.init(named: "LEALDMessage"))
+        let bauiod = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALDMessage"))
         bauiod.contentMode = .scaleAspectFit
         return bauiod
         
@@ -18,7 +18,7 @@ class LEALDiscoverExchangeViewController: UIViewController {
     
     lazy var addCiref: UIButton = {
         let EALDbutton = UIButton()
-        EALDbutton.setImage(UIImage.init(named: "addCiref"), for: .normal)
+        EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "addCiref"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
         EALDbutton.addTarget(self, action: #selector(addCirefTolayer), for: .touchUpInside)
         return EALDbutton
@@ -152,8 +152,8 @@ class LEALDiscoverExchangeViewController: UIViewController {
     }
     
     private func LEALConfigureToggleSystemlorix() {
-        LEALMessageToggleBtnlorix.setTitle("Message", for: .normal)
-        LEALEventToggleBtnlorix.setTitle("Events", for: .normal)
+        LEALMessageToggleBtnlorix.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "NG/riqzBCGdPGl/h9scfE/vchbhqDleEKQ2b0IoKm0ymUocs6UtU"), for: .normal)
+        LEALEventToggleBtnlorix.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "0JoLL/Um2DyGEBOLH89Mj5tb5/EccBXLsKi0RaaYqD2q51sGPGQ="), for: .normal)
         
         let LEALToggleslorix = [LEALMessageToggleBtnlorix, LEALEventToggleBtnlorix]
         let LEALStackHublorix = UIStackView(arrangedSubviews: LEALToggleslorix)
@@ -181,7 +181,7 @@ class LEALDiscoverExchangeViewController: UIViewController {
     
     private func LEALUpdateModeUIVisualorix() {
         let LEALIsMessagelorix = LEALCurrentStateExchange == .message
-        LEALtoptitle.image = UIImage(named: LEALIsMessagelorix ? "LEALDMessage" : "LEALDDiscover")
+        LEALtoptitle.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: LEALIsMessagelorix ? "LEALDMessage" : "LEALDDiscover")
         
         LEALMessageToggleBtnlorix.backgroundColor = LEALIsMessagelorix ? UIColor(red: 0.25, green: 0.02, blue: 0.54, alpha: 1) : .clear
         LEALMessageToggleBtnlorix.layer.cornerRadius = 22
@@ -262,7 +262,7 @@ extension LEALDiscoverExchangeViewController{
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
             else {
                 return
             }

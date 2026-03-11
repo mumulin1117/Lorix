@@ -9,7 +9,7 @@ import UIKit
 
 class LEALCommunityViewController: UIViewController {
     private  lazy var LEALtComoptitle: UIImageView = {
-        let bauiod = UIImageView.init(image: UIImage.init(named: "LEALtComoptitle"))
+        let bauiod = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALtComoptitle"))
         bauiod.contentMode = .scaleAspectFit
         bauiod.translatesAutoresizingMaskIntoConstraints = false
         return bauiod
@@ -17,14 +17,14 @@ class LEALCommunityViewController: UIViewController {
     }()
     lazy var LEALDAdd: UIButton = {
         let EALDbutton = UIButton()
-        EALDbutton.setImage(UIImage.init(named: "cireldLes"), for: .normal)
+        EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "cireldLes"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
         return EALDbutton
     }()
     
     lazy var addCiref: UIButton = {
         let EALDbutton = UIButton()
-        EALDbutton.setImage(UIImage.init(named: "addCiref"), for: .normal)
+        EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "addCiref"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
         EALDbutton.addTarget(self, action: #selector(addCirefTolayer), for: .touchUpInside)
         return EALDbutton
@@ -274,9 +274,10 @@ extension LEALCommunityViewController{
         
         LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/rqhazshz/mwdlfinpresrggf", lungCapacityLor: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
+            
+            
             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
             else {
                 return
             }
@@ -300,7 +301,7 @@ extension LEALCommunityViewController{
         
         LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/mclnmqtgoz/ryfsmzxhbn", lungCapacityLor: ["sonicDraftRix":"64343767","frequencyResponseLor":1,"dynamicRangeRix":20,"rhythmicCadenceLor":LEALActiveCategorylorix]) { rhythmicStemLor in
              guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
             else {
                 return
             }

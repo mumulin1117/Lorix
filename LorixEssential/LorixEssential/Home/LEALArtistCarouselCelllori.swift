@@ -20,7 +20,7 @@ class LEALArtistCarouselCelllori: UICollectionViewCell {
         LEALFollowlori.translatesAutoresizingMaskIntoConstraints = false
         LEALFollowlori.textColor = .white
         LEALFollowlori.font = UIFont.systemFont(ofSize: 14)
-        LEALFollowlori.text = "0 Followers"
+        LEALFollowlori.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "8uqwFWzsm3EPXYjtTGdoyvofw9QVACfOXVN/s2eXnOUk3/EL7AxtJNbv4A=="))
         return LEALFollowlori
     }()
     
@@ -29,7 +29,7 @@ class LEALArtistCarouselCelllori: UICollectionViewCell {
         LEALFollowlori.translatesAutoresizingMaskIntoConstraints = false
         LEALFollowlori.textColor = .white
         LEALFollowlori.font = UIFont.systemFont(ofSize: 14)
-        LEALFollowlori.text = "0 Photos"
+        LEALFollowlori.text = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "UBmjKzgPt0bOFQKHRYtJE6+labooKKexUF2c8LJ75g7OpZ7sSklnWw==")
         return LEALFollowlori
     }()
     
@@ -63,7 +63,7 @@ class LEALArtistCarouselCelllori: UICollectionViewCell {
         LEALArtistNamelori.translatesAutoresizingMaskIntoConstraints = false
         LEALContentBackinglori.addSubview(LEALArtistNamelori)
         
-        LEALVoiceCallActionlori.image = UIImage(named: "LEALGcall")
+        LEALVoiceCallActionlori.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALGcall")
         
         LEALVoiceCallActionlori.translatesAutoresizingMaskIntoConstraints = false
         LEALContentBackinglori.addSubview(LEALVoiceCallActionlori)
@@ -98,7 +98,7 @@ class LEALArtistCarouselCelllori: UICollectionViewCell {
     
 //    func LEALConfigureAcousticCelllori(_ model: LEALRhythmArtistlori) {
 //        LEALArtistNamelori.text = model.LEALArtistIdentitylori
-//        LEALAvatarVisualior.image = UIImage(named: model.LEALArtistAvatarlori)
+//        LEALAvatarVisualior.image = LEALVocalResonanceCorelorix.MITTBuilsdFetchVibeGraphic(MITTBuilsdAssetAlias: model.LEALArtistAvatarlori)
 //    }
     
     required init?(coder: NSCoder) { fatalError() }

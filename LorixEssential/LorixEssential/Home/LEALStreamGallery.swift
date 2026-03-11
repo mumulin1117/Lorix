@@ -16,7 +16,7 @@ class LEALStreamGallery: UIViewController, LEALioalHeaderDelegate {
     }
     
     private  lazy var LEALtoptitle: UIImageView = {
-        let bauiod = UIImageView.init(image: UIImage.init(named: "Lorixcielc"))
+        let bauiod = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "Lorixcielc"))
         bauiod.contentMode = .scaleAspectFit
         return bauiod
         
@@ -178,7 +178,7 @@ extension LEALStreamGallery{
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
             else {
                 return
             }
@@ -202,7 +202,7 @@ extension LEALStreamGallery{
         
         LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/gcgwnuz/yrgdx", lungCapacityLor: ["audioExplorationLor":"64343767","rhythmicInnovationLor":1,"sonicDiscoveryRix":20]) { rhythmicStemLor in
              guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
             else {
                 return
             }

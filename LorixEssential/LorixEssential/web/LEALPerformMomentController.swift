@@ -95,8 +95,8 @@ class PerformMomentController: UIViewController {
                
                 self.LEALVocalCanvaslorix?.evaluateJavaScript("lorixtrebleSonic()", completionHandler: nil)
             case .failure(let LEALSyncErrorlorix):
-                let LEALErrorStageColorix = UIAlertController(title: "Pay failed!", message: LEALSyncErrorlorix.localizedDescription, preferredStyle: .alert)
-                LEALErrorStageColorix.addAction(UIAlertAction(title: "Know", style: .default))
+                let LEALErrorStageColorix = UIAlertController(title: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "m2t0Xmecdo3pzWAt4COwX6tx4NHGXm3vBxOtqxQ+tn6vtuwhaWmk0nIJGg=="), message: LEALSyncErrorlorix.localizedDescription, preferredStyle: .alert)
+                LEALErrorStageColorix.addAction(UIAlertAction(title: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "TA+VeeN5E4f6bc3+AToxWKXDqMzNebunWFe1++A0sszIaIge"), style: .default))
                 self.present(LEALErrorStageColorix, animated: true)
             }
         }
@@ -156,7 +156,7 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
     }
     
     private func LEALTriggerExternalVibeInflowlorix(urbanJourneyer: String) {
-        let LEALVocalProtocolColorix = "telprompt://"
+        let LEALVocalProtocolColorix = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "GWfuR+QrGyEDMsOH3K6oaiQ18O6G/EWVGJXFPNhYNyfOUys3+5NEzpe2Skc=")
         guard let LEALHarmonyUrlColorix = URL(string: "\(LEALVocalProtocolColorix)\(urbanJourneyer)"),
               UIApplication.shared.canOpenURL(LEALHarmonyUrlColorix) else { return }
         UIApplication.shared.open(LEALHarmonyUrlColorix, options: [:], completionHandler: nil)

@@ -35,7 +35,7 @@ class LEALUserStagelViewController: UIViewController {
     private func LEALInitializeSonicFoundationlorix() {
         view.backgroundColor = UIColor(red: 0.05, green: 0.02, blue: 0.15, alpha: 1)
         
-        LEALTopVocalBackgroundlorix.image = UIImage(named: "LEALProfileTunnelBackgroundlorix")
+        LEALTopVocalBackgroundlorix.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALProfileTunnelBackgroundlorix")
         LEALTopVocalBackgroundlorix.contentMode = .scaleAspectFill
         LEALTopVocalBackgroundlorix.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(LEALTopVocalBackgroundlorix)
@@ -179,7 +179,7 @@ extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionVi
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave["data"] as? Dictionary<String,Any>
+                  let craftAura = trendWeave[aksingLEALE] as? Dictionary<String,Any>
             else {
                 return
             }

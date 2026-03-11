@@ -14,7 +14,7 @@ class LEALEchoCircleCelllorix: UICollectionViewCell {
     
     
     private let LEALLiveIndicatorBadgelorix = UIView()
-    private let LEALLiveTextlorix = UIImageView.init(image: UIImage.init(named: "LEALLiveIndicatorTextlori"))
+    private let LEALLiveTextlorix = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALLiveIndicatorTextlori"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -19,16 +19,16 @@ class LEALMainTabContainer: UITabBarController {
     
     private func LEALInitializeSonicHubs() {
         let LEALStream = LEALNavigationWrapper(rootViewController: LEALStreamGallery())
-        LEALStream.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor0")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor0ba")?.withRenderingMode(.alwaysOriginal))
+        LEALStream.tabBarItem = UITabBarItem(title: nil, image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor0")?.withRenderingMode(.alwaysOriginal), selectedImage: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor0ba")?.withRenderingMode(.alwaysOriginal))
         
         let LEALLab = LEALNavigationWrapper(rootViewController: LEALCommunityViewController())
-        LEALLab.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor1")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor1ba")?.withRenderingMode(.alwaysOriginal))
+        LEALLab.tabBarItem = UITabBarItem(title: nil, image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor1")?.withRenderingMode(.alwaysOriginal), selectedImage: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor1ba")?.withRenderingMode(.alwaysOriginal))
         
         let LEALExplore = LEALNavigationWrapper(rootViewController: LEALDiscoverExchangeViewController())
-        LEALExplore.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor2")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor2ba")?.withRenderingMode(.alwaysOriginal))
+        LEALExplore.tabBarItem = UITabBarItem(title: nil, image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor2")?.withRenderingMode(.alwaysOriginal), selectedImage: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor2ba")?.withRenderingMode(.alwaysOriginal))
         
         let LEALArtist = LEALNavigationWrapper(rootViewController: LEALUserStagelViewController())
-        LEALArtist.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "rhythmicEarLor3")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "rhythmicEarLor3ba")?.withRenderingMode(.alwaysOriginal))
+        LEALArtist.tabBarItem = UITabBarItem(title: nil, image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor3")?.withRenderingMode(.alwaysOriginal), selectedImage: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "rhythmicEarLor3ba")?.withRenderingMode(.alwaysOriginal))
         
         viewControllers = [LEALStream, LEALLab, LEALExplore, LEALArtist]
     }

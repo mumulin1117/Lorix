@@ -7,7 +7,7 @@
 
 import UIKit
 import Foundation
-
+let aksingLEALE = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "fy/UL4hy8FaW5oU+0HjBgyaivd8SsOZwZMUSIJ7gGlxIMhar")
 struct LEALEchoArtistlorix: Codable {
     let LEALArtistIdlorix: String
     let LEALArtistAvatarImglorix: String
@@ -26,17 +26,17 @@ struct LEALPulseContentlorix: Codable {
 class LEALPulseFeedCelllorix: UICollectionViewCell {
     
     private let LEALMainVisualImglorix = UIImageView()
-    private let LEALAuthorInfolorix = UIImageView.init(image: UIImage.init(named: "LEALAuthorInfolorix"))
+    private let LEALAuthorInfolorix = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALAuthorInfolorix"))
     
     private let LEALAuthorAvatarlorix = UIImageView()
     private let LEALAuthorNamelabelorix = UILabel()
     
-    private let LEALHotBadgeImglorix = UIImageView(image: UIImage.init(named: "neverhoter"))
+    private let LEALHotBadgeImglorix = UIImageView(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "neverhoter"))
     private let LEALDescriptionLabellorix = UILabel()
     
     lazy var LEALDAdd: UIButton = {
         let EALDbutton = UIButton()
-        EALDbutton.setImage(UIImage.init(named: "cireldLes"), for: .normal)
+        EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "cireldLes"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
         return EALDbutton
     }()
@@ -58,13 +58,13 @@ class LEALPulseFeedCelllorix: UICollectionViewCell {
         LEALInteractionBarlorix.addArrangedSubview(LEALMoreOptionslorix)
         
         
-        LEALHeartActionlorix.setImage(UIImage.init(named: "singerzand"), for: .normal)
+        LEALHeartActionlorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "singerzand"), for: .normal)
         LEALHeartActionlorix.isUserInteractionEnabled = false
         
-        LEALCommentActionlorix.setImage(UIImage.init(named: "singercomment"), for: .normal)
+        LEALCommentActionlorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "singercomment"), for: .normal)
         LEALCommentActionlorix.isUserInteractionEnabled = false
        
-        LEALMoreOptionslorix.setImage(UIImage.init(named: "LEALGreport"), for: .normal)
+        LEALMoreOptionslorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALGreport"), for: .normal)
     }
     
     required init?(coder: NSCoder) { fatalError() }

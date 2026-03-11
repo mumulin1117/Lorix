@@ -17,7 +17,7 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
     
     private let LEALStreamTitleLabelori = UILabel()
 
-    private let LEALLiveIndicatorTextlori = UIImageView.init(image: UIImage.init(named: "LEALLiveIndicatorTextlori"))
+    private let LEALLiveIndicatorTextlori = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALLiveIndicatorTextlori"))
     
     private let LEALHostAvatarImglori = UIImageView()
     private let LEALHostIdentityLabelori = UILabel()

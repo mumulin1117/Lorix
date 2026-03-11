@@ -36,7 +36,7 @@ class LEALEventGridCollectionCelllorix: UICollectionViewCell {
         LEALPosterVisualorix.translatesAutoresizingMaskIntoConstraints = false
         LEALPosterContainerlorix.addSubview(LEALPosterVisualorix)
         
-        LEALAlertBadgeVisualorix.setImage(UIImage(named: "exclamationmarkLorix"), for: .normal)
+        LEALAlertBadgeVisualorix.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "exclamationmarkLorix"), for: .normal)
         
         LEALAlertBadgeVisualorix.translatesAutoresizingMaskIntoConstraints = false
         LEALPosterContainerlorix.addSubview(LEALAlertBadgeVisualorix)

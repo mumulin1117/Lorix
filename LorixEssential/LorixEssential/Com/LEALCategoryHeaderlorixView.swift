@@ -9,7 +9,7 @@ import UIKit
 class LEALCategoryHeaderlorixView: UICollectionReusableView {
     var LEALActionCallbacklorix: ((Int) -> Void)?
     private let LEALStacklorix = UIStackView()
-    private let LEALIndicatorlorix = UIImageView(image: UIImage.init(named: "LEALIndicatorlorix"), )
+    private let LEALIndicatorlorix = UIImageView(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALIndicatorlorix"), )
     private var LEALBtnArraylorix: [UIButton] = []
 
     override init(frame: CGRect) {
@@ -25,10 +25,10 @@ class LEALCategoryHeaderlorixView: UICollectionReusableView {
         LEALStacklorix.translatesAutoresizingMaskIntoConstraints = false
         addSubview(LEALStacklorix)
         
-        let LEALTitleslorix = ["Hot", "New", "Following"]
+        let LEALTitleslorix = ["9FLn7tOnXLGkF6M3YyHbS7zQ9Sjv4FuV7AmGoxNtxevGtSg=", "AuLHA+yg/upDjlqKcyfZDyKLrA2N9XzQjhyV9td84U2y/Rs=", "xrF+RzpPcXieK+9CGa5DenAq2jcYiHkgfU+Ofi4Pc856knEktn4Mw1Y="]
         for (index, title) in LEALTitleslorix.enumerated() {
             let LEALBtnlorix = UIButton(type: .custom)
-            LEALBtnlorix.setTitle(title, for: .normal)
+            LEALBtnlorix.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: title) , for: .normal)
             LEALBtnlorix.setTitleColor(.lightGray, for: .normal)
             LEALBtnlorix.setTitleColor(.white, for: .selected)
             LEALBtnlorix.titleLabel?.font = .boldSystemFont(ofSize: 18)
@@ -60,8 +60,7 @@ class LEALCategoryHeaderlorixView: UICollectionReusableView {
         LEALBtnArraylorix.forEach { $0.isSelected = ($0 == sender) }
         UIView.animate(withDuration: 0.3) {
             self.LEALIndicatorlorix.center.x = sender.center.x
-            print("--------------------------------")
-            print(self.LEALIndicatorlorix.center.x )
+           
         }
         LEALActionCallbacklorix?(sender.tag)
     }
