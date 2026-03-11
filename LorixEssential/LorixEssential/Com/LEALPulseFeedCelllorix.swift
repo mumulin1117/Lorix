@@ -46,7 +46,7 @@ class LEALPulseFeedCelllorix: UICollectionViewCell {
     
     private let LEALHeartActionlorix = UIButton()
     private let LEALCommentActionlorix = UIButton()
-    private let LEALMoreOptionslorix = UIButton()
+     let LEALMoreOptionslorix = UIButton()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,7 +59,11 @@ class LEALPulseFeedCelllorix: UICollectionViewCell {
         
         
         LEALHeartActionlorix.setImage(UIImage.init(named: "singerzand"), for: .normal)
+        LEALHeartActionlorix.isUserInteractionEnabled = false
+        
         LEALCommentActionlorix.setImage(UIImage.init(named: "singercomment"), for: .normal)
+        LEALCommentActionlorix.isUserInteractionEnabled = false
+       
         LEALMoreOptionslorix.setImage(UIImage.init(named: "LEALGreport"), for: .normal)
     }
     
@@ -155,7 +159,7 @@ class LEALPulseFeedCelllorix: UICollectionViewCell {
             
             LEALDescriptionLabellorix.leadingAnchor.constraint(equalTo: LEALAuthorNamelabelorix.leadingAnchor),
             LEALDescriptionLabellorix.topAnchor.constraint(equalTo: LEALAuthorNamelabelorix.bottomAnchor, constant: 2),
-            
+            LEALDescriptionLabellorix.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
 //            LEALInteractionBarlorix.topAnchor.constraint(equalTo: LEALMainVisualImglorix.bottomAnchor, constant: 15),
             LEALInteractionBarlorix.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             LEALInteractionBarlorix.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
@@ -165,6 +169,17 @@ class LEALPulseFeedCelllorix: UICollectionViewCell {
     }
     
     func LEALConfigurePulseCelllorix(_ model: Dictionary<String,Any>,ishot:Bool) {
-     
+        LEALHotBadgeImglorix.isHidden = !ishot
+        
+        if let lorix = model["uvularFrictionLor"] as? Array<String>,let fiert = lorix.first {
+            LEALMainVisualImglorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: fiert)
+        }
+        
+        
+        if let lorix = model["vocalSynthesizerRix"] as? String {
+            LEALAuthorAvatarlorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: lorix)
+        }
+        LEALAuthorNamelabelorix.text = model["soundPaletteLor"] as? String
+        LEALDescriptionLabellorix.text = model["rhythmicSyncopationLor"] as? String
     }
 }

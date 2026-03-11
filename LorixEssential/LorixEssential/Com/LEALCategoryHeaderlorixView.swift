@@ -60,6 +60,8 @@ class LEALCategoryHeaderlorixView: UICollectionReusableView {
         LEALBtnArraylorix.forEach { $0.isSelected = ($0 == sender) }
         UIView.animate(withDuration: 0.3) {
             self.LEALIndicatorlorix.center.x = sender.center.x
+            print("--------------------------------")
+            print(self.LEALIndicatorlorix.center.x )
         }
         LEALActionCallbacklorix?(sender.tag)
     }

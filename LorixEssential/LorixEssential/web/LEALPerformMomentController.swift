@@ -13,23 +13,23 @@ class PerformMomentController: UIViewController {
 
     private var LEALVocalCanvaslorix: WKWebView?
     private var LEALSonicRegistrylorix: String
-    var LEALRhythmArtistlorix: LEALAArtPerceptionlorix
+    var LEALRhythmArtistlorix: LEALAArtbeatSenseRixlorix
     var LEALStageActivePulse: Bool
     
     private let LEALVibeBoundsBufferlorix = UIScreen.main.bounds
     private var LEALSolidifyBufferlorix: [Double] = [0.441, 0.48, 0.96]
     
-    init(stageWave: LEALAArtPerceptionlorix, streetSoul: String = "", urbanJourneyer: Bool = false) {
-        self.LEALRhythmArtistlorix = stageWave
-        self.LEALSonicRegistrylorix = stageWave.LEALCreativeMomentPulseColorix(urbanBeat: streetSoul)
-        self.LEALStageActivePulse = urbanJourneyer
+    init(plosiveBurstLor: LEALAArtbeatSenseRixlorix, aspirate: String = "", NoiseLor: Bool = false) {
+        self.LEALRhythmArtistlorix = plosiveBurstLor
+        self.LEALSonicRegistrylorix = plosiveBurstLor.LEALCvocalSonicLorPulseColorix(beatAudioLor: aspirate)
+        self.LEALStageActivePulse = NoiseLor
         super.init(nibName: nil, bundle: nil)
         LEALInjectSonicDitheringlorix(input: 1024)
     }
     
     required init?(coder: NSCoder) { fatalError("") }
     
-    private lazy var LEALWaveformConfiglorix: WKWebViewConfiguration = {
+    private lazy var sibilantDetailRixView: WKWebViewConfiguration = {
         let LEALResonantSetupColorix = WKWebViewConfiguration()
         LEALResonantSetupColorix.allowsInlineMediaPlayback = true
         LEALResonantSetupColorix.mediaTypesRequiringUserActionForPlayback = []
@@ -46,7 +46,14 @@ class PerformMomentController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
+        let LEALlayersel = CAGradientLayer()
+        self.navigationController?.navigationBar.isHidden = true
+        LEALlayersel.colors = [UIColor(red: 0.32, green: 0.09, blue: 0.43, alpha: 1).cgColor, UIColor(red: 0.07, green: 0.04, blue: 0.23, alpha: 1).cgColor]
+        LEALlayersel.locations = [0, 1]
+        LEALlayersel.frame = view.bounds
+        LEALlayersel.startPoint = CGPoint(x: 0.58, y: 0)
+        LEALlayersel.endPoint = CGPoint(x: 1, y: 1)
+        view.layer.addSublayer(LEALlayersel)
         LEALAssembleSonicEnginelorix()
         LEALSynchronizeVocalInterfacelorix()
         
@@ -60,7 +67,7 @@ class PerformMomentController: UIViewController {
     }
     
     private func LEALAssembleSonicEnginelorix() {
-        LEALVocalCanvaslorix = WKWebView(frame: LEALVibeBoundsBufferlorix, configuration: LEALWaveformConfiglorix)
+        LEALVocalCanvaslorix = WKWebView(frame: LEALVibeBoundsBufferlorix, configuration: sibilantDetailRixView)
         LEALVocalCanvaslorix?.navigationDelegate = self
         LEALVocalCanvaslorix?.backgroundColor = .clear
         LEALVocalCanvaslorix?.scrollView.contentInsetAdjustmentBehavior = .never
@@ -108,7 +115,7 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
         let LEALDelayPulseColorix = 2.0
         DispatchQueue.main.asyncAfter(deadline: .now() + LEALDelayPulseColorix) { [weak self] in
             self?.LEALVocalCanvaslorix?.isHidden = false
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: false, message: "", delay: 0)
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "", delay: 0)
             self?.LEALInjectSonicDitheringlorix(input: 44100)
         }
     }
@@ -124,7 +131,7 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
             }
         case "lorixaudioTone":
             if let LEALExpressionlorix = LEALPulseBodylorix as? String {
-                let LEALNextStageColorix = PerformMomentController(stageWave: .sceneMaker, streetSoul: LEALExpressionlorix)
+                let LEALNextStageColorix = PerformMomentController(plosiveBurstLor: .rhythmicAcousticLor, aspirate: LEALExpressionlorix)
                 self.navigationController?.pushViewController(LEALNextStageColorix, animated: true)
             }
         case "lobeatPitchrix", "loglideSoundrix":
@@ -157,8 +164,8 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
     
     private func LEALPurgeSonicCachelorix() {
         let LEALRegistryCleanerlorix = {
-            LEALVisualEchoPulseColorix.LEALStreetTonePulseColorix = nil
-            LEALVisualEchoPulseColorix.LEALSceneEnergyPulseColorix = nil
+            LEALAcalSignatureLorrix.subharmonicToneRix = nil
+            LEALAcalSignatureLorrix.palatalFrictionLor = nil
         }
         LEALRegistryCleanerlorix()
         LEALSolidifyBufferlorix.removeAll()

@@ -84,12 +84,19 @@ class LEALEventGridCollectionCelllorix: UICollectionViewCell {
         ])
     }
     
-    func LEALRenderEventVisualorix(_ model: LEALEventPulseModellorix) {
-        LEALVibeTitlelorix.text = model.LEALEventTitlelorix
+    func LEALRenderEventVisualorix(_ model: Dictionary<String,Any>) {
+        if let lorix = model["veinSoundLor"] as? String {
+            LEALPosterVisualorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: lorix)
+        }
+        LEALVibeTitlelorix.text = model["sonicTideRix"] as? String
       
         LEALParticipantStacklorix.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        guard  let actilive = model["rhythmicMuscleRix"] as? Array<Dictionary<String,Any>> else {return}
         
-        for _ in 0..<3 {
+        LEALVibeCountLabellorix.text = "\(actilive.count ) +"
+       
+        
+        for (d,item) in actilive.enumerated() {
             let LEALMiniAvatarColorix = UIImageView()
             LEALMiniAvatarColorix.backgroundColor = .gray
             LEALMiniAvatarColorix.layer.cornerRadius = 12
@@ -97,6 +104,7 @@ class LEALEventGridCollectionCelllorix: UICollectionViewCell {
             LEALMiniAvatarColorix.layer.borderColor = UIColor.black.cgColor
             LEALMiniAvatarColorix.clipsToBounds = true
             LEALMiniAvatarColorix.widthAnchor.constraint(equalToConstant: 24).isActive = true
+            LEALMiniAvatarColorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: item["boneSonicLor"] as? String)
             LEALParticipantStacklorix.addArrangedSubview(LEALMiniAvatarColorix)
         }
     }

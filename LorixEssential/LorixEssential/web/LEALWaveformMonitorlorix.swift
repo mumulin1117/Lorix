@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+//loading
 class LEALWaveformMonitorlorix: UIView {
     
     static let LEALVisualInflowlorix = LEALWaveformMonitorlorix()

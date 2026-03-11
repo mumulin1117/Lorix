@@ -17,6 +17,7 @@ struct LEALUtilityPulseModellorix {
     let LEALUtilityTitlelorix: String
 }
 class LEALUserStagelViewController: UIViewController {
+   private var LEAcraftAura = Dictionary<String,Any>()
     
     private var LEALProfileCollectionlorix: UICollectionView!
     private let LEALTopVocalBackgroundlorix = UIImageView()
@@ -27,6 +28,8 @@ class LEALUserStagelViewController: UIViewController {
         LEALInitializeSonicFoundationlorix()
         LEALAssembleRhythmNodelorix()
         LEALRequestProfileSyncColorix()
+        
+        LEALFetchRemoteSynchronizelorix()
     }
     
     private func LEALInitializeSonicFoundationlorix() {
@@ -103,6 +106,28 @@ class LEALUserStagelViewController: UIViewController {
         ]
         LEALProfileCollectionlorix.reloadData()
     }
+   
+    private func pushToPerformMoment(with stage: LEALAArtbeatSenseRixlorix) {
+        let Lealvc = PerformMomentController(plosiveBurstLor: stage)
+        Lealvc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(Lealvc, animated: true)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let stages: [LEALAArtbeatSenseRixlorix] = [
+            .sonicTideRix, .flowVocalLor, .waveRhythmLor, .vocalPulsationLor, .beatFrequencyRix
+        ]
+        
+        if indexPath.row < stages.count {
+            pushToPerformMoment(with: stages[indexPath.row])
+        }
+    }
+
+    @objc func juaoipg()           { pushToPerformMoment(with: .audioHeartLor) }
+    @objc func attensionLealMy()    { pushToPerformMoment(with: .beatSoulRix) }
+    @objc func MyrealattensionLeal() { pushToPerformMoment(with: .rhythmSpiritLor) }
+    @objc func MyLiakoLealMy()      { pushToPerformMoment(with: .soundEssenceRix) }
+    @objc func editoipg()           { pushToPerformMoment(with: .rhythmAmplitudeLor) }
 }
 
 extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -119,6 +144,18 @@ extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionVi
         guard let LEALSectionTypelorix = LEALProfileSectionlorix(rawValue: indexPath.section) else { return UICollectionViewCell() }
         if LEALSectionTypelorix == .LEALVocalIdentitylorix {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALIdentityPulseCelllorix", for: indexPath) as! LEALIdentityPulseCelllorix
+            if let avavtoe =  LEAcraftAura[ "techniqueRefinementRix"] as? String{
+                LEALCelllorix.LEALAvatarVisualNodeColorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: avavtoe)
+            }
+            
+            LEALCelllorix.LEALNamePulseLabellorix.text = LEAcraftAura[ "techniqueRefinementRix"] as? String
+            LEALCelllorix.LEALCoinBalancePlateColorix.addTarget(self, action: #selector(juaoipg), for: .touchUpInside)
+            
+            LEALCelllorix.attensionLealMy?.addTarget(self, action: #selector(juaoipg), for: .touchUpInside)
+            LEALCelllorix.MyrealattensionLeal?.addTarget(self, action: #selector(MyrealattensionLeal), for: .touchUpInside)
+            LEALCelllorix.MyLiakoLealMy?.addTarget(self, action: #selector(MyLiakoLealMy), for: .touchUpInside)
+            LEALCelllorix.MyLiakoLealMy?.addTarget(self, action: #selector(MyLiakoLealMy), for: .touchUpInside)
+            LEALCelllorix.LEALEditPencilTriggerColorix.addTarget(self, action: #selector(editoipg), for: .touchUpInside)
             return LEALCelllorix
         } else {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALUtilityPulseCelllorix", for: indexPath) as! LEALUtilityPulseCelllorix
@@ -127,9 +164,39 @@ extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let LEALSubSonicVClorix = UIViewController()
-        LEALSubSonicVClorix.view.backgroundColor = .black
-        self.navigationController?.pushViewController(LEALSubSonicVClorix, animated: true)
+    
+    @objc private func LEALFetchRemoteSynchronizelorix() {
+        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+        
+        var LEALPath = ""
+        
+        var leaPara = Dictionary<String,Any>()
+        
+        LEALPath = "/hrbkkmjtjbnzzznz/grpxiywgzsk"
+        leaPara = ["rhythmicInstinctLor":LEALAcalSignatureLorrix.subharmonicToneRix]
+        
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: LEALPath, lungCapacityLor: leaPara) { rhythmicStemLor in
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+          
+            guard let trendWeave = rhythmicStemLor as? [String: Any],
+                  let craftAura = trendWeave["data"] as? Dictionary<String,Any>
+            else {
+                return
+            }
+           
+            self.LEAcraftAura = craftAura
+            
+        } articulationPointLor: { vocalCoreLor in
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+          
+        }
+
+        
+        
+        
+        
+        
     }
+    
+    
 }

@@ -15,14 +15,26 @@ class LEALCommunityViewController: UIViewController {
         return bauiod
         
     }()
+    lazy var LEALDAdd: UIButton = {
+        let EALDbutton = UIButton()
+        EALDbutton.setImage(UIImage.init(named: "cireldLes"), for: .normal)
+        EALDbutton.translatesAutoresizingMaskIntoConstraints = false
+        return EALDbutton
+    }()
     
     lazy var addCiref: UIButton = {
         let EALDbutton = UIButton()
         EALDbutton.setImage(UIImage.init(named: "addCiref"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
+        EALDbutton.addTarget(self, action: #selector(addCirefTolayer), for: .touchUpInside)
         return EALDbutton
     }()
     
+   @objc func addCirefTolayer() {
+        let ilser = PerformMomentController.init(plosiveBurstLor: .beatPulseRix)
+        ilser.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(ilser, animated: true)
+    }
     
     private func LEALCreatePulseFeedSectionlorix() -> NSCollectionLayoutSection {
         let LEALPulseItemSizelorix = NSCollectionLayoutSize(
@@ -52,17 +64,7 @@ class LEALCommunityViewController: UIViewController {
                 trailing: 15
             )
         
-        let LEALHeaderSizelorix = NSCollectionLayoutSize(
-                widthDimension: .fractionalWidth(1.0),
-                heightDimension: .absolute(60)
-            )
-            let LEALHeaderlorix = NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: LEALHeaderSizelorix,
-                elementKind: UICollectionView.elementKindSectionHeader,
-                alignment: .top
-            )
-        LEALHeaderlorix.pinToVisibleBounds = true
-            LEALPulseSectionlorix.boundarySupplementaryItems = [LEALHeaderlorix]
+       
             
             return LEALPulseSectionlorix
         
@@ -85,6 +87,19 @@ class LEALCommunityViewController: UIViewController {
         
         LEALSectionlorix.orthogonalScrollingBehavior = .continuous
         LEALSectionlorix.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 20, trailing: 10)
+        
+        let LEALHeaderSizelorix = NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(60)
+            )
+            let LEALHeaderlorix = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: LEALHeaderSizelorix,
+                elementKind: UICollectionView.elementKindSectionFooter,
+                alignment: .bottom
+            )
+        LEALHeaderlorix.pinToVisibleBounds = true
+        LEALSectionlorix.boundarySupplementaryItems = [LEALHeaderlorix]
+        
         return LEALSectionlorix
     }
     
@@ -120,10 +135,20 @@ class LEALCommunityViewController: UIViewController {
             LEALtComoptitle.heightAnchor.constraint(equalToConstant: 37)
         ])
         
-        view.addSubview(addCiref)
+        
         LEALAssembleAcousticEnvironmentlorix()
         LEALInitiateRhythmSession()
         LEALInitiateDataFetchlori()
+        
+        view.addSubview(addCiref)
+        NSLayoutConstraint.activate([
+            
+            
+            addCiref.widthAnchor.constraint(equalToConstant: 94),
+            addCiref.heightAnchor.constraint(equalToConstant: 65),
+            addCiref.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-8),
+            addCiref.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80)
+        ])
     }
     
     private func LEALAssembleAcousticEnvironmentlorix() {
@@ -141,7 +166,7 @@ class LEALCommunityViewController: UIViewController {
         LEALMainDisplayViewlorix.register(LEALPulseFeedCelllorix.self, forCellWithReuseIdentifier: "LEALPulseFeedCelllorix")
         LEALMainDisplayViewlorix.translatesAutoresizingMaskIntoConstraints = false
         
-        LEALMainDisplayViewlorix.register(LEALCategoryHeaderlorixView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "LEALCategoryHeaderlorixView")
+        LEALMainDisplayViewlorix.register(LEALCategoryHeaderlorixView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "LEALCategoryHeaderlorixView")
         
         view.addSubview(LEALMainDisplayViewlorix)
   
@@ -152,10 +177,7 @@ class LEALCommunityViewController: UIViewController {
             LEALMainDisplayViewlorix.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             LEALMainDisplayViewlorix.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            addCiref.widthAnchor.constraint(equalToConstant: 94),
-            addCiref.heightAnchor.constraint(equalToConstant: 65),
-            addCiref.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-8),
-            addCiref.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80)
+          
         ])
     }
     
@@ -189,9 +211,14 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
             let LEALPulseCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALPulseFeedCelllorix", for: indexPath) as! LEALPulseFeedCelllorix
             let LEALContentDatalorix = LEALMainPulseFeedlorix[indexPath.item]
             LEALPulseCelllorix.LEALConfigurePulseCelllorix(LEALContentDatalorix, ishot: self.LEALActiveCategorylorix == 0)
+            LEALPulseCelllorix.LEALDAdd.tag = indexPath.row
+            LEALPulseCelllorix.LEALDAdd.addTarget(self, action: #selector(withIneter(uedg:) ), for: .touchUpInside)
+            
+            LEALPulseCelllorix.LEALMoreOptionslorix.addTarget(self, action: #selector(LEALAlertYui), for: .touchUpInside)
             return LEALPulseCelllorix
         }
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
@@ -200,15 +227,20 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
             pureFilserpick(userLEAL: LEALSelectedEcholorix)
         } else {
             let LEALSelectedPulselorix = LEALMainPulseFeedlorix[indexPath.item]["spatialAwarenessLor"] as? Int ?? 0
-            let ilser = PerformMomentController.init(stageWave: .cityEcho,streetSoul: "\(LEALSelectedPulselorix)")
+            let ilser = PerformMomentController.init(plosiveBurstLor: .vocalNatureLor,aspirate: "\(LEALSelectedPulselorix)")
             ilser.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(ilser, animated: true)
         }
     }
     
-    
+    @objc func withIneter(uedg:UIButton)  {
+        if let id =  LEALMainPulseFeedlorix[uedg.tag]["beatCompositionRix"] as? Int{
+            self.pureFilserpick(userLEAL: id)
+        }
+        
+    }
     func pureFilserpick(userLEAL: Int) {
-        let ilser = PerformMomentController.init(stageWave: .urbanPerformer,streetSoul: "\(userLEAL)")
+        let ilser = PerformMomentController.init(plosiveBurstLor: .beatAudioLor,aspirate: "\(userLEAL)")
         ilser.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(ilser, animated: true)
     }
@@ -216,7 +248,7 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionFooter {
             let LEALHeaderlorix = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "LEALCategoryHeaderlorixView", for: indexPath) as! LEALCategoryHeaderlorixView
             LEALHeaderlorix.LEALActionCallbacklorix = { [weak self] LEALTaglorix in
                 self?.LEALCategoryDidSwitchlorix(LEALTaglorix)
@@ -226,7 +258,6 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
         return UICollectionReusableView()
     }
     
-    // 修改原有的方法，由按钮 Tag 触发
     private func LEALCategoryDidSwitchlorix(_ LEALTaglorix: Int) {
         self.LEALActiveCategorylorix = LEALTaglorix
        
@@ -237,11 +268,11 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
 
 
 extension LEALCommunityViewController{
-    //用户
+    
     @objc private func LEALInitiateRhythmSession() {
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
         
-        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/rqhazshz/mwdlfinpresrggf", creativeMoment: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/rqhazshz/mwdlfinpresrggf", lungCapacityLor: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
@@ -252,7 +283,7 @@ extension LEALCommunityViewController{
   
             self.LEALTopEchoListlorix = craftAura
             self.LEALMainDisplayViewlorix.reloadSections(IndexSet.init(integer: 0))
-        } urbanBeat: { vocalCoreLor in
+        } articulationPointLor: { vocalCoreLor in
 
           
         }
@@ -267,7 +298,7 @@ extension LEALCommunityViewController{
     
     @objc private func LEALInitiateDataFetchlori() {
         
-        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/mclnmqtgoz/ryfsmzxhbn", creativeMoment: ["sonicDraftRix":"64343767","frequencyResponseLor":1,"dynamicRangeRix":20,"signalPurityLor":LEALActiveCategorylorix]) { rhythmicStemLor in
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/mclnmqtgoz/ryfsmzxhbn", lungCapacityLor: ["sonicDraftRix":"64343767","frequencyResponseLor":1,"dynamicRangeRix":20,"rhythmicCadenceLor":LEALActiveCategorylorix]) { rhythmicStemLor in
              guard let trendWeave = rhythmicStemLor as? [String: Any],
                   let craftAura = trendWeave["data"] as? Array<[String: Any]>
             else {
@@ -276,7 +307,7 @@ extension LEALCommunityViewController{
   
             self.LEALMainPulseFeedlorix = craftAura
             self.LEALMainDisplayViewlorix.reloadSections(IndexSet.init(integer: 1))
-        } urbanBeat: { vocalCoreLor in
+        } articulationPointLor: { vocalCoreLor in
            
         }
 

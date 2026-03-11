@@ -14,18 +14,33 @@ class LEALDiscoverExchangeViewController: UIViewController {
         return bauiod
         
     }()
+    
+    
+    lazy var addCiref: UIButton = {
+        let EALDbutton = UIButton()
+        EALDbutton.setImage(UIImage.init(named: "addCiref"), for: .normal)
+        EALDbutton.translatesAutoresizingMaskIntoConstraints = false
+        EALDbutton.addTarget(self, action: #selector(addCirefTolayer), for: .touchUpInside)
+        return EALDbutton
+    }()
+    
+   @objc func addCirefTolayer() {
+        let ilser = PerformMomentController.init(plosiveBurstLor: .rhythmicRefractionLor)
+        ilser.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(ilser, animated: true)
+    }
+    
     private enum LEALExchangeMode { case message, event }
     private var LEALCurrentStateExchange: LEALExchangeMode = .message
     
-//    private let LEALHeaderTitleVisualorix = UIImageView()
     private let LEALSegmentedHublorix = UIView()
     private let LEALMessageToggleBtnlorix = UIButton()
     private let LEALEventToggleBtnlorix = UIButton()
     
     private var LEALMainExchangeCollectionlorix: UICollectionView!
     
-    private var LEALMessageSourceInfolorix: [LEALSignalMessagelorix] = []
-    private var LEALEventSourceInfolorix: [LEALEventPulseModellorix] = []
+    private var LEALMessageSourceInfolorix: Array<Dictionary<String,Any>> = Array<Dictionary<String,Any>>()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +75,8 @@ class LEALDiscoverExchangeViewController: UIViewController {
         view.addSubview(LEALSegmentedHublorix)
         LEALAssembleCollectionNodelorix()
         LEALConfigureToggleSystemlorix()
+        
+        
     
     }
     private func LEALAssembleCollectionNodelorix() {
@@ -143,12 +160,17 @@ class LEALDiscoverExchangeViewController: UIViewController {
         LEALStackHublorix.distribution = .fillEqually
         LEALStackHublorix.translatesAutoresizingMaskIntoConstraints = false
         LEALSegmentedHublorix.addSubview(LEALStackHublorix)
-        
+        view.addSubview(self.addCiref)
         NSLayoutConstraint.activate([
             LEALStackHublorix.leadingAnchor.constraint(equalTo: LEALSegmentedHublorix.leadingAnchor),
             LEALStackHublorix.trailingAnchor.constraint(equalTo: LEALSegmentedHublorix.trailingAnchor),
             LEALStackHublorix.topAnchor.constraint(equalTo: LEALSegmentedHublorix.topAnchor),
             LEALStackHublorix.bottomAnchor.constraint(equalTo: LEALSegmentedHublorix.bottomAnchor),
+            
+            addCiref.widthAnchor.constraint(equalToConstant: 94),
+            addCiref.heightAnchor.constraint(equalToConstant: 65),
+            addCiref.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-8),
+            addCiref.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -80)
         ])
         
         LEALMessageToggleBtnlorix.addTarget(self, action: #selector(LEALDidSwitchToMessagelorix), for: .touchUpInside)
@@ -167,33 +189,108 @@ class LEALDiscoverExchangeViewController: UIViewController {
      
         LEALMainExchangeCollectionlorix.setCollectionViewLayout(LEALMainExchangeCollectionlorix.collectionViewLayout, animated: true)
        
-        LEALMainExchangeCollectionlorix.reloadData()
+        LEALFetchRemoteSynchronizelorix()
     }
     
-    private func LEALFetchRemoteSynchronizelorix() {
-       
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.LEALMessageSourceInfolorix = (0...5).map { _ in LEALSignalMessagelorix(LEALSenderIdlorix: "1", LEALSenderNamelorix: "Liora", LEALAvatarUrllorix: "", LEALLastPhaselorix: "Sounds good.", LEALTimestampTextlorix: "09:20 AM", LEALUnreadPulseCountlorix: 0) }
-            self.LEALEventSourceInfolorix = (0...5).map { _ in LEALEventPulseModellorix(LEALEventIdlorix: "2", LEALEventTitlelorix: "Mic Show", LEALCoverVisuallorix: "", LEALParticipantPreviewslorix: [], LEALTotalVibeslorix: "451+") }
-            self.LEALMainExchangeCollectionlorix.reloadData()
-        }
-    }
+    
 }
 
 extension LEALDiscoverExchangeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return LEALCurrentStateExchange == .message ? LEALMessageSourceInfolorix.count : LEALEventSourceInfolorix.count
+        return LEALMessageSourceInfolorix.count
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if LEALCurrentStateExchange == .message {
+            
+           
+            if let learID = LEALMessageSourceInfolorix[indexPath.row]["nanoBeatLor"] as? Int{
+                let pagestr = PerformMomentController.init(plosiveBurstLor: .rhythmicEarLor,aspirate: "\(learID)")
+                
+                pagestr.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(pagestr, animated: true)
+                
+                return
+            }
+           
+            
+        }else{
+            if let learID = LEALMessageSourceInfolorix[indexPath.row]["waveRhythmLor"] as? Int{
+                let pagestr = PerformMomentController.init(plosiveBurstLor: .acousticPrismRix,aspirate: "\(learID)")
+                
+                pagestr.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(pagestr, animated: true)
+            }
+            
+        }
+        
+        
+    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if LEALCurrentStateExchange == .message {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALMessageCelllorix", for: indexPath) as! LEALMessageInflowCollectionCelllorix
-            LEALCelllorix.LEALRenderPulseInfolorix(LEALMessageSourceInfolorix[indexPath.item])
+            LEALCelllorix.LEALRenderPulseInfolorix(LEALMessageSourceInfolorix[indexPath.row])
             return LEALCelllorix
         } else {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALEventCelllorix", for: indexPath) as! LEALEventGridCollectionCelllorix
-            LEALCelllorix.LEALRenderEventVisualorix(LEALEventSourceInfolorix[indexPath.item])
+            LEALCelllorix.LEALRenderEventVisualorix(LEALMessageSourceInfolorix[indexPath.row])
             return LEALCelllorix
         }
     }
+}
+
+
+
+extension LEALDiscoverExchangeViewController{
+    
+    @objc private func LEALFetchRemoteSynchronizelorix() {
+        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+        
+        var LEALPath = ""
+        
+        var leaPara = ["":""]
+        
+        if LEALCurrentStateExchange == .message {
+            LEALPath = "/tofeofuzodlz/mdgwkiamsk"
+            leaPara = ["soundScaffoldLor":"64343767"]
+        }else{
+            LEALPath = "/rkxeagzbveqsudz/ybktuflugzarc"
+            leaPara = ["beatAudioLor":"64343767"]
+            
+        }
+        
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: LEALPath, lungCapacityLor: leaPara) { rhythmicStemLor in
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+          
+            guard let trendWeave = rhythmicStemLor as? [String: Any],
+                  let craftAura = trendWeave["data"] as? Array<[String: Any]>
+            else {
+                return
+            }
+            if self.LEALCurrentStateExchange == .message {
+                self.LEALMessageSourceInfolorix = craftAura.map { dix in
+                    
+                    if let LEALeadt = (dix["vocalGrainLor"] as? Array<[String:Any]>)?.first{
+                        LEALeadt
+                    }else{[:]}
+                    
+                    
+                }
+            }else{
+                self.LEALMessageSourceInfolorix = craftAura
+            }
+            
+            
+            self.LEALMainExchangeCollectionlorix.reloadData()
+        } articulationPointLor: { vocalCoreLor in
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+          
+        }
+
+        
+        
+        
+        
+        
+    }
+    
 }

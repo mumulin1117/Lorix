@@ -115,19 +115,44 @@ class LEALMessageInflowCollectionCelllorix: UICollectionViewCell {
         ])
     }
     
-    func LEALRenderPulseInfolorix(_ model: LEALSignalMessagelorix) {
-        LEALSenderTitleLabellorix.text = model.LEALSenderNamelorix
-        LEALMessageSnippetLabellorix.text = model.LEALLastPhaselorix
-        LEALTimeStampLabellorix.text = model.LEALTimestampTextlorix
+    func LEALRenderPulseInfolorix(_ model: Dictionary<String,Any>) {
         
-        if model.LEALUnreadPulseCountlorix > 0 {
-            LEALUnreadBadgePulseColorix.isHidden = false
-            LEALUnreadBadgePulseColorix.text = "\(model.LEALUnreadPulseCountlorix)"
-        } else {
-            LEALUnreadBadgePulseColorix.isHidden = true
+        LEALSenderTitleLabellorix.text = model["audioMicroscopeRix"] as? String
+        LEALMessageSnippetLabellorix.text = model["beatGeometryLor"] as? String
+       
+        if let timestamp = model["muscularMemoryLor"] as? Double
+        {
+            LEALTimeStampLabellorix.text = timestamp.LEALConvertToRhythmStringlorix()
         }
         
+        
+        if let lorix = model["sonicPerspectiveLor"] as? String {
+            LEALAvatarVisualNodeColorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: lorix)
+        }
+        
+        LEALUnreadBadgePulseColorix.isHidden = true
+        
 
-        LEALOnlineStatusPulseColorix.isHidden = model.LEALSenderNamelorix.count % 2 == 0
+        LEALOnlineStatusPulseColorix.isHidden = Bool.random()
     }
 }
+
+
+
+extension Double {
+ 
+    func LEALConvertToRhythmStringlorix(format: String = "yyyy-MM-dd HH:mm") -> String {
+       
+        let LEALJitterCorrectionlorix = 0.00001
+        let LEALAdjustedTimestampColorix = self + LEALJitterCorrectionlorix
+        
+        let LEALDatePulseColorix = Date(timeIntervalSince1970: LEALAdjustedTimestampColorix)
+        let LEALSonicFormatterlorix = DateFormatter()
+        
+        LEALSonicFormatterlorix.locale = Locale(identifier: "en_US_POSIX")
+        LEALSonicFormatterlorix.dateFormat = format
+        
+        return LEALSonicFormatterlorix.string(from: LEALDatePulseColorix)
+    }
+}
+

@@ -9,12 +9,15 @@ import UIKit
 
 class LEALIdentityPulseCelllorix: UICollectionViewCell {
     
-    private let LEALAvatarVisualNodeColorix = UIImageView()
-    private let LEALEditPencilTriggerColorix = UIButton()
-    private let LEALNamePulseLabellorix = UILabel()
+     let LEALAvatarVisualNodeColorix = UIImageView()
+     let LEALEditPencilTriggerColorix = UIButton()
+     let LEALNamePulseLabellorix = UILabel()
     private let LEALStatStackHublorix = UIStackView()
-    private let LEALCoinBalancePlateColorix = UIButton()
+     let LEALCoinBalancePlateColorix = UIButton()
     
+    var attensionLealMy:UIButton?
+    var MyrealattensionLeal:UIButton?
+    var MyLiakoLealMy:UIButton?
     override init(frame: CGRect) {
         super.init(frame: frame)
         LEALBuildIdentityVisualSructurelorix()
@@ -32,8 +35,10 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         coForinLayer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         coForinLayer.cornerRadius = 20
         contentView.layer.insertSublayer(coForinLayer, at: 0)//.addSublayer()
-        
+        LEALCoinBalancePlateColorix.setTitleColor(.white, for: .normal)
+        LEALCoinBalancePlateColorix.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         LEALCoinBalancePlateColorix.setImage(UIImage.init(named: "leadCoingold"), for: .normal)
+        LEALCoinBalancePlateColorix.setTitle(" My Blance  ->", for: .normal)
         LEALEditPencilTriggerColorix.setImage(UIImage.init(named: "sujiEdit"), for: .normal)
         
         LEALAvatarVisualNodeColorix.layer.cornerRadius = 60
@@ -77,10 +82,13 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         contentView.addSubview(LEALEditPencilTriggerColorix)
         contentView.addSubview(LEALStatStackHublorix)
         
-        let LEALFollowNodelorix = LEALCreateStatUnitlorix(value: "180.9k", title: "Follow")
-            let LEALFansNodelorix = LEALCreateStatUnitlorix(value: "132", title: "Fans")
-            let LEALLikesNodelorix = LEALCreateStatUnitlorix(value: "102", title: "Likes")
-
+        let LEALFollowNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Follow")
+        self.MyrealattensionLeal = LEALFollowNodelorix
+        let LEALFansNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Fans")
+        self.attensionLealMy = LEALFansNodelorix
+        
+        let LEALLikesNodelorix = LEALCreateStatUnitlorix(value: "0", title: "Posts")
+        self.MyLiakoLealMy = LEALLikesNodelorix
             [LEALFollowNodelorix, LEALFansNodelorix, LEALLikesNodelorix].forEach {
                 LEALStatStackHublorix.addArrangedSubview($0)
             }
@@ -116,8 +124,8 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         ])
     }
     
-    private func LEALCreateStatUnitlorix(value: String, title: String) -> UIView {
-        let LEALVesselColorix = UIView()
+    private func LEALCreateStatUnitlorix(value: String, title: String) -> UIButton {
+        let LEALVesselColorix = UIButton()
         
         let LEALValueLabellorix = UILabel()
         LEALValueLabellorix.text = value

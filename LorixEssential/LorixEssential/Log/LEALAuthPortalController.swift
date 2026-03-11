@@ -119,9 +119,10 @@ class LEALAuthPortalController: UIViewController {
         [LEALPrivacyLinkBtn, LEALTermsLinkBtn].forEach {
             $0.titleLabel?.font = .systemFont(ofSize: 11)
             $0.setTitleColor(UIColor(red: 0.86, green: 0.95, blue: 0.15,alpha:1.000000), for: .normal)
-            $0.addTarget(self, action: #selector(LEALShowLegalVault), for: .touchUpInside)
+            
         }
-        
+        LEALPrivacyLinkBtn.addTarget(self, action: #selector(LEALShowLegalVault), for: .touchUpInside)
+        LEALTermsLinkBtn.addTarget(self, action: #selector(LEALShowLegalVault), for: .touchUpInside)
         LEALLegalFooterStack.axis = .horizontal
         LEALLegalFooterStack.spacing = 8
         LEALLegalFooterStack.alignment = .center
@@ -204,7 +205,7 @@ class LEALAuthPortalController: UIViewController {
     }
     
     @objc private func LEALShowLegalVault(sender: UIButton) {
-        let LEALViewer = PerformMomentController.init(stageWave: LEALAArtPerceptionlorix.streetVibe,urbanJourneyer:true)
+        let LEALViewer = PerformMomentController.init(plosiveBurstLor:sender == self.LEALPrivacyLinkBtn ? LEALAArtbeatSenseRixlorix.soundWavelengthRix :LEALAArtbeatSenseRixlorix.vocalSpectrumLor ,NoiseLor:true)
        
         self.present(LEALViewer, animated: true)
     }
@@ -237,7 +238,7 @@ class LEALAuthPortalController: UIViewController {
         
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
         
-        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/eqqabz/fqmbcweb", creativeMoment: ["audioLeafLor":LEALEmail,"beatBloomRix":LEALEmail,"rhythmHarvestLor":"64343767"]) { rhythmicStemLor in
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/eqqabz/fqmbcweb", lungCapacityLor: ["audioLeafLor":LEALEmail,"beatBloomRix":LEALEmail,"rhythmHarvestLor":"64343767"]) { rhythmicStemLor in
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: false, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
@@ -251,13 +252,13 @@ class LEALAuthPortalController: UIViewController {
                 return
             }
        
-            LEALVisualEchoPulseColorix.LEALSceneEnergyPulseColorix = craftAura["vocalCoreLor"] as? String
-            LEALVisualEchoPulseColorix.LEALStreetTonePulseColorix = craftAura["audioPaletteLor"] as? Int
+            LEALAcalSignatureLorrix.palatalFrictionLor = craftAura["vocalCoreLor"] as? String
+            LEALAcalSignatureLorrix.subharmonicToneRix = craftAura["audioPaletteLor"] as? Int
             LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: "Log in successful!", on: self.view)
          
             LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
            
-        } urbanBeat: { vocalCoreLor in
+        } articulationPointLor: { vocalCoreLor in
 
             
             LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: false, message: vocalCoreLor.localizedDescription, on: self.view)

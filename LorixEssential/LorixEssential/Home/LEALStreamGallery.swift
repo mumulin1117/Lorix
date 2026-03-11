@@ -10,7 +10,7 @@ import Foundation
 
 class LEALStreamGallery: UIViewController, LEALioalHeaderDelegate {
     func pureFilserpick(userLEAL: Int) {
-        let ilser = PerformMomentController.init(stageWave: .urbanPerformer,streetSoul: "\(userLEAL)")
+        let ilser = PerformMomentController.init(plosiveBurstLor: .beatAudioLor,aspirate: "\(userLEAL)")
         ilser.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(ilser, animated: true)
     }
@@ -129,9 +129,9 @@ extension LEALStreamGallery: UICollectionViewDelegate, UICollectionViewDataSourc
         
      let isliva =   ((ai["beatGuideRix"] as? Int) == -1)
         
-        var pagestr = PerformMomentController.init(stageWave: .creativeMotion,streetSoul: "\(licaid)&userId=\(liuseidcaid)")
+        var pagestr = PerformMomentController.init(plosiveBurstLor: .acousticVisionRix,aspirate: "\(licaid)&userId=\(liuseidcaid)")
         if isliva == false {
-            pagestr = PerformMomentController.init(stageWave: .artFusion,streetSoul: "\(licaid)")
+            pagestr = PerformMomentController.init(plosiveBurstLor: .soundTouchRix,aspirate: "\(licaid)")
         }
         pagestr.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(pagestr, animated: true)
@@ -151,7 +151,7 @@ extension LEALStreamGallery: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     @objc func LEALGostremYui()  {
-        let pagestr = PerformMomentController.init(stageWave: .performMood)
+        let pagestr = PerformMomentController.init(plosiveBurstLor: .rhythmFeelLor)
         
         pagestr.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(pagestr, animated: true)
@@ -162,7 +162,7 @@ extension LEALStreamGallery: UICollectionViewDelegate, UICollectionViewDataSourc
 
 extension UIViewController{
     @objc func LEALAlertYui()  {//report
-        let pagestr = PerformMomentController.init(stageWave: .streetRhythm)
+        let pagestr = PerformMomentController.init(plosiveBurstLor: .vocalFlowRix)
         
         pagestr.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(pagestr, animated: true)
@@ -174,7 +174,7 @@ extension LEALStreamGallery{
     @objc private func LEALInitiateRhythmSession() {
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
         
-        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/rqhazshz/mwdlfinpresrggf", creativeMoment: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/rqhazshz/mwdlfinpresrggf", lungCapacityLor: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
             LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
@@ -185,7 +185,7 @@ extension LEALStreamGallery{
   
             self.LEALheader?.pureFilser = craftAura
             self.LEALheader?.LEALDashboardViewlori.reloadData()
-        } urbanBeat: { vocalCoreLor in
+        } articulationPointLor: { vocalCoreLor in
 
           
         }
@@ -200,7 +200,7 @@ extension LEALStreamGallery{
     
     @objc private func LEALInitiateDataFetchlori() {
         
-        LEALVisualEchoPulseColorix.LEALExecuteSonicRequestlorix(performLens: "/gcgwnuz/yrgdx", creativeMoment: ["audioExplorationLor":"64343767","rhythmicInnovationLor":1,"sonicDiscoveryRix":20]) { rhythmicStemLor in
+        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/gcgwnuz/yrgdx", lungCapacityLor: ["audioExplorationLor":"64343767","rhythmicInnovationLor":1,"sonicDiscoveryRix":20]) { rhythmicStemLor in
              guard let trendWeave = rhythmicStemLor as? [String: Any],
                   let craftAura = trendWeave["data"] as? Array<[String: Any]>
             else {
@@ -209,7 +209,7 @@ extension LEALStreamGallery{
   
             self.LEALLiveFeedCachelori = craftAura
             self.LEALDashboardViewlori.reloadData()
-        } urbanBeat: { vocalCoreLor in
+        } articulationPointLor: { vocalCoreLor in
            
         }
 

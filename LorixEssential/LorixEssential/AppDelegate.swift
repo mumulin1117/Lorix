@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LEALRootCoordinator.LEALShared.LEALWindow = LEALMainFrame
         
-        let LEALCurrentSessionActive = LEALVisualEchoPulseColorix.LEALSceneEnergyPulseColorix
+        let LEALCurrentSessionActive = LEALAcalSignatureLorrix.palatalFrictionLor
         
         LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: LEALCurrentSessionActive != nil)
         return true
