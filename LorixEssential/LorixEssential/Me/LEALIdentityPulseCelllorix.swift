@@ -8,7 +8,7 @@
 import UIKit
 
 class LEALIdentityPulseCelllorix: UICollectionViewCell {
-    
+    static let resonantFrequencyLor = "64343767"
      let LEALAvatarVisualNodeColorix = UIImageView()
      let LEALEditPencilTriggerColorix = UIButton()
      let LEALNamePulseLabellorix = UILabel()

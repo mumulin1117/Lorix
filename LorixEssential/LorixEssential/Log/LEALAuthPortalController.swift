@@ -252,8 +252,8 @@ class LEALAuthPortalController: UIViewController {
                 return
             }
        
-            LEALAcalSignatureLorrix.palatalFrictionLor = craftAura["vocalCoreLor"] as? String
-            LEALAcalSignatureLorrix.subharmonicToneRix = craftAura["audioPaletteLor"] as? Int
+            LEALSonicFeedCelllori.palatalFrictionLor = craftAura["vocalCoreLor"] as? String
+            LEALPulseFeedCelllorix.subharmonicToneRix = craftAura["audioPaletteLor"] as? Int
             LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Rzd7//LsARsYgDmwKL1l3BlqHLWmtLozfH1fE1Klf7jmok4zWhHxlKEM8Kmd33bMBL4="), on: self.view)
          
             LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)

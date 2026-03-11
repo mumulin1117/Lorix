@@ -24,7 +24,10 @@ struct LEALPulseContentlorix: Codable {
     let LEALCommentCountlorix: Int
 }
 class LEALPulseFeedCelllorix: UICollectionViewCell {
-    
+    static var subharmonicToneRix: Int? {
+        get { UserDefaults.standard.object(forKey: "audioPaletteLor") as? Int }
+        set { UserDefaults.standard.set(newValue, forKey: "audioPaletteLor") }
+    }
     private let LEALMainVisualImglorix = UIImageView()
     private let LEALAuthorInfolorix = UIImageView.init(image: LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "LEALAuthorInfolorix"))
     

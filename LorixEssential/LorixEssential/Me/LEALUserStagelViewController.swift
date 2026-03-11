@@ -164,39 +164,54 @@ extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionVi
         }
     }
     
+
+    
+    
+}
+extension LEALUserStagelViewController {
     
     @objc private func LEALFetchRemoteSynchronizelorix() {
-        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
         
-        var LEALPath = ""
+        let LEALSonicMonitorlorix = LEALWaveformMonitorlorix.LEALVisualInflowlorix
+        LEALSonicMonitorlorix.LEALBeginVocalSamplinglorix()
         
-        var leaPara = Dictionary<String,Any>()
+        let LEALTargetRouteColorix = "/hrbkkmjtjbnzzznz" + "/grpxiywgzsk"
         
-        LEALPath = "/hrbkkmjtjbnzzznz/grpxiywgzsk"
-        leaPara = ["rhythmicInstinctLor":LEALAcalSignatureLorrix.subharmonicToneRix]
+       
+        let LEALActiveMetricsColorix = [
+            "rhythmicInstinctLor": LEALPulseFeedCelllorix.subharmonicToneRix
+        ]
         
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: LEALPath, lungCapacityLor: leaPara) { rhythmicStemLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
-            guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Dictionary<String,Any>
-            else {
-                return
-            }
-           
-            self.LEAcraftAura = craftAura
+       
+        LEALSonicDataAdapterlorix.LEALSharedEnginelorix.LEALSyncSingleResonancePulseColorix(
+            path: LEALTargetRouteColorix,
+            metrics: LEALActiveMetricsColorix
+        ) { [weak self] LEALFeatureMaplorix in
             
-        } articulationPointLor: { vocalCoreLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
+            DispatchQueue.main.async {
+              
+                let LEALIsSuccesslorix = (LEALFeatureMaplorix != nil)
+                LEALSonicMonitorlorix.LEALTerminateResonancelorix(
+                    isPositive: LEALIsSuccesslorix,
+                    message: ""
+                )
+                
+                if let LEALFinalAuralorix = LEALFeatureMaplorix {
+                   
+                    self?.LEAcraftAura = LEALFinalAuralorix
+                    
+                    self?.LEALProfileCollectionlorix.reloadData()
+                    self?.LEALTriggerHapticEchoPulseColorix()
+                }
+            }
         }
-
-        
-        
-        
-        
-        
     }
-    
-    
+  
+    private func LEALTriggerHapticEchoPulseColorix() {
+        if #available(iOS 10.0, *) {
+            let LEALImpactlorix = UIImpactFeedbackGenerator(style: .light)
+            LEALImpactlorix.prepare()
+            LEALImpactlorix.impactOccurred()
+        }
+    }
 }

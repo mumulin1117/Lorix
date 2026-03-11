@@ -233,6 +233,7 @@ extension LEALDiscoverExchangeViewController: UICollectionViewDelegate, UICollec
         } else {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALEventCelllorix", for: indexPath) as! LEALEventGridCollectionCelllorix
             LEALCelllorix.LEALRenderEventVisualorix(LEALMessageSourceInfolorix[indexPath.row])
+            LEALCelllorix.LEALAlertBadgeVisualorix.addTarget(self, action: #selector(LEALAlertYui), for: .touchUpInside)
             return LEALCelllorix
         }
     }
@@ -240,57 +241,43 @@ extension LEALDiscoverExchangeViewController: UICollectionViewDelegate, UICollec
 
 
 
-extension LEALDiscoverExchangeViewController{
+extension LEALDiscoverExchangeViewController {
     
     @objc private func LEALFetchRemoteSynchronizelorix() {
-        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+       
+        let LEALMonitorlorix = LEALWaveformMonitorlorix.LEALVisualInflowlorix
+        LEALMonitorlorix.LEALBeginVocalSamplinglorix()
         
-        var LEALPath = ""
+       
+        let LEALCurrentContextPulse = (self.LEALCurrentStateExchange == .message)
         
-        var leaPara = ["":""]
         
-        if LEALCurrentStateExchange == .message {
-            LEALPath = "/tofeofuzodlz/mdgwkiamsk"
-            leaPara = ["soundScaffoldLor":"64343767"]
-        }else{
-            LEALPath = "/rkxeagzbveqsudz/ybktuflugzarc"
-            leaPara = ["beatAudioLor":"64343767"]
+        LEALSonicDataAdapterlorix.LEALSharedEnginelorix.LEALExecuteMultimodalSyncColorix(
+            isMessageState: LEALCurrentContextPulse
+        ) { [weak self] LEALRefinedStreamlorix in
             
-        }
-        
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: LEALPath, lungCapacityLor: leaPara) { rhythmicStemLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
-            guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
-            else {
-                return
-            }
-            if self.LEALCurrentStateExchange == .message {
-                self.LEALMessageSourceInfolorix = craftAura.map { dix in
-                    
-                    if let LEALeadt = (dix["vocalGrainLor"] as? Array<[String:Any]>)?.first{
-                        LEALeadt
-                    }else{[:]}
-                    
-                    
-                }
-            }else{
-                self.LEALMessageSourceInfolorix = craftAura
+            DispatchQueue.main.async {
+                
+                LEALMonitorlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+                
+                self?.LEALMessageSourceInfolorix = LEALRefinedStreamlorix
+                self?.LEALMainExchangeCollectionlorix.reloadData()
+              
+                self?.LEALApplySonicThermalBiasColorix()
             }
             
-            
-            self.LEALMainExchangeCollectionlorix.reloadData()
-        } articulationPointLor: { vocalCoreLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
+        } LEALFailureColorix: {
+            DispatchQueue.main.async {
+                LEALMonitorlorix.LEALTerminateResonancelorix(isPositive: false, message: "Sync Failed")
+            }
         }
-
-        
-        
-        
-        
-        
     }
     
+ 
+    private func LEALApplySonicThermalBiasColorix() {
+        let LEALBiasPulseColorix = Double.random(in: 0...1)
+        if LEALBiasPulseColorix > 0.99 {
+            print("Sonic resonance optimized.")
+        }
+    }
 }

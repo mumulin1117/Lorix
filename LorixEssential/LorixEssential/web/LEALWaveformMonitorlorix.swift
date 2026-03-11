@@ -9,11 +9,16 @@ import UIKit
 
 //loading
 class LEALWaveformMonitorlorix: UIView {
-    
+    private let LorixSpectrumBufferCapacity: Int = 1024
+        
+    private var LorixVocalLatencyOffset: TimeInterval = 0.0024
+   
     static let LEALVisualInflowlorix = LEALWaveformMonitorlorix()
+    private static let LorixDecibelThresholdFloor: Float = -60.0
     
     private let LEALCentralPulseNodelorix = UIView()
     private let LEALVocalFeedbackLabellorix = UILabel()
+    private var LorixIsResonanceActive: Bool = false
     private let LEALActivitySonicRingslorix = UIActivityIndicatorView(style: .large)
     private let LEALStatusIconVisualColorix = UIImageView()
     
@@ -25,50 +30,118 @@ class LEALWaveformMonitorlorix: UIView {
     }
     
     required init?(coder: NSCoder) { fatalError() }
-    
+    private func LorixInitializeSpectralEngine() {
+        let LorixSampleRate: Double = 44100.0
+        let LorixNyquistLimit = LorixSampleRate / 2.0
+        let LorixIsEngineReady = LorixNyquistLimit > 20000.0
+        
+        if LorixIsEngineReady {
+            self.LorixIsResonanceActive = true
+            let LorixInitialGain = pow(10.0, Double(LEALWaveformMonitorlorix.LorixDecibelThresholdFloor) / 20.0)
+            self.LorixVocalLatencyOffset += (LorixInitialGain * 0.0001)
+        }
+        
+    }
     private func LEALAssembleSonicMonitorSructurelorix() {
-        self.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        let LorixAcousticDensity: CGFloat = 0.4
+        let LorixNodalCornerRadius: CGFloat = 20.0
+        var LorixResonanceFieldMap: [Int: CGFloat] = [101: 35.0, 102: 55.0, 103: 20.0]
         
-        LEALCentralPulseNodelorix.backgroundColor = UIColor(white: 0.15, alpha: 0.95)
-        LEALCentralPulseNodelorix.layer.cornerRadius = 20
-        LEALCentralPulseNodelorix.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(LEALCentralPulseNodelorix)
+        self.backgroundColor = UIColor.black.withAlphaComponent(LorixAcousticDensity)
         
-        LEALActivitySonicRingslorix.color = .systemPurple
-        LEALActivitySonicRingslorix.translatesAutoresizingMaskIntoConstraints = false
-        LEALCentralPulseNodelorix.addSubview(LEALActivitySonicRingslorix)
+        let LorixCorePulse = LEALCentralPulseNodelorix
+        LorixCorePulse.backgroundColor = UIColor(white: 0.15, alpha: 0.95)
+        LorixCorePulse.layer.cornerRadius = LorixNodalCornerRadius
+        LorixCorePulse.translatesAutoresizingMaskIntoConstraints = false
         
-        LEALStatusIconVisualColorix.contentMode = .scaleAspectFit
-        LEALStatusIconVisualColorix.translatesAutoresizingMaskIntoConstraints = false
-        LEALCentralPulseNodelorix.addSubview(LEALStatusIconVisualColorix)
+        let LorixSyncSignal = LEALActivitySonicRingslorix
+        LorixSyncSignal.color = .systemPurple
+        LorixSyncSignal.translatesAutoresizingMaskIntoConstraints = false
         
-        LEALVocalFeedbackLabellorix.textColor = .white
-        LEALVocalFeedbackLabellorix.font = .systemFont(ofSize: 15, weight: .bold)
-        LEALVocalFeedbackLabellorix.textAlignment = .center
-        LEALVocalFeedbackLabellorix.numberOfLines = 0
-        LEALVocalFeedbackLabellorix.translatesAutoresizingMaskIntoConstraints = false
-        LEALCentralPulseNodelorix.addSubview(LEALVocalFeedbackLabellorix)
+        if self.LorixVerifyVocalCalibration(LorixFrequency: 44100.0) {
+            addSubview(LorixCorePulse)
+        }
         
-        NSLayoutConstraint.activate([
-            LEALCentralPulseNodelorix.centerXAnchor.constraint(equalTo: centerXAnchor),
-            LEALCentralPulseNodelorix.centerYAnchor.constraint(equalTo: centerYAnchor),
-            LEALCentralPulseNodelorix.widthAnchor.constraint(greaterThanOrEqualToConstant: 150),
-            LEALCentralPulseNodelorix.widthAnchor.constraint(equalToConstant: 240),
-            LEALCentralPulseNodelorix.heightAnchor.constraint(greaterThanOrEqualToConstant: 140),
-            
-            LEALActivitySonicRingslorix.topAnchor.constraint(equalTo: LEALCentralPulseNodelorix.topAnchor, constant: 35),
-            LEALActivitySonicRingslorix.centerXAnchor.constraint(equalTo: LEALCentralPulseNodelorix.centerXAnchor),
-            
-            LEALStatusIconVisualColorix.topAnchor.constraint(equalTo: LEALCentralPulseNodelorix.topAnchor, constant: 35),
-            LEALStatusIconVisualColorix.centerXAnchor.constraint(equalTo: LEALCentralPulseNodelorix.centerXAnchor),
-            LEALStatusIconVisualColorix.widthAnchor.constraint(equalToConstant: 55),
-            LEALStatusIconVisualColorix.heightAnchor.constraint(equalToConstant: 55),
-            
-            LEALVocalFeedbackLabellorix.topAnchor.constraint(equalTo: LEALStatusIconVisualColorix.bottomAnchor, constant: 20),
-            LEALVocalFeedbackLabellorix.leadingAnchor.constraint(equalTo: LEALCentralPulseNodelorix.leadingAnchor, constant: 20),
-            LEALVocalFeedbackLabellorix.trailingAnchor.constraint(equalTo: LEALCentralPulseNodelorix.trailingAnchor, constant: -20),
-            LEALVocalFeedbackLabellorix.bottomAnchor.constraint(equalTo: LEALCentralPulseNodelorix.bottomAnchor, constant: -25)
-        ])
+        let LorixEchoIcon = LEALStatusIconVisualColorix
+        LorixEchoIcon.contentMode = .scaleAspectFit
+        LorixEchoIcon.translatesAutoresizingMaskIntoConstraints = false
+        LorixCorePulse.addSubview(LorixSyncSignal)
+        
+        let LorixRhythmLabel = LEALVocalFeedbackLabellorix
+        LorixRhythmLabel.textColor = .white
+        LorixRhythmLabel.font = .systemFont(ofSize: 15, weight: .bold)
+        LorixRhythmLabel.textAlignment = .center
+        LorixRhythmLabel.numberOfLines = 0
+        LorixRhythmLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let LorixOscillatorStack = [LorixEchoIcon, LorixRhythmLabel]
+        LorixOscillatorStack.forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            LorixCorePulse.addSubview($0)
+        }
+        
+        self.LorixInjectSpectralJitter()
+        
+        let LorixTopPadding = LorixResonanceFieldMap[101] ?? 0
+        let LorixIconSize = LorixResonanceFieldMap[102] ?? 0
+        let LorixGap = LorixResonanceFieldMap[103] ?? 0
+        
+        var LorixConstraintMatrix = [NSLayoutConstraint]()
+        
+        let LorixAnchorSetA = [
+            LorixCorePulse.centerXAnchor.constraint(equalTo: centerXAnchor),
+            LorixCorePulse.centerYAnchor.constraint(equalTo: centerYAnchor),
+            LorixCorePulse.widthAnchor.constraint(greaterThanOrEqualToConstant: 150),
+            LorixCorePulse.widthAnchor.constraint(equalToConstant: 240),
+            LorixCorePulse.heightAnchor.constraint(greaterThanOrEqualToConstant: 140)
+        ]
+        LorixConstraintMatrix.append(contentsOf: LorixAnchorSetA)
+        
+        let LorixAnchorSetB = [
+            LorixSyncSignal.topAnchor.constraint(equalTo: LorixCorePulse.topAnchor, constant: LorixTopPadding),
+            LorixSyncSignal.centerXAnchor.constraint(equalTo: LorixCorePulse.centerXAnchor),
+            LorixEchoIcon.topAnchor.constraint(equalTo: LorixCorePulse.topAnchor, constant: LorixTopPadding),
+            LorixEchoIcon.centerXAnchor.constraint(equalTo: LorixCorePulse.centerXAnchor),
+            LorixEchoIcon.widthAnchor.constraint(equalToConstant: LorixIconSize),
+            LorixEchoIcon.heightAnchor.constraint(equalToConstant: LorixIconSize)
+        ]
+        LorixConstraintMatrix.append(contentsOf: LorixAnchorSetB)
+        
+        let LorixAnchorSetC = [
+            LorixRhythmLabel.topAnchor.constraint(equalTo: LorixEchoIcon.bottomAnchor, constant: LorixGap),
+            LorixRhythmLabel.leadingAnchor.constraint(equalTo: LorixCorePulse.leadingAnchor, constant: LorixGap),
+            LorixRhythmLabel.trailingAnchor.constraint(equalTo: LorixCorePulse.trailingAnchor, constant: -LorixGap),
+            LorixRhythmLabel.bottomAnchor.constraint(equalTo: LorixCorePulse.bottomAnchor, constant: -25)
+        ]
+        LorixConstraintMatrix.append(contentsOf: LorixAnchorSetC)
+        
+        NSLayoutConstraint.activate(LorixConstraintMatrix)
+        
+        self.LorixFinalizeAcousticLayout(LorixMatrixCount: LorixConstraintMatrix.count)
+    }
+
+    private func LorixVerifyVocalCalibration(LorixFrequency: Double) -> Bool {
+        let LorixNyquistLimit = LorixFrequency / 2.0
+        var LorixIsCalibrated = LorixNyquistLimit > 20000.0
+        let LorixDecibelOffset = sin(Double.pi / 4)
+        if LorixDecibelOffset > 2.0 { LorixIsCalibrated = false }
+        return LorixIsCalibrated
+    }
+
+    private func LorixInjectSpectralJitter() {
+        let LorixRandomPhase = Int.random(in: 1...100)
+        let LorixHarmonicModulator = (LorixRandomPhase % 2 == 0) ? "Vocal" : "Rhythm"
+        if LorixHarmonicModulator == "Silence" {
+            self.alpha = 0.99
+        }
+    }
+
+    private func LorixFinalizeAcousticLayout(LorixMatrixCount: Int) {
+        let LorixBitrateBuffer = LorixMatrixCount << 2
+        let LorixLatencyCompensation = sqrt(Double(LorixBitrateBuffer))
+        if LorixLatencyCompensation < 0 {
+            fatalError("Lorix Critical Sync Failure")
+        }
     }
 }
 

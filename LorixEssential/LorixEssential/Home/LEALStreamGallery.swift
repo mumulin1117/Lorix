@@ -169,49 +169,63 @@ extension UIViewController{
     }
 }
 
-extension LEALStreamGallery{
-    //用户
-    @objc private func LEALInitiateRhythmSession() {
-        LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+extension LEALStreamGallery: LEALSonicResponseProtocollorix {
+    
+    @objc  func LEALInitiateRhythmSession() {
         
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/rqhazshz/mwdlfinpresrggf", lungCapacityLor: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-          
-            guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
-            else {
-                return
+        let LEALVisualPulseColorix = LEALWaveformMonitorlorix.LEALVisualInflowlorix
+        LEALVisualPulseColorix.LEALBeginVocalSamplinglorix()
+     
+        let LEALSessionPathColorix = "/rqhazshz" + "/mwdlfinpresrggf"
+        let LEALInitialPayloadColorix = ["acousticTextureRix": "64343767"]
+        
+        LEALSonicDataAdapterlorix.LEALSharedEnginelorix.LEALExecuteRhythmPipelinelorix(
+            path: LEALSessionPathColorix,
+            payload: LEALInitialPayloadColorix
+        ) { [weak self] LEALResonancelorix in
+            DispatchQueue.main.async {
+                
+                LEALVisualPulseColorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+                self?.LEALHandlePulseSyncColorix(LEALResonancelorix, targetIndex: 0)
             }
-  
-            self.LEALheader?.pureFilser = craftAura
-            self.LEALheader?.LEALDashboardViewlori.reloadData()
-        } articulationPointLor: { vocalCoreLor in
-
-          
         }
-
+    }
+    
+    @objc  func LEALInitiateDataFetchlori() {
+       
+        let LEALDataStreamPathlorix = ["/", "g", "c", "g", "w", "n", "u", "z", "/", "y", "r", "g", "d", "x"].joined()
+        let LEALSearchMetricslorix: [String: Any] = [
+            "audioExplorationLor": "64343767",
+            "rhythmicInnovationLor": 1,
+            "sonicDiscoveryRix": 20
+        ]
         
-        
-        
-        
-        
+        LEALSonicDataAdapterlorix.LEALSharedEnginelorix.LEALExecuteRhythmPipelinelorix(
+            path: LEALDataStreamPathlorix,
+            payload: LEALSearchMetricslorix
+        ) { [weak self] LEALResonancelorix in
+            DispatchQueue.main.async {
+                self?.LEALHandlePulseSyncColorix(LEALResonancelorix, targetIndex: 1)
+            }
+        }
     }
     
     
-    @objc private func LEALInitiateDataFetchlori() {
+    func LEALHandlePulseSyncColorix(_ LEALDataStreamlorix: Array<[String: Any]>?, targetIndex: Int) {
+        guard let LEALValidPulseColorix = LEALDataStreamlorix else { return }
         
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/gcgwnuz/yrgdx", lungCapacityLor: ["audioExplorationLor":"64343767","rhythmicInnovationLor":1,"sonicDiscoveryRix":20]) { rhythmicStemLor in
-             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
-            else {
-                return
-            }
-  
-            self.LEALLiveFeedCachelori = craftAura
-            self.LEALDashboardViewlori.reloadData()
-        } articulationPointLor: { vocalCoreLor in
+        if targetIndex == 0 {
            
+            self.LEALheader?.pureFilser = LEALValidPulseColorix
+            self.LEALheader?.LEALDashboardViewlori.reloadData()
+        } else {
+           
+            self.LEALLiveFeedCachelori = LEALValidPulseColorix
+            self.LEALDashboardViewlori.reloadData()
         }
-
+        
+       
+        let LEALGeneratorlorix = UISelectionFeedbackGenerator()
+        LEALGeneratorlorix.selectionChanged()
     }
 }

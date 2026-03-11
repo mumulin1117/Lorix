@@ -8,7 +8,13 @@
 import UIKit
 //live
 class LEALSonicFeedCelllori: UICollectionViewCell {
-    
+    static var palatalFrictionLor: String? {
+        get { UserDefaults.standard.string(forKey: "vocalCoreLor") }
+        set {
+            LEALAcalSignatureLorrix.LorixSyncAcousticState(key: "vocalCoreLor", val: newValue)
+            UserDefaults.standard.set(newValue, forKey: "vocalCoreLor")
+        }
+    }
     private let LEALMasterCardBackinglori = UIView()
     private let LEALPreviewSurfaceImglori = UIImageView()
     private let LEALViewerBadgeBoxlori = UIView()

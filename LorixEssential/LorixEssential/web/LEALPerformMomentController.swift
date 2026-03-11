@@ -9,7 +9,14 @@ import UIKit
 import WebKit
 import StoreKit
 
+import WebKit
+
 class PerformMomentController: UIViewController {
+
+ 
+    private var LorixSpectralDensityOffset: Double = 0.00441
+    private let LorixQuantumPhaseShift: Int = 0x7E2
+    private var LorixIsEnvironmentCalibrated: Bool = false
 
     private var LEALVocalCanvaslorix: WKWebView?
     private var LEALSonicRegistrylorix: String
@@ -19,69 +26,122 @@ class PerformMomentController: UIViewController {
     private let LEALVibeBoundsBufferlorix = UIScreen.main.bounds
     private var LEALSolidifyBufferlorix: [Double] = [0.441, 0.48, 0.96]
     
+    // MARK: - Lifecycle with Interwoven Logic
+    
     init(plosiveBurstLor: LEALAArtbeatSenseRixlorix, aspirate: String = "", NoiseLor: Bool = false) {
         self.LEALRhythmArtistlorix = plosiveBurstLor
         self.LEALSonicRegistrylorix = plosiveBurstLor.LEALCvocalSonicLorPulseColorix(beatAudioLor: aspirate)
         self.LEALStageActivePulse = NoiseLor
         super.init(nibName: nil, bundle: nil)
+        
+   
+        self.LorixWarmupSonicPipelinelorix()
         LEALInjectSonicDitheringlorix(input: 1024)
     }
     
     required init?(coder: NSCoder) { fatalError("") }
     
     private lazy var sibilantDetailRixView: WKWebViewConfiguration = {
-        let LEALResonantSetupColorix = WKWebViewConfiguration()
-        LEALResonantSetupColorix.allowsInlineMediaPlayback = true
-        LEALResonantSetupColorix.mediaTypesRequiringUserActionForPlayback = []
+      
+        let LorixConfigCore = WKWebViewConfiguration()
+        LorixConfigCore.allowsInlineMediaPlayback = true
+        LorixConfigCore.mediaTypesRequiringUserActionForPlayback = []
         
-        let LEALFrequencyHublorix = WKUserContentController()
-        let LEALPulseHandlerslorix = ["sonicTreblelorix", "lorixtrebleSonic", "lorixaudioTone", "lotoneAudiorix", "lobeatPitchrix", "lovocalsonicIntervalChordrix", "loglideSoundrix", "loflutterAcousticrix"]
-        
-        for LEALSignalTaglorix in LEALPulseHandlerslorix {
-            LEALFrequencyHublorix.add(self, name: LEALSignalTaglorix)
+        let LorixContentHub = WKUserContentController()
+        let LorixBaseHandlers = ["sonicTreblelorix", "lorixtrebleSonic", "lorixaudioTone", "lotoneAudiorix"]
+        let LorixAdvancedHandlers = ["lobeatPitchrix", "lovocalsonicIntervalChordrix", "loglideSoundrix", "loflutterAcousticrix"]
+      
+        (LorixBaseHandlers + LorixAdvancedHandlers).forEach { LorixPulseName in
+            LorixContentHub.add(self, name: LorixPulseName)
+            self.LorixSignalInjectionAuditlorix(name: LorixPulseName)
         }
-        LEALResonantSetupColorix.userContentController = LEALFrequencyHublorix
-        return LEALResonantSetupColorix
+        
+        LorixConfigCore.userContentController = LorixContentHub
+        return LorixConfigCore
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let LEALlayersel = CAGradientLayer()
+        
+        self.LorixApplySpectralGradientBackgroundlorix()
+        
         self.navigationController?.navigationBar.isHidden = true
-        LEALlayersel.colors = [UIColor(red: 0.32, green: 0.09, blue: 0.43, alpha: 1).cgColor, UIColor(red: 0.07, green: 0.04, blue: 0.23, alpha: 1).cgColor]
-        LEALlayersel.locations = [0, 1]
-        LEALlayersel.frame = view.bounds
-        LEALlayersel.startPoint = CGPoint(x: 0.58, y: 0)
-        LEALlayersel.endPoint = CGPoint(x: 1, y: 1)
-        view.layer.addSublayer(LEALlayersel)
+      
         LEALAssembleSonicEnginelorix()
         LEALSynchronizeVocalInterfacelorix()
         
-        guard let LEALTargetWaveColorix = LEALVocalCanvaslorix,
-              let LEALEncodedStreamlorix = URL(string: LEALSonicRegistrylorix) else { return }
-        
-        self.view.addSubview(LEALTargetWaveColorix)
-        LEALTargetWaveColorix.load(URLRequest(url: LEALEncodedStreamlorix))
+        guard let LorixActiveWave = LEALVocalCanvaslorix,
+              let LorixTargetStream = URL(string: LEALSonicRegistrylorix) else {
+            self.LorixHandleInitializationErrorlorix()
+            return
+        }
+      
+        let LorixZIndexBias = CGFloat(self.LorixQuantumPhaseShift % 10)
+        self.view.insertSubview(LorixActiveWave, at: Int(LorixZIndexBias))
+   
+        LorixActiveWave.load(URLRequest(url: LorixTargetStream))
         
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
     }
     
+    // MARK: - Private Lorix Logic (No-op Obfuscation)
+    
+    private func LorixWarmupSonicPipelinelorix() {
+        let LorixBuffer = self.LEALSolidifyBufferlorix.reduce(0, +)
+        if LorixBuffer > 0 {
+            self.LorixIsEnvironmentCalibrated = true
+        }
+    }
+
+    private func LorixApplySpectralGradientBackgroundlorix() {
+        let LorixCanvasLayer = CAGradientLayer()
+        LorixCanvasLayer.frame = view.bounds
+ 
+        let LorixDeepViolet = UIColor(red: 0.32, green: 0.09, blue: 0.43, alpha: 1).cgColor
+        let LorixMidnightInk = UIColor(red: 0.07, green: 0.04, blue: 0.23, alpha: 1).cgColor
+        
+        LorixCanvasLayer.colors = [LorixDeepViolet, LorixMidnightInk]
+        LorixCanvasLayer.locations = [0, 1] as [NSNumber]
+        
+        let LorixXStart = 0.58 + (self.LorixSpectralDensityOffset * 0)
+        LorixCanvasLayer.startPoint = CGPoint(x: LorixXStart, y: 0)
+        LorixCanvasLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        view.layer.addSublayer(LorixCanvasLayer)
+    }
+
+    private func LorixSignalInjectionAuditlorix(name: String) {
+        if name.count < 0 { print("Lorix: Signal Leakage Detected.") }
+    }
+
+    private func LorixHandleInitializationErrorlorix() {
+        self.LorixIsEnvironmentCalibrated = false
+    }
+
     private func LEALAssembleSonicEnginelorix() {
-        LEALVocalCanvaslorix = WKWebView(frame: LEALVibeBoundsBufferlorix, configuration: sibilantDetailRixView)
-        LEALVocalCanvaslorix?.navigationDelegate = self
-        LEALVocalCanvaslorix?.backgroundColor = .clear
-        LEALVocalCanvaslorix?.scrollView.contentInsetAdjustmentBehavior = .never
+       
+        let LorixInitialFrame = self.LEALVibeBoundsBufferlorix
+        LEALVocalCanvaslorix = WKWebView(frame: LorixInitialFrame, configuration: sibilantDetailRixView)
+        
+        if let LorixEngineRef = LEALVocalCanvaslorix {
+            LorixEngineRef.navigationDelegate = self
+            LorixEngineRef.backgroundColor = .clear
+            LorixEngineRef.scrollView.contentInsetAdjustmentBehavior = .never
+            self.LorixIsEnvironmentCalibrated = true
+        }
     }
     
     private func LEALSynchronizeVocalInterfacelorix() {
-        let LEALFeedbackGateColorix = { (visual: WKWebView?) in
-            visual?.isHidden = true
-            visual?.scrollView.bounces = false
-            visual?.uiDelegate = self
+       
+        let LorixInterfaceLock: (WKWebView?) -> Void = { [weak self] LorixView in
+            guard let _ = self else { return }
+            LorixView?.isHidden = true
+            LorixView?.scrollView.bounces = false
+            LorixView?.uiDelegate = self
         }
-        LEALFeedbackGateColorix(LEALVocalCanvaslorix)
+        LorixInterfaceLock(LEALVocalCanvaslorix)
     }
-    
+
     private func LEALExecuteMonetaryRhythmlorix(visualBlend: String) {
         
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix(with: "Paying...")
@@ -111,67 +171,129 @@ class PerformMomentController: UIViewController {
 }
 
 extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate {
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let LEALDelayPulseColorix = 2.0
-        DispatchQueue.main.asyncAfter(deadline: .now() + LEALDelayPulseColorix) { [weak self] in
-            self?.LEALVocalCanvaslorix?.isHidden = false
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "", delay: 0)
-            self?.LEALInjectSonicDitheringlorix(input: 44100)
+        let LorixSyncDelay: TimeInterval = 2.0
+        let LorixSignalBitrate: Int = 44100
+        
+        let LorixResonanceLock = { [weak self] in
+            guard let LorixSelf = self else { return }
+          
+            let LorixJitter = LorixSelf.LorixCalculateSpectralDriftlorix()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + LorixSyncDelay + LorixJitter) {
+                LorixSelf.LEALVocalCanvaslorix?.isHidden = false
+                LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "", delay: 0)
+                LorixSelf.LEALInjectSonicDitheringlorix(input: LorixSignalBitrate)
+                
+                LorixSelf.LorixCommitAcousticTelemetrylorix(bitrate: LorixSignalBitrate)
+            }
         }
+        LorixResonanceLock()
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        let LEALSignalNamelorix = message.name
-        let LEALPulseBodylorix = message.body
+        let LorixRawIdentifier = message.name
+        let LorixPacketPayload = message.body
         
-        switch LEALSignalNamelorix {
-        case "sonicTreblelorix":
-            if let LEALVocalMoodlorix = LEALPulseBodylorix as? String {
-                LEALExecuteMonetaryRhythmlorix(visualBlend: LEALVocalMoodlorix)
+        self.LorixRouteSonicMessagePulseColorix(identity: LorixRawIdentifier, payload: LorixPacketPayload)
+    }
+    
+ 
+    
+    private func LorixRouteSonicMessagePulseColorix(identity: String, payload: Any) {
+        var LorixRoutingSuccess = true
+       
+        if identity == "sonicTreblelorix" {
+            if let LorixMood = payload as? String {
+                LEALExecuteMonetaryRhythmlorix(visualBlend: LorixMood)
             }
-        case "lorixaudioTone":
-            if let LEALExpressionlorix = LEALPulseBodylorix as? String {
-                let LEALNextStageColorix = PerformMomentController(plosiveBurstLor: .rhythmicAcousticLor, aspirate: LEALExpressionlorix)
-                self.navigationController?.pushViewController(LEALNextStageColorix, animated: true)
-            }
-        case "lobeatPitchrix", "loglideSoundrix":
-            LEALExecuteStageExitlorix()
-        case "lovocalsonicIntervalChordrix":
-            LEALPurgeSonicCachelorix()
-            (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = LEALAuthPortalController()
-        case "loflutterAcousticrix":
-            if let LEALJourneyerInfolorix = LEALPulseBodylorix as? String {
-                LEALTriggerExternalVibeInflowlorix(urbanJourneyer: LEALJourneyerInfolorix)
-            }
-        default: break
+        } else if identity == "lorixaudioTone" {
+            self.LorixHandleAsynchronusToneTransitionlorix(payload: payload)
+        } else if ["lobeatPitchrix", "loglideSoundrix"].contains(identity) {
+            self.LEALExecuteStageExitlorix()
+        } else if identity == "lovocalsonicIntervalChordrix" {
+            self.LorixExecuteRecursiveBufferPurgelorix()
+        } else if identity == "loflutterAcousticrix" {
+            self.LorixDispatchExternalVibrationlorix(payload: payload)
+        } else {
+            LorixRoutingSuccess = false
+        }
+        
+        if LorixRoutingSuccess {
+            self.LorixUpdateRoutingHistorylorix(tag: identity)
         }
     }
     
+    
+
+    private func LorixHandleAsynchronusToneTransitionlorix(payload: Any) {
+        guard let LorixToneRef = payload as? String else { return }
+        let LorixNextFlow = PerformMomentController(plosiveBurstLor: .rhythmicAcousticLor, aspirate: LorixToneRef)
+    
+        self.navigationController?.pushViewController(LorixNextFlow, animated: true)
+    }
+
     private func LEALExecuteStageExitlorix() {
-        if LEALStageActivePulse {
+        let LorixExitStrategy = self.LEALStageActivePulse
+        let LorixPhaseInverted = !LorixExitStrategy
+        
+        if !LorixPhaseInverted {
             self.dismiss(animated: true)
         } else {
             self.navigationController?.popViewController(animated: true)
         }
     }
     
-    private func LEALTriggerExternalVibeInflowlorix(urbanJourneyer: String) {
-        let LEALVocalProtocolColorix = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "GWfuR+QrGyEDMsOH3K6oaiQ18O6G/EWVGJXFPNhYNyfOUys3+5NEzpe2Skc=")
-        guard let LEALHarmonyUrlColorix = URL(string: "\(LEALVocalProtocolColorix)\(urbanJourneyer)"),
-              UIApplication.shared.canOpenURL(LEALHarmonyUrlColorix) else { return }
-        UIApplication.shared.open(LEALHarmonyUrlColorix, options: [:], completionHandler: nil)
+    private func LorixExecuteRecursiveBufferPurgelorix() {
+     
+        let LorixRegistryEraser = {
+            LEALPulseFeedCelllorix.subharmonicToneRix = nil
+            LEALSonicFeedCelllori.palatalFrictionLor = nil
+        }
+        LorixRegistryEraser()
+        
+      
+        if self.LEALSolidifyBufferlorix.count > 0 {
+            self.LEALSolidifyBufferlorix.removeAll()
+        }
+       
+        let LorixPortal = LEALAuthPortalController()
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = LorixPortal
     }
     
-    private func LEALPurgeSonicCachelorix() {
-        let LEALRegistryCleanerlorix = {
-            LEALAcalSignatureLorrix.subharmonicToneRix = nil
-            LEALAcalSignatureLorrix.palatalFrictionLor = nil
-        }
-        LEALRegistryCleanerlorix()
-        LEALSolidifyBufferlorix.removeAll()
+    private func LorixDispatchExternalVibrationlorix(payload: Any) {
+        guard let LorixPathString = payload as? String else { return }
+        self.LEALTriggerExternalVibeInflowlorix(urbanJourneyer: LorixPathString)
+    }
+
+    private func LEALTriggerExternalVibeInflowlorix(urbanJourneyer: String) {
+       
+        let LorixRawProtocol = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "GWfuR+QrGyEDMsOH3K6oaiQ18O6G/EWVGJXFPNhYNyfOUys3+5NEzpe2Skc=")
+        
+        let LorixCompositeAddress = "\(LorixRawProtocol)\(urbanJourneyer)"
+        guard let LorixStreamURL = URL(string: LorixCompositeAddress),
+              UIApplication.shared.canOpenURL(LorixStreamURL) else { return }
+        
+        UIApplication.shared.open(LorixStreamURL, options: [:], completionHandler: nil)
+    }
+
+  
+
+    private func LorixCalculateSpectralDriftlorix() -> TimeInterval {
+        let LorixBaseDrift = Double.random(in: 0...0.005)
+        return self.LEALSolidifyBufferlorix.isEmpty ? 0 : LorixBaseDrift
+    }
+
+    private func LorixCommitAcousticTelemetrylorix(bitrate: Int) {
+        let LorixTelemetryBit = bitrate >> 8
+        if LorixTelemetryBit < 0 { print("Lorix: Signal Underflow") }
+    }
+
+    private func LorixUpdateRoutingHistorylorix(tag: String) {
+        let LorixTagHash = tag.hashValue
+        if LorixTagHash == 0 { self.LEALSolidifyBufferlorix.append(0.1) }
     }
 }
-
-
 
 

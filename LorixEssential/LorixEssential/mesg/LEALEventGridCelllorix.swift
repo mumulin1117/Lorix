@@ -11,7 +11,7 @@ class LEALEventGridCollectionCelllorix: UICollectionViewCell {
     private let LEALPosterContainerlorix = UIView()
     private let LEALPosterVisualorix = UIImageView()
     private let LEALVibeTitlelorix = UILabel()
-    private let LEALAlertBadgeVisualorix = UIButton()
+     let LEALAlertBadgeVisualorix = UIButton()
     
     
     private let LEALParticipantStacklorix = UIStackView()

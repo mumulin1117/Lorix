@@ -15,14 +15,14 @@ class LEALCommunityViewController: UIViewController {
         return bauiod
         
     }()
-    lazy var LEALDAdd: UIButton = {
+    private lazy var LEALDAdd: UIButton = {
         let EALDbutton = UIButton()
         EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "cireldLes"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
         return EALDbutton
     }()
     
-    lazy var addCiref: UIButton = {
+    private lazy var addCiref: UIButton = {
         let EALDbutton = UIButton()
         EALDbutton.setImage(LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "addCiref"), for: .normal)
         EALDbutton.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +70,6 @@ class LEALCommunityViewController: UIViewController {
         
     }
     
-    //横向滚动
     private func LEALCreateEchoCircleSectionlorix() -> NSCollectionLayoutSection {
         let LEALItemSizelorix = NSCollectionLayoutSize(widthDimension: .absolute(96), heightDimension: .absolute(102))
         let LEALItemlorix = NSCollectionLayoutItem(layoutSize: LEALItemSizelorix)
@@ -270,47 +269,50 @@ extension LEALCommunityViewController: UICollectionViewDataSource, UICollectionV
 extension LEALCommunityViewController{
     
     @objc private func LEALInitiateRhythmSession() {
+        let LEALMonitorlorix = LEALWaveformMonitorlorix.LEALVisualInflowlorix
+                
+        LEALMonitorlorix.LEALBeginVocalSamplinglorix()
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
+        let LEALSessionPathlorix = ["/", "r", "q", "h", "a", "z", "s", "h", "z", "/", "m", "w", "d", "l", "f", "i", "n", "p", "r", "e", "s", "r", "g", "g", "f"].joined()
+               
+        let LEALPayloadlorix = ["acousticTextureRix": "64343767"]
         
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/rqhazshz/mwdlfinpresrggf", lungCapacityLor: ["acousticTextureRix":"64343767"]) { rhythmicStemLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
-            
-            
-            guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
-            else {
-                return
-            }
-  
-            self.LEALTopEchoListlorix = craftAura
-            self.LEALMainDisplayViewlorix.reloadSections(IndexSet.init(integer: 0))
-        } articulationPointLor: { vocalCoreLor in
+        LEALSonicDispatcherlorix.LEALSyncVocalStreamlorix(path: LEALSessionPathlorix, params: LEALPayloadlorix) { [weak self] LEALResultlorix in
+                    DispatchQueue.main.async {
+                        LEALMonitorlorix.LEALTerminateResonancelorix(isPositive: true, message: "")
+                        if let LEALDataPulselorix = LEALResultlorix {
+                            self?.LEALTopEchoListlorix = LEALDataPulselorix
+                            self?.LEALMainDisplayViewlorix.reloadSections(IndexSet(integer: 0))
+                        }
+                    }
+                } failure: {
+                    LEALMonitorlorix.LEALTerminateResonancelorix(isPositive: false, message: "Sync Error")
+                }
 
-          
-        }
-
-        
-        
-        
-        
         
     }
     
     
     @objc private func LEALInitiateDataFetchlori() {
         
-        LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/mclnmqtgoz/ryfsmzxhbn", lungCapacityLor: ["sonicDraftRix":"64343767","frequencyResponseLor":1,"dynamicRangeRix":20,"rhythmicCadenceLor":LEALActiveCategorylorix]) { rhythmicStemLor in
-             guard let trendWeave = rhythmicStemLor as? [String: Any],
-                  let craftAura = trendWeave[aksingLEALE] as? Array<[String: Any]>
-            else {
-                return
-            }
-  
-            self.LEALMainPulseFeedlorix = craftAura
-            self.LEALMainDisplayViewlorix.reloadSections(IndexSet.init(integer: 1))
-        } articulationPointLor: { vocalCoreLor in
-           
-        }
+        let LEALCurrentFreqPulse = self.LEALActiveCategorylorix
+                let LEALTargetIdentifierlorix = "/mclnmqtgoz/ryfsmzxhbn"
+                
+                let LEALParamWeavelorix: [String : Any] = [
+                    "sonicDraftRix": "64343767",
+                    "frequencyResponseLor": 1,
+                    "dynamicRangeRix": 20,
+                    "rhythmicCadenceLor": LEALCurrentFreqPulse
+                ]
+                
+                LEALSonicDispatcherlorix.LEALSyncVocalStreamlorix(path: LEALTargetIdentifierlorix, params: LEALParamWeavelorix) { [weak self] LEALResultlorix in
+                    guard let LEALFilteredDatalorix = LEALResultlorix else { return }
+                 
+                    DispatchQueue.main.async {
+                        self?.LEALMainPulseFeedlorix = LEALFilteredDatalorix
+                        self?.LEALMainDisplayViewlorix.reloadSections(IndexSet(integer: 1))
+                    }
+                }
 
     }
 }
