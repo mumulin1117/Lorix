@@ -9,7 +9,6 @@ import UIKit
 import WebKit
 import StoreKit
 
-import WebKit
 
 class PerformMomentController: UIViewController {
 
@@ -258,7 +257,8 @@ extension PerformMomentController: WKScriptMessageHandler, WKNavigationDelegate,
             self.LEALSolidifyBufferlorix.removeAll()
         }
        
-        let LorixPortal = LEALAuthPortalController()
+        let LorixPortal = UINavigationController.init(rootViewController: LEALAuthPortalController())
+        LorixPortal.navigationBar.isHidden = true
         (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = LorixPortal
     }
     

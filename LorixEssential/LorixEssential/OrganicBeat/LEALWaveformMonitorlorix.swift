@@ -210,7 +210,7 @@ extension LEALWaveformMonitorlorix {
         }
     }
     
-    private func LEALPurgeSonicMonitorlorix() {
+     func LEALPurgeSonicMonitorlorix() {
         UIView.animate(withDuration: 0.2, animations: {
             self.alpha = 0
         }) { _ in

@@ -78,9 +78,9 @@ class LEALUserStagelViewController: UIViewController {
     }
     
     private func LEALCreateIdentityLayoutlorix() -> NSCollectionLayoutSection {
-        let LEALItemSizelorix = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(360))
+        let LEALItemSizelorix = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(390))
         let LEALItemlorix = NSCollectionLayoutItem(layoutSize: LEALItemSizelorix)
-        let LEALGroupSizelorix = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(360))
+        let LEALGroupSizelorix = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(390))
         let LEALGrouplorix = NSCollectionLayoutGroup.vertical(layoutSize: LEALGroupSizelorix, subitems: [LEALItemlorix])
         return NSCollectionLayoutSection(group: LEALGrouplorix)
     }
@@ -123,11 +123,23 @@ class LEALUserStagelViewController: UIViewController {
         }
     }
 
-    @objc func juaoipg()           { pushToPerformMoment(with: .audioHeartLor) }
-    @objc func attensionLealMy()    { pushToPerformMoment(with: .beatSoulRix) }
-    @objc func MyrealattensionLeal() { pushToPerformMoment(with: .rhythmSpiritLor) }
-    @objc func MyLiakoLealMy()      { pushToPerformMoment(with: .soundEssenceRix) }
-    @objc func editoipg()           { pushToPerformMoment(with: .rhythmAmplitudeLor) }
+    @objc func juaoipg()           {
+        pushToPerformMoment(with: .audioHeartLor)
+    }
+    @objc func attensionLealMy()    {
+        pushToPerformMoment(with: .beatSoulRix)
+    }
+    @objc func MyrealattensionLeal() {
+        pushToPerformMoment(with: .rhythmSpiritLor)
+    }
+    @objc func MyLiakoLealMy()      {
+        pushToPerformMoment(with: .soundEssenceRix)
+    }
+    @objc func editoipg() {
+        let LEALProfileEditorLorix = LEAFelayAddInfoController()
+        LEALProfileEditorLorix.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(LEALProfileEditorLorix, animated: true)
+    }
 }
 
 extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -144,11 +156,23 @@ extension LEALUserStagelViewController: UICollectionViewDelegate, UICollectionVi
         guard let LEALSectionTypelorix = LEALProfileSectionlorix(rawValue: indexPath.section) else { return UICollectionViewCell() }
         if LEALSectionTypelorix == .LEALVocalIdentitylorix {
             let LEALCelllorix = collectionView.dequeueReusableCell(withReuseIdentifier: "LEALIdentityPulseCelllorix", for: indexPath) as! LEALIdentityPulseCelllorix
-            if let avavtoe =  LEAcraftAura[ "techniqueRefinementRix"] as? String{
-                LEALCelllorix.LEALAvatarVisualNodeColorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: avavtoe)
+            if let LEALProfileBeatLorix = LEALRhythmProfileMemorylorix.LEALCurrentSnapshotLorix {
+                LEALCelllorix.LEALNamePulseLabellorix.text = LEALProfileBeatLorix.LEALBeatNameLorix
+                LEALCelllorix.LEALBioPulseLabellorix.text = LEALProfileBeatLorix.LEALBeatBioLorix
+                if let LEALAvatarPathLorix = LEALProfileBeatLorix.LEALBeatAvatarPathLorix,
+                   let LEALAvatarImageLorix = UIImage(contentsOfFile: LEALAvatarPathLorix) {
+                    LEALCelllorix.LEALAvatarVisualNodeColorix.image = LEALAvatarImageLorix
+                } else {
+                    LEALCelllorix.LEALAvatarVisualNodeColorix.image = LEALVocalResonanceCorelorix.LEALSonicMadeing(lealNames: "yuelaocio")
+                }
+            } else {
+                if let avavtoe =  LEAcraftAura[ "techniqueRefinementRix"] as? String{
+                    LEALCelllorix.LEALAvatarVisualNodeColorix.LEALVocalVisualSyncColorix(LEALSonicPathlorix: avavtoe)
+                }
+                
+                LEALCelllorix.LEALNamePulseLabellorix.text = LEAcraftAura[ "techniqueRefinementRix"] as? String
+                LEALCelllorix.LEALBioPulseLabellorix.text = "Share beats, clips, and stage moments"
             }
-            
-            LEALCelllorix.LEALNamePulseLabellorix.text = LEAcraftAura[ "techniqueRefinementRix"] as? String
             LEALCelllorix.LEALCoinBalancePlateColorix.addTarget(self, action: #selector(juaoipg), for: .touchUpInside)
             
             LEALCelllorix.attensionLealMy?.addTarget(self, action: #selector(juaoipg), for: .touchUpInside)

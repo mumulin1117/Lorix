@@ -12,6 +12,7 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
      let LEALAvatarVisualNodeColorix = UIImageView()
      let LEALEditPencilTriggerColorix = UIButton()
      let LEALNamePulseLabellorix = UILabel()
+     let LEALBioPulseLabellorix = UILabel()
     private let LEALStatStackHublorix = UIStackView()
      let LEALCoinBalancePlateColorix = UIButton()
     
@@ -48,11 +49,19 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         LEALAvatarVisualNodeColorix.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(LEALAvatarVisualNodeColorix)
         
-        LEALNamePulseLabellorix.text = "Emily"
+        LEALNamePulseLabellorix.text = ""
         LEALNamePulseLabellorix.textColor = .white
         LEALNamePulseLabellorix.font = .systemFont(ofSize: 32, weight: .bold)
         LEALNamePulseLabellorix.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(LEALNamePulseLabellorix)
+        
+        LEALBioPulseLabellorix.text = ""
+        LEALBioPulseLabellorix.textColor = UIColor.white.withAlphaComponent(0.72)
+        LEALBioPulseLabellorix.font = .systemFont(ofSize: 14, weight: .regular)
+        LEALBioPulseLabellorix.textAlignment = .center
+        LEALBioPulseLabellorix.numberOfLines = 2
+        LEALBioPulseLabellorix.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(LEALBioPulseLabellorix)
         
         LEALCoinBalancePlateColorix.layer.cornerRadius = 25
        
@@ -77,7 +86,8 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
         LEALStatStackHublorix.distribution = .fillEqually
         LEALStatStackHublorix.alignment = .center
         LEALStatStackHublorix.translatesAutoresizingMaskIntoConstraints = false
-      
+        LEALStatStackHublorix.isUserInteractionEnabled = true
+        
         contentView.addSubview(LEALCoinBalancePlateColorix)
         contentView.addSubview(LEALEditPencilTriggerColorix)
         contentView.addSubview(LEALStatStackHublorix)
@@ -102,8 +112,14 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
             
             LEALNamePulseLabellorix.topAnchor.constraint(equalTo: LEALAvatarVisualNodeColorix.bottomAnchor, constant: 15),
             LEALNamePulseLabellorix.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            LEALNamePulseLabellorix.leadingAnchor.constraint(greaterThanOrEqualTo: contentView.leadingAnchor, constant: 24),
+            LEALNamePulseLabellorix.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -24),
             
-            LEALStatStackHublorix.topAnchor.constraint(equalTo: LEALNamePulseLabellorix.bottomAnchor, constant: 14),
+            LEALBioPulseLabellorix.topAnchor.constraint(equalTo: LEALNamePulseLabellorix.bottomAnchor, constant: 6),
+            LEALBioPulseLabellorix.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 34),
+            LEALBioPulseLabellorix.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -34),
+            
+            LEALStatStackHublorix.topAnchor.constraint(equalTo: LEALBioPulseLabellorix.bottomAnchor, constant: 14),
             LEALStatStackHublorix.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             LEALStatStackHublorix.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             LEALStatStackHublorix.heightAnchor.constraint(equalToConstant: 55),
@@ -153,19 +169,19 @@ class LEALIdentityPulseCelllorix: UICollectionViewCell {
             LEALTitleLabellorix.bottomAnchor.constraint(equalTo: LEALVesselColorix.bottomAnchor)
         ])
 
-        let LEALTaporix = UITapGestureRecognizer(target: self, action: #selector(LEALStatNodeTriggeredlorix(_:)))
-        LEALVesselColorix.addGestureRecognizer(LEALTaporix)
-        LEALVesselColorix.isUserInteractionEnabled = true
+//        let LEALTaporix = UITapGestureRecognizer(target: self, action: #selector(LEALStatNodeTriggeredlorix(_:)))
+//        LEALVesselColorix.addGestureRecognizer(LEALTaporix)
+//        LEALVesselColorix.isUserInteractionEnabled = true
         
         return LEALVesselColorix
     }
     
-    @objc private func LEALStatNodeTriggeredlorix(_ sender: UITapGestureRecognizer) {
-        
-        UIView.animate(withDuration: 0.1, animations: {
-            sender.view?.alpha = 0.5
-        }) { _ in
-            UIView.animate(withDuration: 0.1) { sender.view?.alpha = 1.0 }
-        }
-    }
+//    @objc private func LEALStatNodeTriggeredlorix(_ sender: UITapGestureRecognizer) {
+//        
+//        UIView.animate(withDuration: 0.1, animations: {
+//            sender.view?.alpha = 0.5
+//        }) { _ in
+//            UIView.animate(withDuration: 0.1) { sender.view?.alpha = 1.0 }
+//        }
+//    }
 }

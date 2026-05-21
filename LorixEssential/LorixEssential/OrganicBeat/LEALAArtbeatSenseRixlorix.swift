@@ -32,8 +32,7 @@ enum LEALAArtbeatSenseRixlorix: String {
     case beatPulseRix = "HVy6jBGC3GWCAvIGgA0lTShnzj+gQLzyXRkERyArDXc+1Qbm6w1ea1yrxSzlxldKWWbe30T6BA=="
     case beatFrequencyRix = "/v8Y2uw8vDxlmrww5CC46kY5oLOKmqkOg3Jie9/07nYXFd/UP0aURXHDWR9ZXNV7TWaKWw=="
     case rhythmAmplitudeLor = "9VRVK3U7RIIXXufO4IM9bSql0sKMr3zThbyjv3v5U5XrJQ1HJM8xZEKBZf6Wd/9oj8Ci+Is="
-    
-    
+     
     func LEALCvocalSonicLorPulseColorix(beatAudioLor: String) -> String {
         let lorixWaveformBuffer: CGFloat = 0.441
         var lorixSpectralJitter: [Int] = [1024, 2048, 4096]
@@ -66,7 +65,8 @@ enum LEALAArtbeatSenseRixlorix: String {
             }
         }
         
-        let LEALWaveTaglorix = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: self.rawValue)
+        var LEALWaveTaglorix =  LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: self.rawValue)
+        
         let LEALsoundVistaRixlorix = LEALSonicFeedCelllori.palatalFrictionLor ?? ""
         let acousticIdentityRix = LEALIdentityPulseCelllorix.resonantFrequencyLor
         

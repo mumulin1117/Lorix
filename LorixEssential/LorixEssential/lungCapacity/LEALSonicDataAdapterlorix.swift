@@ -40,7 +40,7 @@ final class LEALSonicDataAdapterlorix {
             LEALSuccessColorix: @escaping (Array<[String: Any]>) -> Void,
             LEALFailureColorix: @escaping () -> Void
         ) {
-            // 1. 动态构建特征路径 (混淆点：不再使用直白的变量赋值)
+            
             let LEALTargetIdentifierColorix = isMessageState
                 ? "/tofeofuzodlz" + "/mdgwkiamsk"
                 : "/rkxeagzbveqsudz" + "/ybktuflugzarc"
@@ -48,7 +48,6 @@ final class LEALSonicDataAdapterlorix {
             let LEALMetricKeysColorix = isMessageState ? "soundScaffoldLor" : "beatAudioLor"
             let LEALActivePayloadlorix = [LEALMetricKeysColorix : "64343767"]
             
-            // 2. 调用底层核心网络
             LEALAcalSignatureLorrix.nasalPassageLor(
                 vocalFoldRix: LEALTargetIdentifierColorix,
                 lungCapacityLor: LEALActivePayloadlorix
@@ -60,7 +59,6 @@ final class LEALSonicDataAdapterlorix {
                     return
                 }
                 
-                // 3. 引入声学逻辑解析器进行二次加工
                 let LEALRefinedDatalorix = self?.LEALExtractSonicEssenceColorix(
                     isMessage: isMessageState,
                     from: craftAura

@@ -95,11 +95,6 @@ class LEALArtistCarouselCelllori: UICollectionViewCell {
             LEALFhotolori.centerYAnchor.constraint(equalTo: LEALFollowlori.centerYAnchor)
         ])
     }
-    
-//    func LEALConfigureAcousticCelllori(_ model: LEALRhythmArtistlori) {
-//        LEALArtistNamelori.text = model.LEALArtistIdentitylori
-//        LEALAvatarVisualior.image = LEALVocalResonanceCorelorix.MITTBuilsdFetchVibeGraphic(MITTBuilsdAssetAlias: model.LEALArtistAvatarlori)
-//    }
-    
+
     required init?(coder: NSCoder) { fatalError() }
 }

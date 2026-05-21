@@ -33,7 +33,9 @@ class LEALRootCoordinator {
         if LEALIsAuthenticated {
             LEALWindow?.rootViewController = LEALMainTabContainer()
         } else {
-            LEALWindow?.rootViewController = LEALAuthPortalController()
+            let LorixPortal = UINavigationController.init(rootViewController: LEALAuthPortalController())
+            LorixPortal.navigationBar.isHidden = true
+            LEALWindow?.rootViewController = LorixPortal
         }
         LEALWindow?.makeKeyAndVisible()
     }

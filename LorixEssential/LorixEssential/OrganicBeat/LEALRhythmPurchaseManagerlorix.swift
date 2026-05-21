@@ -5,7 +5,7 @@
 //  Created by LorixEssential on 2026/3/10.
 //
 
-///Pay
+
 import StoreKit
 
 class LEALRhythmPurchaseManagerlorix: NSObject {

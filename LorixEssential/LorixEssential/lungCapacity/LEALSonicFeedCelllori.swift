@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//live
+
 class LEALSonicFeedCelllori: UICollectionViewCell {
     static var palatalFrictionLor: String? {
         get { UserDefaults.standard.string(forKey: "vocalCoreLor") }
@@ -19,6 +19,8 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
     private let LEALPreviewSurfaceImglori = UIImageView()
     private let LEALViewerBadgeBoxlori = UIView()
     private let LEALViewerIconlori = UIImageView()
+    private let LEALViepassworfdIconlori = UIImageView.init(image: UIImage(named: "pswdIcon"))
+    
     private let LEALViewerCountLabelori = UILabel()
     
     private let LEALStreamTitleLabelori = UILabel()
@@ -43,14 +45,14 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
         LEALMasterCardBackinglori.layer.cornerRadius = 35
         LEALMasterCardBackinglori.clipsToBounds = true
         LEALMasterCardBackinglori.translatesAutoresizingMaskIntoConstraints = false
-        
+        LEALViepassworfdIconlori.translatesAutoresizingMaskIntoConstraints = false
         // 2. Cover Image Surface
         LEALPreviewSurfaceImglori.contentMode = .scaleAspectFill
         LEALPreviewSurfaceImglori.layer.cornerRadius = 25
         LEALPreviewSurfaceImglori.clipsToBounds = true
         LEALPreviewSurfaceImglori.translatesAutoresizingMaskIntoConstraints = false
         LEALMasterCardBackinglori.addSubview(LEALPreviewSurfaceImglori)
-        
+        LEALPreviewSurfaceImglori.addSubview(LEALViepassworfdIconlori)
         // 3. Viewer Count Badge (Overlay on Image)
         LEALViewerBadgeBoxlori.backgroundColor = UIColor.black.withAlphaComponent(0.4)
         LEALViewerBadgeBoxlori.layer.cornerRadius = 12
@@ -113,6 +115,10 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
             LEALPreviewSurfaceImglori.bottomAnchor.constraint(equalTo: LEALMasterCardBackinglori.bottomAnchor, constant: -15),
             LEALPreviewSurfaceImglori.widthAnchor.constraint(equalTo: LEALMasterCardBackinglori.widthAnchor, multiplier: 0.38),
             
+            LEALViepassworfdIconlori.widthAnchor.constraint(equalToConstant: 30),
+            LEALViepassworfdIconlori.heightAnchor.constraint(equalToConstant: 30),
+            LEALViepassworfdIconlori.bottomAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.bottomAnchor, constant: -10),
+            LEALViepassworfdIconlori.rightAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.rightAnchor, constant: -10),
             LEALViewerBadgeBoxlori.topAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.topAnchor, constant: 10),
             LEALViewerBadgeBoxlori.leadingAnchor.constraint(equalTo: LEALPreviewSurfaceImglori.leadingAnchor, constant: 10),
             LEALViewerBadgeBoxlori.heightAnchor.constraint(equalToConstant: 24),
@@ -156,7 +162,7 @@ class LEALSonicFeedCelllori: UICollectionViewCell {
         }
         
         LEALViewerCountLabelori.text = "\(Int.random(in: 20...80))"
-        
+//        LEALViepassworfdIconlori.isHidden = !((LEALDataModelori["beatGuideRix"] as? Int) == -1)
         LEALLiveIndicatorTextlori.isHidden =  !((LEALDataModelori["beatGuideRix"] as? Int) == -1)
         LEALPreviewSurfaceImglori.backgroundColor = .darkGray
         LEALHostAvatarImglori.backgroundColor = .systemPurple

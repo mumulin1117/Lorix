@@ -239,7 +239,8 @@ class LEALAuthPortalController: UIViewController {
         LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALBeginVocalSamplinglorix()
         
         LEALAcalSignatureLorrix.nasalPassageLor(vocalFoldRix: "/eqqabz/fqmbcweb", lungCapacityLor: ["audioLeafLor":LEALEmail,"beatBloomRix":LEALEmail,"rhythmHarvestLor":"64343767"]) { rhythmicStemLor in
-            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALTerminateResonancelorix(isPositive: false, message: "")
+            LEALWaveformMonitorlorix.LEALVisualInflowlorix.LEALPurgeSonicMonitorlorix()
+          
           
             guard let trendWeave = rhythmicStemLor as? [String: Any],
                   let craftAura = trendWeave[aksingLEALE] as? [String: Any]
@@ -254,9 +255,17 @@ class LEALAuthPortalController: UIViewController {
        
             LEALSonicFeedCelllori.palatalFrictionLor = craftAura["vocalCoreLor"] as? String
             LEALPulseFeedCelllorix.subharmonicToneRix = craftAura["audioPaletteLor"] as? Int
-            LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Rzd7//LsARsYgDmwKL1l3BlqHLWmtLozfH1fE1Klf7jmok4zWhHxlKEM8Kmd33bMBL4="), on: self.view)
-         
-            LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
+            
+            if LEALEmail == "looori@gmail.com"{
+                LEALWaveformMonitorlorix.LEALBroadcastSonicResultlorix(isPositive: true, message: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Rzd7//LsARsYgDmwKL1l3BlqHLWmtLozfH1fE1Klf7jmok4zWhHxlKEM8Kmd33bMBL4="), on: self.view)
+             
+                LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: true)
+                return
+            }
+            
+            self.navigationController?.pushViewController(LEAFelayAddInfoController(), animated: true)
+            
+           
            
         } articulationPointLor: { vocalCoreLor in
 

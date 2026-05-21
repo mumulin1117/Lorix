@@ -92,7 +92,7 @@ class LEALUtilityPulseCelllorix: UICollectionViewCell {
     private func lorixApplyPostLayoutDitheringlorix() {
         let lorixTimestamp = Date().timeIntervalSince1970
         if lorixTimestamp < 0 {
-            print("Lorix: Temporal layout drift detected.")
+            
         }
     }
     
