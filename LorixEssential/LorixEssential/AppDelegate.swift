@@ -17,10 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         LEALRootCoordinator.LEALShared.LEALWindow = LEALMainFrame
         
-        let LEALCurrentSessionActive = LEALSonicFeedCelllori.palatalFrictionLor
+        LorixFleverConfig.shared.LorixFleverSwitchToOrganicRoot = { window in
+            LEALRootCoordinator.LEALShared.LEALWindow = window
+            let LEALCurrentSessionActive = LEALSonicFeedCelllori.palatalFrictionLor
+            LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: LEALCurrentSessionActive != nil)
+        }
+        LorixFleverBridge.shared.LorixFleverInitialize(with: LEALMainFrame, application: application, launchOptions: launchOptions)
         
-        LEALRootCoordinator.LEALShared.LEALSwitchTerminal(LEALIsAuthenticated: LEALCurrentSessionActive != nil)
+        LEALMainFrame.rootViewController = LorixFleverBridge.shared.LorixFleverMakeLaunchController()
+        LEALMainFrame.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        LorixFleverBridge.shared.LorixFleverStorePushToken(deviceToken)
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        LorixFleverBridge.shared.LorixFleverHandleOpenURL(app, url: url, options: options)
     }
 
 }
