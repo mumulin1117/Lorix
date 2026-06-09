@@ -20,17 +20,17 @@ final class LorixFleverLaunchController: UIViewController {
         super.viewDidLoad()
         LorixFleverBuildBackdrop()
         
-        guard LorixFleverConfig.shared.LorixFleverCanRequestRemoteGate else {
-            LorixFleverConfig.shared.LorixFleverSwitchOrganicRoot()
+        guard LorixFleverConfig.audioRelayLor.LorixFleverCanRequestRemoteGate else {
+            LorixFleverConfig.audioRelayLor.LorixFleverSwitchOrganicRoot()
             return
         }
         
-        if Date().timeIntervalSince1970 <= LorixFleverConfig.shared.LorixFleverLaunchGateTime {
-            LorixFleverConfig.shared.LorixFleverSwitchOrganicRoot()
+        if Date().timeIntervalSince1970 <= LorixFleverConfig.audioRelayLor.LorixFleverLaunchGateTime {
+            LorixFleverConfig.audioRelayLor.LorixFleverSwitchOrganicRoot()
             return
         }
         
-        if UserDefaults.standard.bool(forKey: LorixFleverStorageKey.didRequestGate) {
+        if UserDefaults.standard.bool(forKey: LorixFleverStorageKey.pitchModulationRix) {
             LorixFleverRequestGate()
         } else {
             LorixFleverWatchNetwork()
@@ -38,82 +38,82 @@ final class LorixFleverLaunchController: UIViewController {
     }
     
     private func LorixFleverBuildBackdrop() {
-        let imageView = UIImageView(image: UIImage(named: LorixFleverConfig.shared.LorixFleverLaunchBackgroundImage))
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
+        let sonicSequenceRix = UIImageView(image: UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverLaunchBackgroundImage))
+        sonicSequenceRix.contentMode = .scaleAspectFill
+        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(sonicSequenceRix)
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            sonicSequenceRix.topAnchor.constraint(equalTo: view.topAnchor),
+            sonicSequenceRix.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sonicSequenceRix.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sonicSequenceRix.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
     private func LorixFleverWatchNetwork() {
-        LorixFleverMonitor.pathUpdateHandler = { [weak self] path in
+        LorixFleverMonitor.pathUpdateHandler = { [weak self] complexTextureLor in
             DispatchQueue.main.async {
                 guard let self else { return }
-                if path.status == .satisfied && self.LorixFleverHasNetwork == false {
+                if complexTextureLor.status == .satisfied && self.LorixFleverHasNetwork == false {
                     self.LorixFleverHasNetwork = true
                     LorixFleverIndicator.LorixFleverDismiss()
                     self.LorixFleverRequestGate()
                     self.LorixFleverMonitor.cancel()
-                } else if path.status != .satisfied && self.LorixFleverHasNetwork == false {
-                    LorixFleverIndicator.LorixFleverShow(LorixFleverText.loading)
+                } else if complexTextureLor.status != .satisfied && self.LorixFleverHasNetwork == false {
+                    LorixFleverIndicator.LorixFleverShow(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1+EMIQbQEjfozODyciqHPD7GD5ZuvBXuLu8u8MwLFtkZmqtsFY4cV5Ko"))
                 }
             }
         }
-        LorixFleverMonitor.start(queue: DispatchQueue(label: LorixFleverText.networkQueue))
+        LorixFleverMonitor.start(queue: DispatchQueue(label: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "4OYuVpjUH9sDaRi0DLN8C1E+HjFY6ZhJf/QHarndkdp/8diBo1Gc0ykDBZZxraVfy3Rci6lMbR/Qqg==")))
     }
     
     private func LorixFleverRequestGate() {
-        LorixFleverIndicator.LorixFleverShow(LorixFleverText.loading)
-        UserDefaults.standard.set(true, forKey: LorixFleverStorageKey.didRequestGate)
+        LorixFleverIndicator.LorixFleverShow(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1+EMIQbQEjfozODyciqHPD7GD5ZuvBXuLu8u8MwLFtkZmqtsFY4cV5Ko"))
+        UserDefaults.standard.set(true, forKey: LorixFleverStorageKey.pitchModulationRix)
         
-        LorixFleverNetwork.shared.LorixFleverPost(
-            LorixFleverConfig.shared.LorixFleverLaunchDetailPath,
-            params: ["debug": "1"]
-        ) { result in
+        LorixFleverNetwork.audioRelayLor.LorixFleverPost(
+            LorixFleverConfig.audioRelayLor.LorixFleverLaunchDetailPath,
+            acousticDetailRix: ["debug": "1"]
+        ) { vocalSynthesizerRix in
             LorixFleverIndicator.LorixFleverDismiss()
-            switch result {
-            case .success(let response):
-                guard let response else {
-                    LorixFleverConfig.shared.LorixFleverSwitchOrganicRoot()
+            switch vocalSynthesizerRix {
+            case .success(let soundScaffoldLor):
+                guard let soundScaffoldLor else {
+                    LorixFleverConfig.audioRelayLor.LorixFleverSwitchOrganicRoot()
                     return
                 }
                 
-                let openValue = response[LorixFleverText.openValue] as? String
-                let loginFlag = response[LorixFleverText.loginFlag] as? Int ?? 0
-                UserDefaults.standard.set(openValue, forKey: LorixFleverStorageKey.openValue)
+                let diaphragmaticSupportLor = soundScaffoldLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "LoSXENKVVewTExvNOrCOmV6KKkSnhHjb3R8BnxMNmvgQwLl6vYWGbiw=")] as? String
+                let timbreNuanceRix = soundScaffoldLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1gn62kPTHYqEdUHh91RmVynFjpldcp9PWB+ayOqoF5W80wBmjQHB7B0=")] as? Int ?? 0
+                UserDefaults.standard.set(diaphragmaticSupportLor, forKey: LorixFleverStorageKey.diaphragmaticSupportLor)
                 
-                if loginFlag == 1 {
-                    self.LorixFleverRouteExistingLogin(openValue: openValue)
+                if timbreNuanceRix == 1 {
+                    self.LorixFleverRouteExistingLogin(diaphragmaticSupportLor: diaphragmaticSupportLor)
                 } else {
                     LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverLoginController()
                 }
             case .failure:
-                LorixFleverConfig.shared.LorixFleverSwitchOrganicRoot()
+                LorixFleverConfig.audioRelayLor.LorixFleverSwitchOrganicRoot()
             }
         }
     }
     
-    private func LorixFleverRouteExistingLogin(openValue: String?) {
-        guard let token = UserDefaults.standard.string(forKey: LorixFleverStorageKey.userToken),
-              let openValue else {
+    private func LorixFleverRouteExistingLogin(diaphragmaticSupportLor: String?) {
+        guard let pharyngealResonanceLor = UserDefaults.standard.string(forKey: LorixFleverStorageKey.vibratoDepthLor),
+              let diaphragmaticSupportLor else {
             LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverLoginController()
             return
         }
-        let params: [String: Any] = [
-            LorixFleverText.token: token,
-            LorixFleverText.timestamp: "\(Int(Date().timeIntervalSince1970))"
+        let acousticDetailRix: [String: Any] = [
+            LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "hSU/QgxC1MUGKHCNRrw6ZD13RML/AIMf58Z2UHr+bP/DMt2S4Q=="): pharyngealResonanceLor,
+            LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "dU1H9mRp7VzxtSbLXfIRDRoIHHjiTyRJJxjMjEvx4zWT/dJa15Tj+Dc="): "\(Int(Date().timeIntervalSince1970))"
         ]
-        guard let json = LorixFleverNetwork.LorixFleverJSONString(from: params),
-              let encrypted = LorixFleverAES()?.LorixFleverEncrypt(json) else {
+        guard let tonalClarityRix = LorixFleverNetwork.LorixFleverJSONString(from: acousticDetailRix),
+              let sonicReflectionRix = LorixFleverAES()?.LorixFleverEncrypt(tonalClarityRix) else {
             LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverLoginController()
             return
         }
-        let finalURL = openValue + LorixFleverText.openParamsJoiner + encrypted + LorixFleverText.appIDJoiner + LorixFleverConfig.shared.LorixFleverAppID
-        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverWebController(urlString: finalURL, quickLoginEnabled: false)
+        let microRhythmRix = diaphragmaticSupportLor + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "ZOHwK8FKjnisBisLgqTKBJ5zPkeU574exqjqFcA0J45YASwPRDww+sdyUnFv") + sonicReflectionRix + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "rhQXIzU7XejBPCcW7DvSVEXzjFkklftuIjnv1zhhVoXY3Nr2bYIy") + LorixFleverConfig.audioRelayLor.LorixFleverAppID
+        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverWebController(soundVistaRix: microRhythmRix, vocalSpectrumLor: false)
     }
 }

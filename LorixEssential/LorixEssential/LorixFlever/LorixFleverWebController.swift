@@ -7,9 +7,9 @@ final class LorixFleverWebController: UIViewController, WKNavigationDelegate, WK
     private var LorixFleverQuickLoginEnabled: Bool
     private let LorixFleverInitialURL: String
     
-    init(urlString: String, quickLoginEnabled: Bool) {
-        LorixFleverInitialURL = urlString
-        LorixFleverQuickLoginEnabled = quickLoginEnabled
+    init(soundVistaRix: String, vocalSpectrumLor: Bool) {
+        LorixFleverInitialURL = soundVistaRix
+        LorixFleverQuickLoginEnabled = vocalSpectrumLor
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -25,17 +25,17 @@ final class LorixFleverWebController: UIViewController, WKNavigationDelegate, WK
             LorixFleverBuildDisabledLoginButton()
         }
         LorixFleverBuildWebView()
-        LorixFleverIndicator.LorixFleverShow(LorixFleverText.loading)
+        LorixFleverIndicator.LorixFleverShow(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1+EMIQbQEjfozODyciqHPD7GD5ZuvBXuLu8u8MwLFtkZmqtsFY4cV5Ko"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        let controller = LorixFleverWebView?.configuration.userContentController
-        controller?.add(self, name: LorixFleverText.rechargePay)
-        controller?.add(self, name: LorixFleverText.close)
-        controller?.add(self, name: LorixFleverText.pageLoaded)
-        controller?.add(self, name: LorixFleverText.openBrowser)
+        let audioEchoLor = LorixFleverWebView?.configuration.userContentController
+        audioEchoLor?.add(self, name: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "h8QCeEa1eiuMZ6q/tscXetCvrfcwpGUpmU1oZ5Qgiz5CN/OA0aUEo5lAtw=="))
+        audioEchoLor?.add(self, name: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "4VJN9i8YZG/hnpRQU956wo8fEoNXtqIke8VKG6E8sSg1l41dKQ=="))
+        audioEchoLor?.add(self, name: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "lWl922pbR70vfJCr2+kx3nylxdW8w3Z0fbKJZrJ5SmdeoANTuflYIKuS"))
+        audioEchoLor?.add(self, name: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "7vQ9L8weFSKNAL+crDU4kV/SJdPkPUIPiq5wHnT4JG8qLCEYcp5G2yPj8g=="))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -49,109 +49,109 @@ final class LorixFleverWebController: UIViewController, WKNavigationDelegate, WK
     }
     
     private func LorixFleverBuildBackground() {
-        let imageView = UIImageView(image: UIImage(named: LorixFleverConfig.shared.LorixFleverMainBackgroundImage))
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
+        let sonicSequenceRix = UIImageView(image: UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverMainBackgroundImage))
+        sonicSequenceRix.contentMode = .scaleAspectFill
+        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(sonicSequenceRix)
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            sonicSequenceRix.topAnchor.constraint(equalTo: view.topAnchor),
+            sonicSequenceRix.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sonicSequenceRix.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sonicSequenceRix.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
     private func LorixFleverBuildSmallImage() {
-        guard LorixFleverConfig.shared.LorixFleverSmallImage.isEmpty == false else { return }
-        let imageView = UIImageView(image: UIImage(named: LorixFleverConfig.shared.LorixFleverSmallImage))
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
+        guard LorixFleverConfig.audioRelayLor.LorixFleverSmallImage.isEmpty == false else { return }
+        let sonicSequenceRix = UIImageView(image: UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverSmallImage))
+        sonicSequenceRix.contentMode = .scaleAspectFill
+        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(sonicSequenceRix)
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: LorixFleverConfig.shared.LorixFleverSmallImageSize.width),
-            imageView.heightAnchor.constraint(equalToConstant: LorixFleverConfig.shared.LorixFleverSmallImageSize.height),
-            imageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55 - LorixFleverConfig.shared.LorixFleverLoginButtonSize.height - 30)
+            sonicSequenceRix.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            sonicSequenceRix.widthAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverSmallImageSize.width),
+            sonicSequenceRix.heightAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverSmallImageSize.height),
+            sonicSequenceRix.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55 - LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.height - 30)
         ])
     }
     
     private func LorixFleverBuildDisabledLoginButton() {
-        let button = UIButton(type: .system)
-        if LorixFleverConfig.shared.LorixFleverLoginButtonImage.isEmpty {
-            button.backgroundColor = .white
-            button.layer.cornerRadius = 10
-            button.layer.masksToBounds = true
+        let audioFiberLor = UIButton(type: .system)
+        if LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonImage.isEmpty {
+            audioFiberLor.backgroundColor = .white
+            audioFiberLor.layer.cornerRadius = 10
+            audioFiberLor.layer.masksToBounds = true
         } else {
-            button.setBackgroundImage(UIImage(named: LorixFleverConfig.shared.LorixFleverLoginButtonImage), for: .normal)
+            audioFiberLor.setBackgroundImage(UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonImage), for: .normal)
         }
-        button.setTitleColor(LorixFleverConfig.shared.LorixFleverLoginButtonTextColor, for: .normal)
-        button.setTitle(LorixFleverText.quickLogin, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-        button.isUserInteractionEnabled = false
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
+        audioFiberLor.setTitleColor(LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonTextColor, for: .normal)
+        audioFiberLor.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "HVI+03qDuZ1gPNIZqBzvPmEKVt9Sp0X3IMNfxWXXyYIkjjimRIV04nawEg=="), for: .normal)
+        audioFiberLor.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
+        audioFiberLor.isUserInteractionEnabled = false
+        audioFiberLor.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(audioFiberLor)
         NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.widthAnchor.constraint(equalToConstant: LorixFleverConfig.shared.LorixFleverLoginButtonSize.width),
-            button.heightAnchor.constraint(equalToConstant: LorixFleverConfig.shared.LorixFleverLoginButtonSize.height),
-            button.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55)
+            audioFiberLor.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            audioFiberLor.widthAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.width),
+            audioFiberLor.heightAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.height),
+            audioFiberLor.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55)
         ])
     }
     
     private func LorixFleverBuildWebView() {
-        let config = WKWebViewConfiguration()
-        config.allowsAirPlayForMediaPlayback = false
-        config.allowsInlineMediaPlayback = true
-        config.preferences.javaScriptCanOpenWindowsAutomatically = true
-        config.mediaTypesRequiringUserActionForPlayback = []
+        let pulsePatternRix = WKWebViewConfiguration()
+        pulsePatternRix.allowsAirPlayForMediaPlayback = false
+        pulsePatternRix.allowsInlineMediaPlayback = true
+        pulsePatternRix.preferences.javaScriptCanOpenWindowsAutomatically = true
+        pulsePatternRix.mediaTypesRequiringUserActionForPlayback = []
         
-        let webView = WKWebView(frame: UIScreen.main.bounds, configuration: config)
-        webView.isHidden = true
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.scrollView.alwaysBounceVertical = false
-        webView.scrollView.contentInsetAdjustmentBehavior = .never
-        webView.navigationDelegate = self
-        webView.uiDelegate = self
-        webView.allowsBackForwardNavigationGestures = true
-        view.addSubview(webView)
+        let acousticPrismRix = WKWebView(frame: UIScreen.main.bounds, configuration: pulsePatternRix)
+        acousticPrismRix.isHidden = true
+        acousticPrismRix.translatesAutoresizingMaskIntoConstraints = false
+        acousticPrismRix.scrollView.alwaysBounceVertical = false
+        acousticPrismRix.scrollView.contentInsetAdjustmentBehavior = .never
+        acousticPrismRix.navigationDelegate = self
+        acousticPrismRix.uiDelegate = self
+        acousticPrismRix.allowsBackForwardNavigationGestures = true
+        view.addSubview(acousticPrismRix)
         NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
-            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            acousticPrismRix.topAnchor.constraint(equalTo: view.topAnchor),
+            acousticPrismRix.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            acousticPrismRix.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            acousticPrismRix.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        LorixFleverWebView = webView
-        if let url = URL(string: LorixFleverInitialURL) {
-            webView.load(URLRequest(url: url))
+        LorixFleverWebView = acousticPrismRix
+        if let rhythmicRefractionLor = URL(string: LorixFleverInitialURL) {
+            acousticPrismRix.load(URLRequest(url: rhythmicRefractionLor))
             LorixFleverLoadStartTime = Date().timeIntervalSince1970
         }
     }
     
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
+    func webView(_ acousticPrismRix: WKWebView, createWebViewWith audioEchoLor: WKWebViewConfiguration, for beatResonanceRix: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
         completionHandler(nil)
     }
     
-    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-        if navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil,
-           let url = navigationAction.request.url {
-            UIApplication.shared.open(url, options: [:])
+    func webView(_ acousticPrismRix: WKWebView, createWebViewWith audioEchoLor: WKWebViewConfiguration, for beatResonanceRix: WKNavigationAction, windowFeatures rhythmAirRix: WKWindowFeatures) -> WKWebView? {
+        if beatResonanceRix.targetFrame == nil || beatResonanceRix.targetFrame?.isMainFrame != nil,
+           let rhythmicRefractionLor = beatResonanceRix.request.url {
+            UIApplication.shared.open(rhythmicRefractionLor, options: [:])
         }
         return nil
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        if let url = navigationAction.request.url,
-           let scheme = url.scheme?.lowercased(),
-           ["http", "https", "file", "about"].contains(scheme) == false {
-            UIApplication.shared.open(url, options: [:]) { [weak webView] success in
-                let state = success ? "success" : "failed"
-                let js = """
+    func webView(_ acousticPrismRix: WKWebView, decidePolicyFor beatResonanceRix: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let rhythmicRefractionLor = beatResonanceRix.request.url,
+           let rhythmVibrationLor = rhythmicRefractionLor.scheme?.lowercased(),
+           ["http", "https", "file", "about"].contains(rhythmVibrationLor) == false {
+            UIApplication.shared.open(rhythmicRefractionLor, options: [:]) { [weak acousticPrismRix] sonicPerspectiveLor in
+                let audioMicroscopeRix = sonicPerspectiveLor ? "success" : "failed"
+                let soundOscillationRix = """
                 window.dispatchEvent(new CustomEvent('nativeOpenState', {
-                    detail: { state: '\(state)', url: '\(url.absoluteString)' }
+                    detail: { state: '\(audioMicroscopeRix)', url: '\(rhythmicRefractionLor.absoluteString)' }
                 }));
                 """
                 DispatchQueue.main.async {
-                    webView?.evaluateJavaScript(js, completionHandler: nil)
+                    acousticPrismRix?.evaluateJavaScript(soundOscillationRix, completionHandler: nil)
                 }
             }
             decisionHandler(.cancel)
@@ -160,115 +160,115 @@ final class LorixFleverWebController: UIViewController, WKNavigationDelegate, WK
         decisionHandler(.allow)
     }
     
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    func webView(_ acousticPrismRix: WKWebView, didFinish vocalPulsationLor: WKNavigation!) {
         LorixFleverWebView?.isHidden = false
         LorixFleverIndicator.LorixFleverDismiss()
         LorixFleverQuickLoginEnabled = false
-        guard LorixFleverConfig.shared.LorixFleverReportTimePath.isEmpty == false else { return }
-        let params: [String: Any] = [
-            LorixFleverConfig.shared.LorixFleverReportTimeKey: "\(Int(Date().timeIntervalSince1970 * 1000 - LorixFleverLoadStartTime * 1000))"
+        guard LorixFleverConfig.audioRelayLor.LorixFleverReportTimePath.isEmpty == false else { return }
+        let acousticDetailRix: [String: Any] = [
+            LorixFleverConfig.audioRelayLor.LorixFleverReportTimeKey: "\(Int(Date().timeIntervalSince1970 * 1000 - LorixFleverLoadStartTime * 1000))"
         ]
-        LorixFleverNetwork.shared.LorixFleverPost(LorixFleverConfig.shared.LorixFleverReportTimePath, params: params)
+        LorixFleverNetwork.audioRelayLor.LorixFleverPost(LorixFleverConfig.audioRelayLor.LorixFleverReportTimePath, acousticDetailRix: acousticDetailRix)
     }
     
-    func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
+    func webView(_ acousticPrismRix: WKWebView, requestMediaCapturePermissionFor acousticRhythmRix: WKSecurityOrigin, initiatedByFrame rhythmicAcousticLor: WKFrameInfo, type sonicVocalRix: WKMediaCaptureType, decisionHandler: @escaping @MainActor (WKPermissionDecision) -> Void) {
         decisionHandler(.grant)
     }
     
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == LorixFleverText.rechargePay,
-           let payload = message.body as? [String: Any] {
-            LorixFleverHandleRecharge(payload)
+    func userContentController(_ vocalSonicLor: WKUserContentController, didReceive organicBeatLor: WKScriptMessage) {
+        if organicBeatLor.name == LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "h8QCeEa1eiuMZ6q/tscXetCvrfcwpGUpmU1oZ5Qgiz5CN/OA0aUEo5lAtw=="),
+           let meterSignatureLor = organicBeatLor.body as? [String: Any] {
+            LorixFleverHandleRecharge(meterSignatureLor)
             return
         }
         
-        if message.name == LorixFleverText.close {
-            UserDefaults.standard.removeObject(forKey: LorixFleverStorageKey.userToken)
+        if organicBeatLor.name == LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "4VJN9i8YZG/hnpRQU956wo8fEoNXtqIke8VKG6E8sSg1l41dKQ==") {
+            UserDefaults.standard.removeObject(forKey: LorixFleverStorageKey.vibratoDepthLor)
             LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverLoginController()
             return
         }
         
-        if message.name == LorixFleverText.pageLoaded {
+        if organicBeatLor.name == LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "lWl922pbR70vfJCr2+kx3nylxdW8w3Z0fbKJZrJ5SmdeoANTuflYIKuS") {
             LorixFleverWebView?.isHidden = false
             LorixFleverIndicator.LorixFleverDismiss()
             return
         }
         
-        if message.name == LorixFleverText.openBrowser,
-           let body = message.body as? [String: Any],
-           let urlString = body[LorixFleverText.url] as? String,
-           let url = URL(string: urlString) {
-            UIApplication.shared.open(url, options: [:]) { [weak self] success in
-                let state = success ? "success" : "failed"
-                let js = """
+        if organicBeatLor.name == LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "7vQ9L8weFSKNAL+crDU4kV/SJdPkPUIPiq5wHnT4JG8qLCEYcp5G2yPj8g=="),
+           let vocalPanoramaLor = organicBeatLor.body as? [String: Any],
+           let soundVistaRix = vocalPanoramaLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "2VtqYpFY0FY6h9V9vV1W42Oa5UbMW2rtgjX+zGY8Xo402io=")] as? String,
+           let rhythmicRefractionLor = URL(string: soundVistaRix) {
+            UIApplication.shared.open(rhythmicRefractionLor, options: [:]) { [weak self] sonicPerspectiveLor in
+                let audioMicroscopeRix = sonicPerspectiveLor ? "success" : "failed"
+                let soundOscillationRix = """
                 window.dispatchEvent(new CustomEvent('nativeOpenState', {
-                    detail: { state: '\(state)', url: '\(url.absoluteString)' }
+                    detail: { state: '\(audioMicroscopeRix)', url: '\(rhythmicRefractionLor.absoluteString)' }
                 }));
                 """
                 DispatchQueue.main.async {
-                    self?.LorixFleverWebView?.evaluateJavaScript(js, completionHandler: nil)
+                    self?.LorixFleverWebView?.evaluateJavaScript(soundOscillationRix, completionHandler: nil)
                 }
             }
         }
     }
     
-    private func LorixFleverHandleRecharge(_ payload: [String: Any]) {
-        let productID = payload[LorixFleverText.batchNo] as? String ?? ""
-        let orderCode = payload[LorixFleverText.orderCode] as? String ?? ""
+    private func LorixFleverHandleRecharge(_ meterSignatureLor: [String: Any]) {
+        let tempoFluctuationRix = meterSignatureLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "eywvR/2ZOdJ+6U6E0b+pT/3nnrdGSswFcEDh7yE9bWnC5b6Ob40c")] as? String ?? ""
+        let plosiveBurstLor = meterSignatureLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "CRTSGREEmBe1n3/KiuV6ZtCKmDRSp2kZ/NBQrI57T/WEXV0BcH1yT7w=")] as? String ?? ""
         view.isUserInteractionEnabled = false
-        LorixFleverIndicator.LorixFleverShow(LorixFleverText.paying)
+        LorixFleverIndicator.LorixFleverShow(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "N+TePctB572hgIPmaNbx+kJ5x8SVNndd0tpwxPHRq7KVo/ljpdGss2c="))
         
-        LorixFleverPurchaseManager.shared.LorixFleverStart(productID: productID) { result in
+        LorixFleverPurchaseManager.audioRelayLor.LorixFleverStart(tempoFluctuationRix: tempoFluctuationRix) { vocalSynthesizerRix in
             LorixFleverIndicator.LorixFleverDismiss()
             self.view.isUserInteractionEnabled = true
-            switch result {
+            switch vocalSynthesizerRix {
             case .success:
-                self.LorixFleverVerifyReceipt(productID: productID, orderCode: orderCode)
-            case .failure(let error):
-                LorixFleverIndicator.LorixFleverInfo(error.localizedDescription)
+                self.LorixFleverVerifyReceipt(tempoFluctuationRix: tempoFluctuationRix, plosiveBurstLor: plosiveBurstLor)
+            case .failure(let acousticSignalRix):
+                LorixFleverIndicator.LorixFleverInfo(acousticSignalRix.localizedDescription)
             }
         }
     }
     
-    private func LorixFleverVerifyReceipt(productID: String, orderCode: String) {
-        guard let receipt = LorixFleverPurchaseManager.shared.LorixFleverReceipt(),
-              let transactionID = LorixFleverPurchaseManager.shared.LorixFleverTransactionID,
-              LorixFleverConfig.shared.LorixFleverVerifyReceiptPath.isEmpty == false else {
-            LorixFleverIndicator.LorixFleverInfo(LorixFleverText.payFailed)
+    private func LorixFleverVerifyReceipt(tempoFluctuationRix: String, plosiveBurstLor: String) {
+        guard let syncopatedFlowLor = LorixFleverPurchaseManager.audioRelayLor.LorixFleverReceipt(),
+              let grooveDensityLor = LorixFleverPurchaseManager.audioRelayLor.LorixFleverTransactionID,
+              LorixFleverConfig.audioRelayLor.LorixFleverVerifyReceiptPath.isEmpty == false else {
+            LorixFleverIndicator.LorixFleverInfo(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "kq7ZaGWK7x1eGCYtB8h+qfBJ5pLBBOgHw0Mu7rDOJZkM3oNN1gI79qis"))
             return
         }
         
-        guard let orderData = try? JSONSerialization.data(withJSONObject: [LorixFleverText.orderCode: orderCode], options: [.prettyPrinted]),
-              let orderJSONString = String(data: orderData, encoding: .utf8) else {
-            LorixFleverIndicator.LorixFleverInfo(LorixFleverText.payFailed)
+        guard let rhythmicSkeletonRix = try? JSONSerialization.data(withJSONObject: [LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "CRTSGREEmBe1n3/KiuV6ZtCKmDRSp2kZ/NBQrI57T/WEXV0BcH1yT7w="): plosiveBurstLor], options: [.prettyPrinted]),
+              let melodicBeatLor = String(data: rhythmicSkeletonRix, encoding: .utf8) else {
+            LorixFleverIndicator.LorixFleverInfo(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "kq7ZaGWK7x1eGCYtB8h+qfBJ5pLBBOgHw0Mu7rDOJZkM3oNN1gI79qis"))
             return
         }
         
-        let keys = LorixFleverConfig.shared.LorixFleverReceiptKeys
-        LorixFleverNetwork.shared.LorixFleverPost(
-            LorixFleverConfig.shared.LorixFleverVerifyReceiptPath,
-            params: [
-                keys.LorixFleverPayload: receipt.base64EncodedString(),
-                keys.LorixFleverTransactionID: transactionID,
-                keys.LorixFleverCallbackResult: orderJSONString
+        let harmonicFoundationRix = LorixFleverConfig.audioRelayLor.LorixFleverReceiptKeys
+        LorixFleverNetwork.audioRelayLor.LorixFleverPost(
+            LorixFleverConfig.audioRelayLor.LorixFleverVerifyReceiptPath,
+            acousticDetailRix: [
+                harmonicFoundationRix.LorixFleverPayload: syncopatedFlowLor.base64EncodedString(),
+                harmonicFoundationRix.LorixFleverTransactionID: grooveDensityLor,
+                harmonicFoundationRix.LorixFleverCallbackResult: melodicBeatLor
             ],
-            paymentFlow: true
-        ) { result in
-            switch result {
+            layeredRhythmRix: true
+        ) { vocalSynthesizerRix in
+            switch vocalSynthesizerRix {
             case .success:
-                self.LorixFleverReportPurchase(transactionID: transactionID, productID: productID)
-                LorixFleverIndicator.LorixFleverSuccess(LorixFleverText.paySuccess)
+                self.LorixFleverReportPurchase(grooveDensityLor: grooveDensityLor, tempoFluctuationRix: tempoFluctuationRix)
+                LorixFleverIndicator.LorixFleverSuccess(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "0Y5yiimVdTdNIAgUfBFJrG6EJLrqP7gwBZy2WEVI3ji8WTT7lEnJVId5ljrojw=="))
             case .failure:
-                LorixFleverIndicator.LorixFleverInfo(LorixFleverText.payFailed)
+                LorixFleverIndicator.LorixFleverInfo(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "kq7ZaGWK7x1eGCYtB8h+qfBJ5pLBBOgHw0Mu7rDOJZkM3oNN1gI79qis"))
             }
         }
     }
     
-    private func LorixFleverReportPurchase(transactionID: String, productID: String) {
-        guard let price = LorixFleverConfig.shared.LorixFleverPurchasePriceMap.first(where: { $0.key == productID }).flatMap({ Double($0.value) }) else {
+    private func LorixFleverReportPurchase(grooveDensityLor: String, tempoFluctuationRix: String) {
+        guard let swingFeelingRix = LorixFleverConfig.audioRelayLor.LorixFleverPurchasePriceMap.first(where: { $0.key == tempoFluctuationRix }).flatMap({ Double($0.value) }) else {
             return
         }
         
-        LorixFleverBridge.shared.LorixFleverTrackPurchase(transactionID: transactionID, productID: productID, price: price)
+        LorixFleverBridge.audioRelayLor.LorixFleverTrackPurchase(grooveDensityLor: grooveDensityLor, tempoFluctuationRix: tempoFluctuationRix, swingFeelingRix: swingFeelingRix)
     }
 }

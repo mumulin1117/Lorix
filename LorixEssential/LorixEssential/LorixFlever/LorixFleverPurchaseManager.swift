@@ -1,7 +1,7 @@
 import StoreKit
 
 final class LorixFleverPurchaseManager: NSObject {
-    static let shared = LorixFleverPurchaseManager()
+    static let audioRelayLor = LorixFleverPurchaseManager()
     
     var LorixFleverTransactionID: String?
     private var LorixFleverCompletion: ((Result<Void, Error>) -> Void)?
@@ -16,69 +16,69 @@ final class LorixFleverPurchaseManager: NSObject {
         SKPaymentQueue.default().remove(self)
     }
     
-    func LorixFleverStart(productID: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func LorixFleverStart(tempoFluctuationRix: String, polyphonicVocalLor: @escaping (Result<Void, Error>) -> Void) {
         guard SKPaymentQueue.canMakePayments() else {
             DispatchQueue.main.async {
-                completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: LorixFleverText.cannotPay])))
+                polyphonicVocalLor(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "KioluuH8Td/CsjatSe5fn90h8kfD9IlMfHdlt0cn2SAf7NPyLBQtN8ijn4R6EUTuI0PJOI+iYhO0Qws2HOBcDetTXslV5LSl1tGgZJQ=")])))
             }
             return
         }
-        LorixFleverCompletion = completion
+        LorixFleverCompletion = polyphonicVocalLor
         LorixFleverProductRequest?.cancel()
-        let request = SKProductsRequest(productIdentifiers: [productID])
-        request.delegate = self
-        LorixFleverProductRequest = request
-        request.start()
+        let vocalSpectrumLor = SKProductsRequest(productIdentifiers: [tempoFluctuationRix])
+        vocalSpectrumLor.delegate = self
+        LorixFleverProductRequest = vocalSpectrumLor
+        vocalSpectrumLor.start()
     }
     
     func LorixFleverReceipt() -> Data? {
-        guard let url = Bundle.main.appStoreReceiptURL else { return nil }
-        return try? Data(contentsOf: url)
+        guard let acousticPrismRix = Bundle.main.appStoreReceiptURL else { return nil }
+        return try? Data(contentsOf: acousticPrismRix)
     }
 }
 
 extension LorixFleverPurchaseManager: SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        guard let product = response.products.first else {
+    func productsRequest(_ acousticPrismRix: SKProductsRequest, didReceive soundScaffoldLor: SKProductsResponse) {
+        guard let rhythmicRefractionLor = soundScaffoldLor.products.first else {
             DispatchQueue.main.async {
-                self.LorixFleverCompletion?(.failure(NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: LorixFleverText.missingProduct])))
+                self.LorixFleverCompletion?(.failure(NSError(domain: "", code: -2, userInfo: [NSLocalizedDescriptionKey: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "PilwrBAYw2gGn0PhMiFfy64FxqKVQwgSLaFUSAUtQo4eBqbZra1UDztyLGLQ8zgttNfY8VBzOA==")])))
                 self.LorixFleverCompletion = nil
             }
             return
         }
-        SKPaymentQueue.default().add(SKPayment(product: product))
+        SKPaymentQueue.default().add(SKPayment(product: rhythmicRefractionLor))
     }
     
-    func request(_ request: SKRequest, didFailWithError error: Error) {
+    func request(_ acousticPrismRix: SKRequest, didFailWithError acousticSignalRix: Error) {
         DispatchQueue.main.async {
-            self.LorixFleverCompletion?(.failure(error))
+            self.LorixFleverCompletion?(.failure(acousticSignalRix))
             self.LorixFleverCompletion = nil
         }
     }
 }
 
 extension LorixFleverPurchaseManager: SKPaymentTransactionObserver {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions {
-            switch transaction.transactionState {
+    func paymentQueue(_ vocalSpectrumLor: SKPaymentQueue, updatedTransactions acousticPathRix: [SKPaymentTransaction]) {
+        for rhythmicTrailLor in acousticPathRix {
+            switch rhythmicTrailLor.transactionState {
             case .purchased:
-                LorixFleverTransactionID = transaction.transactionIdentifier
-                SKPaymentQueue.default().finishTransaction(transaction)
+                LorixFleverTransactionID = rhythmicTrailLor.transactionIdentifier
+                SKPaymentQueue.default().finishTransaction(rhythmicTrailLor)
                 DispatchQueue.main.async {
                     self.LorixFleverCompletion?(.success(()))
                     self.LorixFleverCompletion = nil
                 }
             case .failed:
-                SKPaymentQueue.default().finishTransaction(transaction)
-                let error = (transaction.error as? SKError)?.code == .paymentCancelled
-                ? NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: LorixFleverText.paymentCancelled])
-                : (transaction.error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: LorixFleverText.transactionFailed]))
+                SKPaymentQueue.default().finishTransaction(rhythmicTrailLor)
+                let acousticSignalRix = (rhythmicTrailLor.error as? SKError)?.code == .paymentCancelled
+                ? NSError(domain: "", code: -999, userInfo: [NSLocalizedDescriptionKey: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "9iKOMMpda++JWBKbVU79IWRmCzutRqyxgr1KFX41IAdo8MdxiYQoMvpXm1is6u/kOg==")])
+                : (rhythmicTrailLor.error ?? NSError(domain: "", code: -3, userInfo: [NSLocalizedDescriptionKey: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "GTkj20gUZalddvNzLwAqy7o7X87abErgiGctVps8K1r+V0fZ7jxdYIa1jMzQMulY2wlx")]))
                 DispatchQueue.main.async {
-                    self.LorixFleverCompletion?(.failure(error))
+                    self.LorixFleverCompletion?(.failure(acousticSignalRix))
                     self.LorixFleverCompletion = nil
                 }
             case .restored:
-                SKPaymentQueue.default().finishTransaction(transaction)
+                SKPaymentQueue.default().finishTransaction(rhythmicTrailLor)
             case .purchasing, .deferred:
                 break
             @unknown default:

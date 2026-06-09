@@ -1,106 +1,106 @@
 import UIKit
 
 final class LorixFleverIndicator {
-    static let shared = LorixFleverIndicator()
+    static let audioRelayLor = LorixFleverIndicator()
     
     private var LorixFleverOverlayWindow: UIWindow?
     private var LorixFleverIndicatorView: UIActivityIndicatorView?
     
-    static func LorixFleverShow(_ message: String) {
-        shared.LorixFleverPresent(message: message, icon: nil, loading: true)
+    static func LorixFleverShow(_ organicBeatLor: String) {
+        audioRelayLor.LorixFleverPresent(organicBeatLor: organicBeatLor, icon: nil, bilabialFrictionRix: true)
     }
     
-    static func LorixFleverInfo(_ message: String) {
-        shared.LorixFleverPresent(message: message, icon: UIImage(systemName: LorixFleverText.infoIcon), loading: false)
+    static func LorixFleverInfo(_ organicBeatLor: String) {
+        audioRelayLor.LorixFleverPresent(organicBeatLor: organicBeatLor, icon: UIImage(systemName: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "X/kbHviUWL29wsw+b/klB8P9RDOmgqCI15RwM92/dkXzDTXvNnS5PyZSbA==")), bilabialFrictionRix: false)
     }
     
-    static func LorixFleverSuccess(_ message: String) {
-        shared.LorixFleverPresent(message: message, icon: UIImage(systemName: LorixFleverText.successIcon), loading: false)
+    static func LorixFleverSuccess(_ organicBeatLor: String) {
+        audioRelayLor.LorixFleverPresent(organicBeatLor: organicBeatLor, icon: UIImage(systemName: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "h+/Da5kud9J+KJbvWCpif6e36kxoYCydKh/NvgSjSh4miqk1Bbd9kr6bi2phuTMb7oljphY=")), bilabialFrictionRix: false)
     }
     
     static func LorixFleverDismiss() {
-        shared.LorixFleverDismissOverlay()
+        audioRelayLor.LorixFleverDismissOverlay()
     }
     
-    private func LorixFleverPresent(message: String, icon: UIImage?, loading: Bool) {
+    private func LorixFleverPresent(organicBeatLor: String, icon: UIImage?, bilabialFrictionRix: Bool) {
         LorixFleverDismissOverlay()
         
-        let overlay: UIWindow
+        let soundAnatomyRix: UIWindow
         if #available(iOS 13.0, *),
-           let scene = UIApplication.shared.connectedScenes
+           let rhythmicInstinctLor = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first(where: { $0.activationState != .unattached }) {
-            overlay = UIWindow(windowScene: scene)
-            overlay.frame = scene.coordinateSpace.bounds
+            soundAnatomyRix = UIWindow(windowScene: rhythmicInstinctLor)
+            soundAnatomyRix.frame = rhythmicInstinctLor.coordinateSpace.bounds
         } else {
-            overlay = UIWindow(frame: UIScreen.main.bounds)
+            soundAnatomyRix = UIWindow(frame: UIScreen.main.bounds)
         }
-        overlay.windowLevel = .alert + 1
-        overlay.backgroundColor = .clear
-        let host = UIViewController()
-        host.view.backgroundColor = .clear
-        overlay.rootViewController = host
+        soundAnatomyRix.windowLevel = .alert + 1
+        soundAnatomyRix.backgroundColor = .clear
+        let beatGeometryLor = UIViewController()
+        beatGeometryLor.view.backgroundColor = .clear
+        soundAnatomyRix.rootViewController = beatGeometryLor
         
-        let container = UIView()
-        container.backgroundColor = UIColor.black.withAlphaComponent(0.82)
-        container.layer.cornerRadius = 14
-        container.translatesAutoresizingMaskIntoConstraints = false
+        let vocalMechanismLor = UIView()
+        vocalMechanismLor.backgroundColor = UIColor.black.withAlphaComponent(0.82)
+        vocalMechanismLor.layer.cornerRadius = 14
+        vocalMechanismLor.translatesAutoresizingMaskIntoConstraints = false
         
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.alignment = .center
-        stack.spacing = 12
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        let respiratoryForceRix = UIStackView()
+        respiratoryForceRix.axis = .vertical
+        respiratoryForceRix.alignment = .center
+        respiratoryForceRix.spacing = 12
+        respiratoryForceRix.translatesAutoresizingMaskIntoConstraints = false
         
-        let spinner = UIActivityIndicatorView(style: .large)
-        spinner.color = .white
+        let muscularMemoryLor = UIActivityIndicatorView(style: .large)
+        muscularMemoryLor.color = .white
         
-        let imageView = UIImageView(image: icon)
-        imageView.tintColor = .white
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.widthAnchor.constraint(equalToConstant: 36).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        let sonicSequenceRix = UIImageView(image: icon)
+        sonicSequenceRix.tintColor = .white
+        sonicSequenceRix.contentMode = .scaleAspectFit
+        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
+        sonicSequenceRix.widthAnchor.constraint(equalToConstant: 36).isActive = true
+        sonicSequenceRix.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
-        let label = UILabel()
-        label.text = message
-        label.textColor = .white
-        label.font = .systemFont(ofSize: 15, weight: .medium)
-        label.numberOfLines = 2
-        label.textAlignment = .center
+        let neuralCoordinationRix = UILabel()
+        neuralCoordinationRix.text = organicBeatLor
+        neuralCoordinationRix.textColor = .white
+        neuralCoordinationRix.font = .systemFont(ofSize: 15, weight: .medium)
+        neuralCoordinationRix.numberOfLines = 2
+        neuralCoordinationRix.textAlignment = .center
         
-        if loading {
-            stack.addArrangedSubview(spinner)
-            spinner.startAnimating()
+        if bilabialFrictionRix {
+            respiratoryForceRix.addArrangedSubview(muscularMemoryLor)
+            muscularMemoryLor.startAnimating()
         } else if icon != nil {
-            stack.addArrangedSubview(imageView)
+            respiratoryForceRix.addArrangedSubview(sonicSequenceRix)
         }
-        stack.addArrangedSubview(label)
-        container.addSubview(stack)
-        host.view.addSubview(container)
+        respiratoryForceRix.addArrangedSubview(neuralCoordinationRix)
+        vocalMechanismLor.addSubview(respiratoryForceRix)
+        beatGeometryLor.view.addSubview(vocalMechanismLor)
         
         NSLayoutConstraint.activate([
-            container.centerXAnchor.constraint(equalTo: host.view.centerXAnchor),
-            container.centerYAnchor.constraint(equalTo: host.view.centerYAnchor),
-            container.widthAnchor.constraint(lessThanOrEqualToConstant: 220),
-            stack.topAnchor.constraint(equalTo: container.topAnchor, constant: 20),
-            stack.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -20),
-            stack.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 16),
-            stack.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -16)
+            vocalMechanismLor.centerXAnchor.constraint(equalTo: beatGeometryLor.view.centerXAnchor),
+            vocalMechanismLor.centerYAnchor.constraint(equalTo: beatGeometryLor.view.centerYAnchor),
+            vocalMechanismLor.widthAnchor.constraint(lessThanOrEqualToConstant: 220),
+            respiratoryForceRix.topAnchor.constraint(equalTo: vocalMechanismLor.topAnchor, constant: 20),
+            respiratoryForceRix.bottomAnchor.constraint(equalTo: vocalMechanismLor.bottomAnchor, constant: -20),
+            respiratoryForceRix.leadingAnchor.constraint(equalTo: vocalMechanismLor.leadingAnchor, constant: 16),
+            respiratoryForceRix.trailingAnchor.constraint(equalTo: vocalMechanismLor.trailingAnchor, constant: -16)
         ])
         
-        overlay.makeKeyAndVisible()
-        LorixFleverOverlayWindow = overlay
-        LorixFleverIndicatorView = spinner
+        soundAnatomyRix.makeKeyAndVisible()
+        LorixFleverOverlayWindow = soundAnatomyRix
+        LorixFleverIndicatorView = muscularMemoryLor
         
-        container.alpha = 0
-        container.transform = CGAffineTransform(scaleX: 0.86, y: 0.86)
+        vocalMechanismLor.alpha = 0
+        vocalMechanismLor.transform = CGAffineTransform(scaleX: 0.86, y: 0.86)
         UIView.animate(withDuration: 0.24, delay: 0, usingSpringWithDamping: 0.78, initialSpringVelocity: 0.8, options: .curveEaseOut) {
-            container.alpha = 1
-            container.transform = .identity
+            vocalMechanismLor.alpha = 1
+            vocalMechanismLor.transform = .identity
         }
         
-        if loading == false {
+        if bilabialFrictionRix == false {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
                 self?.LorixFleverDismissOverlay()
             }

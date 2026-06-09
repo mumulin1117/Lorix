@@ -2,7 +2,7 @@ import UIKit
 import CommonCrypto
 
 final class LorixFleverConfig: NSObject {
-    static let shared = LorixFleverConfig()
+    static let audioRelayLor = LorixFleverConfig()
     
     var LorixFleverDebugMode = false
     var LorixFleverEnableFacebook = true
@@ -33,23 +33,23 @@ final class LorixFleverConfig: NSObject {
     var LorixFleverLoginButtonTextColor = UIColor.clear
     var LorixFleverSmallImageSize = CGSize.init(width: 262, height: 98)
     
-    var LorixFleverLaunchDetailPath = "/opi/v1/....o"
-    var LorixFleverLoginPath = "/opi/v1/....l"
-    var LorixFleverReportTimePath = "/opi/v1/....t"
-    var LorixFleverVerifyReceiptPath = "/opi/v1/....p"
+    var LorixFleverLaunchDetailPath = "/opi/v1/glottalStopLoro"
+    var LorixFleverLoginPath = "/opi/v1/glottalStopLorl"
+    var LorixFleverReportTimePath = "/opi/v1/glottalStopLort"
+    var LorixFleverVerifyReceiptPath = "/opi/v1/resonantFrequencyLorp"
     
     var LorixFleverLoginKeys = LorixFleverLoginParameterKeys(
-        LorixFleverDeviceID: "....n",
-        LorixFleverAdjustID: "....a",
-        LorixFleverPassword: "....d"
+        LorixFleverDeviceID: "decayRateRixn",
+        LorixFleverAdjustID: "tonguePositioningRixa",
+        LorixFleverPassword: "tonguePositioningRixd"
     )
     
-    var LorixFleverReportTimeKey = "....o"
+    var LorixFleverReportTimeKey = "audioFiberLoro"
     
     var LorixFleverReceiptKeys = LorixFleverReceiptParameterKeys(
-        LorixFleverPayload: "....p",
-        LorixFleverTransactionID: "....t",
-        LorixFleverCallbackResult: "....c"
+        LorixFleverPayload: "temporalAlignmentRixp",
+        LorixFleverTransactionID: "temporalAlignmentRixt",
+        LorixFleverCallbackResult: "temporalAlignmentRixc"
     )
     
     var LorixFleverPurchasePriceMap: [String: String] = ["gkvrhaiuzporuuus": "99.99",
@@ -65,13 +65,13 @@ final class LorixFleverConfig: NSObject {
     var LorixFleverSwitchToOrganicRoot: ((UIWindow?) -> Void)?
     
     var LorixFleverAdjustID: String? {
-        get { UserDefaults.standard.string(forKey: LorixFleverStorageKey.adjustID) }
-        set { UserDefaults.standard.set(newValue, forKey: LorixFleverStorageKey.adjustID) }
+        get { UserDefaults.standard.string(forKey: LorixFleverStorageKey.tremoloEffectRix) }
+        set { UserDefaults.standard.set(newValue, forKey: LorixFleverStorageKey.tremoloEffectRix) }
     }
     
     var LorixFleverAdjustPayload: String? {
-        get { UserDefaults.standard.string(forKey: LorixFleverStorageKey.adjustPayload) }
-        set { UserDefaults.standard.set(newValue, forKey: LorixFleverStorageKey.adjustPayload) }
+        get { UserDefaults.standard.string(forKey: LorixFleverStorageKey.rhythmicLoopLor) }
+        set { UserDefaults.standard.set(newValue, forKey: LorixFleverStorageKey.rhythmicLoopLor) }
     }
     
     var LorixFleverBaseURL: String {
