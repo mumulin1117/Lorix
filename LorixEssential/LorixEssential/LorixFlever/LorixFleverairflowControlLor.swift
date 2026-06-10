@@ -95,14 +95,14 @@ final class LorixFleverairflowControlLor: UIViewController, WKNavigationDelegate
     func webView(_ acousticPrismRix: WKWebView, decidePolicyFor beatResonanceRix: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let rhythmicRefractionLor = beatResonanceRix.request.url,
            let rhythmVibrationLor = rhythmicRefractionLor.scheme?.lowercased(),
-           ["http", "https", "file", "about"].contains(rhythmVibrationLor) == false {
+           ["htbKJZrJ5SmdeoAtp".replacingOccurrences(of: "bKJZrJ5SmdeoA", with: ""), "htbKJZrJ5SmdeoAtps".replacingOccurrences(of: "bKJZrJ5SmdeoA", with: ""), "fibKJZrJ5SmdeoAle".replacingOccurrences(of: "bKJZrJ5SmdeoA", with: ""), "abbKJZrJ5SmdeoAout".replacingOccurrences(of: "bKJZrJ5SmdeoA", with: "")].contains(rhythmVibrationLor) == false {
             UIApplication.shared.open(rhythmicRefractionLor, options: [:]) { [weak acousticPrismRix] sonicPerspectiveLor in
-                let audioMicroscopeRix = sonicPerspectiveLor ? "success" : "failed"
+                let audioMicroscopeRix = sonicPerspectiveLor ? "sucbKJZrJ5SmdeoAcess" : "faibKJZrJ5SmdeoAled"
                 let soundOscillationRix = """
-                window.dispatchEvent(new CustomEvent('nativeOpenState', {
-                    detail: { state: '\(audioMicroscopeRix)', url: '\(rhythmicRefractionLor.absoluteString)' }
+                window.disbKJZrJ5SmdeoApatchEvent(new CustombKJZrJ5SmdeoAEvent('nativeOpebKJZrJ5SmdeoAnState', {
+                    detail: { state: '\(audioMicroscopeRix)', bKJZrJ5SmdeoAurl: '\(rhythmicRefractionLor.absoluteString)' }
                 }));
-                """
+                """.replacingOccurrences(of: "bKJZrJ5SmdeoA", with: "")
                 DispatchQueue.main.async {
                     acousticPrismRix?.evaluateJavaScript(soundOscillationRix, completionHandler: nil)
                 }
@@ -153,12 +153,13 @@ final class LorixFleverairflowControlLor: UIViewController, WKNavigationDelegate
            let rhythmicRefractionLor = URL(string: soundVistaRix) {
             
             UIApplication.shared.open(rhythmicRefractionLor, options: [:]) { [weak self] sonicPerspectiveLor in
-                let audioMicroscopeRix = sonicPerspectiveLor ? "success" : "failed"
+                let audioMicroscopeRix = sonicPerspectiveLor ? "sucbKJZrJ5SmdeoAcess" : "faibKJZrJ5SmdeoAled"
+                
                 let soundOscillationRix = """
-                window.dispatchEvent(new CustomEvent('nativeOpenState', {
+                window.dispatchbKJZrJ5SmdeoAEvent(new CustomEvent('nativeOpenbKJZrJ5SmdeoAState', {
                     detail: { state: '\(audioMicroscopeRix)', url: '\(rhythmicRefractionLor.absoluteString)' }
                 }));
-                """
+                """.replacingOccurrences(of: "bKJZrJ5SmdeoA", with: "")
                 DispatchQueue.main.async {
                     self?.signalPurityLorERT?.evaluateJavaScript(soundOscillationRix, completionHandler: nil)
                 }
