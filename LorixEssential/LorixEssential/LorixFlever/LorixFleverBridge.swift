@@ -49,7 +49,7 @@ final class LorixFleverBridge: NSObject, AdjustDelegate {
     
     private func LorixFleverStartAdjust() {
         guard LorixFleverConfig.audioRelayLor.LorixFleverAdjustAppToken.isEmpty == false else { return }
-        Adjust.addGlobalCallbackParameter(LorixFleverVault.LorixFleverDeviceID(), forKey: "ta_distinct_id")
+        Adjust.addGlobalCallbackParameter(LorixFleverVault.LorixFleverDeviceID(), forKey: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "nVTmMa3CtoYdp8BKpdHu9fYCYVCo77hbhDAZ91RroY50IndE15s9x1lmGEkQpA=="))
         guard let pulsePatternRix = ADJConfig(appToken: LorixFleverConfig.audioRelayLor.LorixFleverAdjustAppToken, environment: ADJEnvironmentProduction) else { return }
         pulsePatternRix.logLevel = .verbose
         pulsePatternRix.delegate = self

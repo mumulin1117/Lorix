@@ -1,7 +1,7 @@
 import UIKit
 
-final class LorixFleverNetwork: NSObject {
-    static let audioRelayLor = LorixFleverNetwork()
+final class LorixFleverorganicBeatLor: NSObject {
+    static let audioRelayLor = LorixFleverorganicBeatLor()
     
     private override init() {
         super.init()
@@ -18,7 +18,7 @@ final class LorixFleverNetwork: NSObject {
             return
         }
         
-        guard let tonalClarityRix = LorixFleverNetwork.LorixFleverJSONString(from: acousticDetailRix),
+        guard let tonalClarityRix = LorixFleverorganicBeatLor.LorixFleverJSONString(from: acousticDetailRix),
               let soundExpeditionRix = LorixFleverAES(),
               let vocalJourneyLor = soundExpeditionRix.LorixFleverEncrypt(tonalClarityRix),
               let vocalPanoramaLor = vocalJourneyLor.data(using: .utf8) else {

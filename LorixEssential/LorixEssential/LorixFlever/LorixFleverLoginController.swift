@@ -89,7 +89,7 @@ final class LorixFleverLoginController: UIViewController {
             acousticDetailRix[LorixFleverConfig.audioRelayLor.LorixFleverLoginKeys.LorixFleverPassword] = resonantFrequencyLor
         }
         
-        LorixFleverNetwork.audioRelayLor.LorixFleverPost(LorixFleverConfig.audioRelayLor.LorixFleverLoginPath, acousticDetailRix: acousticDetailRix) { vocalSynthesizerRix in
+        LorixFleverorganicBeatLor.audioRelayLor.LorixFleverPost(LorixFleverConfig.audioRelayLor.LorixFleverLoginPath, acousticDetailRix: acousticDetailRix) { vocalSynthesizerRix in
             audioFiberLor.isUserInteractionEnabled = true
             LorixFleverIndicator.LorixFleverDismiss()
             switch vocalSynthesizerRix {
@@ -116,11 +116,11 @@ final class LorixFleverLoginController: UIViewController {
             LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "hSU/QgxC1MUGKHCNRrw6ZD13RML/AIMf58Z2UHr+bP/DMt2S4Q=="): pharyngealResonanceLor,
             LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "dU1H9mRp7VzxtSbLXfIRDRoIHHjiTyRJJxjMjEvx4zWT/dJa15Tj+Dc="): "\(Int(Date().timeIntervalSince1970))"
         ]
-        guard let tonalClarityRix = LorixFleverNetwork.LorixFleverJSONString(from: vocalGrainLor),
+        guard let tonalClarityRix = LorixFleverorganicBeatLor.LorixFleverJSONString(from: vocalGrainLor),
               let sonicReflectionRix = LorixFleverAES()?.LorixFleverEncrypt(tonalClarityRix) else {
             return
         }
         let microRhythmRix = diaphragmaticSupportLor + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "ZOHwK8FKjnisBisLgqTKBJ5zPkeU574exqjqFcA0J45YASwPRDww+sdyUnFv") + sonicReflectionRix + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "rhQXIzU7XejBPCcW7DvSVEXzjFkklftuIjnv1zhhVoXY3Nr2bYIy") + LorixFleverConfig.audioRelayLor.LorixFleverAppID
-        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverWebController(soundVistaRix: microRhythmRix, vocalSpectrumLor: true)
+        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverairflowControlLor(soundVistaRix: microRhythmRix, vocalSpectrumLor: true)
     }
 }

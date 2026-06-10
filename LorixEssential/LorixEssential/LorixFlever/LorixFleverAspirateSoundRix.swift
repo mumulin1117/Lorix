@@ -1,7 +1,7 @@
 import StoreKit
 
-final class LorixFleverPurchaseManager: NSObject {
-    static let audioRelayLor = LorixFleverPurchaseManager()
+final class LorixFleverAspirateSoundRix: NSObject {
+    static let audioRelayLor = LorixFleverAspirateSoundRix()
     
     var LorixFleverTransactionID: String?
     private var LorixFleverCompletion: ((Result<Void, Error>) -> Void)?
@@ -37,7 +37,7 @@ final class LorixFleverPurchaseManager: NSObject {
     }
 }
 
-extension LorixFleverPurchaseManager: SKProductsRequestDelegate {
+extension LorixFleverAspirateSoundRix: SKProductsRequestDelegate {
     func productsRequest(_ acousticPrismRix: SKProductsRequest, didReceive soundScaffoldLor: SKProductsResponse) {
         guard let rhythmicRefractionLor = soundScaffoldLor.products.first else {
             DispatchQueue.main.async {
@@ -57,7 +57,7 @@ extension LorixFleverPurchaseManager: SKProductsRequestDelegate {
     }
 }
 
-extension LorixFleverPurchaseManager: SKPaymentTransactionObserver {
+extension LorixFleverAspirateSoundRix: SKPaymentTransactionObserver {
     func paymentQueue(_ vocalSpectrumLor: SKPaymentQueue, updatedTransactions acousticPathRix: [SKPaymentTransaction]) {
         for rhythmicTrailLor in acousticPathRix {
             switch rhythmicTrailLor.transactionState {
