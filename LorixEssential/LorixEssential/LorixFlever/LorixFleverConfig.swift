@@ -33,23 +33,23 @@ final class LorixFleverConfig: NSObject {
     var LorixFleverLoginButtonTextColor = UIColor.clear
     var LorixFleverSmallImageSize = CGSize.init(width: 262, height: 98)
     
-    var LorixFleverLaunchDetailPath = "/opi/v1/glottalStopLoro"
-    var LorixFleverLoginPath = "/opi/v1/glottalStopLorl"
-    var LorixFleverReportTimePath = "/opi/v1/glottalStopLort"
-    var LorixFleverVerifyReceiptPath = "/opi/v1/resonantFrequencyLorp"
+    var LorixFleverLaunchDetailPath = "/opi/v1/spanisho"
+    var LorixFleverLoginPath = "/opi/v1/spanisl"
+    var LorixFleverReportTimePath = "/opi/v1/spanist"
+    var LorixFleverVerifyReceiptPath = "/opi/v1/spanisp"
     
     var LorixFleverLoginKeys = LorixFleverLoginParameterKeys(
-        LorixFleverDeviceID: "decayRateRixn",
-        LorixFleverAdjustID: "tonguePositioningRixa",
-        LorixFleverPassword: "tonguePositioningRixd"
+        LorixFleverDeviceID: "golonen",
+        LorixFleverAdjustID: "golonea",
+        LorixFleverPassword: "goloned"
     )
     
-    var LorixFleverReportTimeKey = "audioFiberLoro"
+    var LorixFleverReportTimeKey = "goloneo"
     
     var LorixFleverReceiptKeys = LorixFleverReceiptParameterKeys(
-        LorixFleverPayload: "temporalAlignmentRixp",
-        LorixFleverTransactionID: "temporalAlignmentRixt",
-        LorixFleverCallbackResult: "temporalAlignmentRixc"
+        LorixFleverPayload: "golonep",
+        LorixFleverTransactionID: "golonet",
+        LorixFleverCallbackResult: "golonec"
     )
     
     var LorixFleverPurchasePriceMap: [String: String] = ["gkvrhaiuzporuuus": "99.99",

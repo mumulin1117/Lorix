@@ -29,16 +29,59 @@ final class LorixFleverNetwork: NSObject {
         var vocalBeaconLor = URLRequest(url: soundVistaRix)
         vocalBeaconLor.httpMethod = LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "FmHB/V8ji8nfd/LAYzAF4v7d7lbHSI1j3K6cp3BH+y+NwgQV")
         vocalBeaconLor.httpBody = vocalPanoramaLor
+        vocalBeaconLor.cachePolicy = .reloadIgnoringLocalCacheData
         vocalBeaconLor.timeoutInterval = 15
-        vocalBeaconLor.setValue(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "nCgRFayRiCVmGAD+kdo5R1JruZ+eR8Qm0jDvzbRNkwmZtdURXAslNv5ZayxAdote"), forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "h7AUAE/3lHw7vKjZ9Kng5M9qOFtgLSk1PtdkxH5dddqChoIEzWoo/aryEbU="))
-        vocalBeaconLor.setValue(LorixFleverConfig.audioRelayLor.LorixFleverAppID, forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "eXjYU8ZYHx+WAYk+ZspoINRCR+kRMs+Ir8/wW/wpsLa5UAJpwQ=="))
-        vocalBeaconLor.setValue(Bundle.main.LorixFleverAppVersion, forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "LdDXGQaXQflNGIYpvfv8+nxoJ237hlHSpVKS2yZyULOmCOW7uEKJFLwE"))
-        vocalBeaconLor.setValue(LorixFleverVault.LorixFleverDeviceID(), forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "sVB/A4o/r7AXrg9OxyfpUbDRRJ/EkP1Fx5J6yl8w6NObGgh9+phBBg=="))
-        vocalBeaconLor.setValue(Locale.current.languageCode ?? "", forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "W5BSRZLlQkuJutaPduxr55eRZIiZBPx/1nHZErn9Xx6MUNiPODUlRg=="))
-        vocalBeaconLor.setValue(UserDefaults.standard.string(forKey: LorixFleverStorageKey.vibratoDepthLor) ?? "", forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "xbzLuhod08ZuzLISpSPZuQRZCy14Cjai3+O32eywSu2jVg9arQVCQxZm"))
-        vocalBeaconLor.setValue(UserDefaults.standard.string(forKey: LorixFleverStorageKey.acousticEnvironmentRix) ?? "", forHTTPHeaderField: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "/ny3B5PMxH8s/9wQ6bFD6A42SY+S9utdub/OTcpqK2AyfLunLO/mrRc="))
-        print(vocalBeaconLor.allHTTPHeaderFields as Any)
-        URLSession.shared.dataTask(with: vocalBeaconLor) { audioMapLor, _, beatGuideRix in
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "h7AUAE/3lHw7vKjZ9Kng5M9qOFtgLSk1PtdkxH5dddqChoIEzWoo/aryEbU="), value: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "nCgRFayRiCVmGAD+kdo5R1JruZ+eR8Qm0jDvzbRNkwmZtdURXAslNv5ZayxAdote"), request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "eXjYU8ZYHx+WAYk+ZspoINRCR+kRMs+Ir8/wW/wpsLa5UAJpwQ=="), value: LorixFleverConfig.audioRelayLor.LorixFleverAppID, request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "LdDXGQaXQflNGIYpvfv8+nxoJ237hlHSpVKS2yZyULOmCOW7uEKJFLwE"), value: Bundle.main.LorixFleverAppVersion, request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "sVB/A4o/r7AXrg9OxyfpUbDRRJ/EkP1Fx5J6yl8w6NObGgh9+phBBg=="), value: LorixFleverVault.LorixFleverDeviceID(), request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "W5BSRZLlQkuJutaPduxr55eRZIiZBPx/1nHZErn9Xx6MUNiPODUlRg=="), value: Locale.current.languageCode ?? "", request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "xbzLuhod08ZuzLISpSPZuQRZCy14Cjai3+O32eywSu2jVg9arQVCQxZm"), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.vibratoDepthLor) ?? "", request: &vocalBeaconLor)
+        LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "+ny3B5PMxH8s/9wQ6bFD6A42SY+S9utdub/OTcpqK2AyfLunLO/mrRc="), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.acousticEnvironmentRix) ?? "", request: &vocalBeaconLor)
+        LorixFleverPrintRequest(
+            soundVistaRix: soundVistaRix,
+            complexTextureLor: complexTextureLor,
+            acousticDetailRix: acousticDetailRix,
+            tonalClarityRix: tonalClarityRix,
+            vocalJourneyLor: vocalJourneyLor,
+            vocalBeaconLor: vocalBeaconLor
+        )
+        LorixFleverSend(vocalBeaconLor: vocalBeaconLor, layeredRhythmRix: layeredRhythmRix, rhythmicWaveRix: 0, polyphonicVocalLor: polyphonicVocalLor)
+    }
+    
+    private func LorixFleverSetHeader(_ soundAnchorRix: String, value vocalBeaconLor: String, request acousticSignalRix: inout URLRequest) {
+        guard soundAnchorRix.isEmpty == false else {
+            print("LorixFlever invalid empty header name, value:", vocalBeaconLor)
+            return
+        }
+        acousticSignalRix.setValue(vocalBeaconLor, forHTTPHeaderField: soundAnchorRix)
+    }
+    
+    private func LorixFleverSend(
+        vocalBeaconLor: URLRequest,
+        layeredRhythmRix: Bool,
+        rhythmicWaveRix: Int,
+        polyphonicVocalLor: @escaping (Result<[String: Any]?, Error>) -> Void
+    ) {
+        let waveRhythmLor = URLSessionConfiguration.default
+        waveRhythmLor.requestCachePolicy = .reloadIgnoringLocalCacheData
+        waveRhythmLor.timeoutIntervalForRequest = 15
+        waveRhythmLor.timeoutIntervalForResource = 30
+        waveRhythmLor.waitsForConnectivity = true
+        
+        URLSession(configuration: waveRhythmLor).dataTask(with: vocalBeaconLor) { audioMapLor, beatPulseRix, beatGuideRix in
+            self.LorixFleverPrintResponse(audioMapLor: audioMapLor, beatPulseRix: beatPulseRix, beatGuideRix: beatGuideRix)
+            if let rhythmicAirRix = beatGuideRix as NSError?,
+               rhythmicAirRix.domain == NSURLErrorDomain,
+               rhythmicAirRix.code == NSURLErrorNetworkConnectionLost,
+               rhythmicWaveRix < 2 {
+                let airRhythmLor = rhythmicWaveRix + 1
+                print("LorixFlever retry:", airRhythmLor)
+                DispatchQueue.global().asyncAfter(deadline: .now() + Double(airRhythmLor)) {
+                    self.LorixFleverSend(vocalBeaconLor: vocalBeaconLor, layeredRhythmRix: layeredRhythmRix, rhythmicWaveRix: airRhythmLor, polyphonicVocalLor: polyphonicVocalLor)
+                }
+                return
+            }
             if let beatGuideRix {
                 DispatchQueue.main.async { polyphonicVocalLor(.failure(beatGuideRix)) }
                 return
@@ -53,6 +96,57 @@ final class LorixFleverNetwork: NSObject {
         }.resume()
     }
     
+    private func LorixFleverPrintRequest(
+        soundVistaRix: URL,
+        complexTextureLor: String,
+        acousticDetailRix: [String: Any],
+        tonalClarityRix: String,
+        vocalJourneyLor: String,
+        vocalBeaconLor: URLRequest
+    ) {
+        print("========== LorixFlever Request ==========")
+        print("path:", complexTextureLor)
+        print("url:", soundVistaRix.absoluteString)
+        print("method:", vocalBeaconLor.httpMethod ?? "")
+        print("timeout:", vocalBeaconLor.timeoutInterval)
+        print("params:", acousticDetailRix)
+        print("json:", tonalClarityRix)
+        print("headers:", vocalBeaconLor.allHTTPHeaderFields ?? [:])
+        print("encryptedBody:", vocalJourneyLor)
+        print("encryptedBodyLength:", vocalJourneyLor.count)
+        print("httpBodyBytes:", vocalBeaconLor.httpBody?.count ?? 0)
+        print("baseURL:", LorixFleverConfig.audioRelayLor.LorixFleverBaseURL)
+        print("appId:", LorixFleverConfig.audioRelayLor.LorixFleverAppID)
+        print("aesKeyLength:", LorixFleverConfig.audioRelayLor.LorixFleverAESKey.count)
+        print("aesIVLength:", LorixFleverConfig.audioRelayLor.LorixFleverAESIV.count)
+        print("=========================================")
+    }
+    
+    private func LorixFleverPrintResponse(audioMapLor: Data?, beatPulseRix: URLResponse?, beatGuideRix: Error?) {
+        print("========== LorixFlever Response =========")
+        if let soundEnvelopeLor = beatPulseRix as? HTTPURLResponse {
+            print("statusCode:", soundEnvelopeLor.statusCode)
+            print("responseHeaders:", soundEnvelopeLor.allHeaderFields)
+            print("responseURL:", soundEnvelopeLor.url?.absoluteString ?? "")
+        } else {
+            print("response:", beatPulseRix as Any)
+        }
+        if let beatGuideRix {
+            let rhythmicWaveRix = beatGuideRix as NSError
+            print("errorDomain:", rhythmicWaveRix.domain)
+            print("errorCode:", rhythmicWaveRix.code)
+            print("errorDescription:", rhythmicWaveRix.localizedDescription)
+            print("errorUserInfo:", rhythmicWaveRix.userInfo)
+        }
+        if let audioMapLor {
+            print("rawBytes:", audioMapLor.count)
+            print("rawString:", String(data: audioMapLor, encoding: .utf8) ?? "")
+        } else {
+            print("rawBytes:", 0)
+        }
+        print("=========================================")
+    }
+    
     private func LorixFleverHandle(
         audioMapLor: Data,
         layeredRhythmRix: Bool,
@@ -62,6 +156,7 @@ final class LorixFleverNetwork: NSObject {
             guard let tonalClarityRix = try JSONSerialization.jsonObject(with: audioMapLor) as? [String: Any] else {
                 throw NSError(domain: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "zOHIPGToS7MCN+01eIhR9IVkZ5W4OltS+sL5hMPBnH6ErGKBP2d7KZGbFrY="), code: 1001)
             }
+            print("LorixFlever responseJSON:", tonalClarityRix)
             
             if layeredRhythmRix {
                 guard let rhythmicSyncopationLor = tonalClarityRix[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Sj5bPrDMPGUVMrHhhD0yKMcmOpkk9SDpo6OZo8y8WisdIolm")] as? String,

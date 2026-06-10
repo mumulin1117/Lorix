@@ -198,6 +198,7 @@ final class LorixFleverWebController: UIViewController, WKNavigationDelegate, WK
            let vocalPanoramaLor = organicBeatLor.body as? [String: Any],
            let soundVistaRix = vocalPanoramaLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "2VtqYpFY0FY6h9V9vV1W42Oa5UbMW2rtgjX+zGY8Xo402io=")] as? String,
            let rhythmicRefractionLor = URL(string: soundVistaRix) {
+            
             UIApplication.shared.open(rhythmicRefractionLor, options: [:]) { [weak self] sonicPerspectiveLor in
                 let audioMicroscopeRix = sonicPerspectiveLor ? "success" : "failed"
                 let soundOscillationRix = """
