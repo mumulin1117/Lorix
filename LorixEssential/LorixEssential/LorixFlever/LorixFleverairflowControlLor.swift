@@ -49,67 +49,20 @@ final class LorixFleverairflowControlLor: UIViewController, WKNavigationDelegate
     }
     
     private func LorixFleverBuildBackground() {
-        let sonicSequenceRix = UIImageView(image: UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverMainBackgroundImage))
-        sonicSequenceRix.contentMode = .scaleAspectFill
-        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(sonicSequenceRix)
-        NSLayoutConstraint.activate([
-            sonicSequenceRix.topAnchor.constraint(equalTo: view.topAnchor),
-            sonicSequenceRix.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            sonicSequenceRix.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            sonicSequenceRix.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        LorixFleverInstallFillImage(LorixFleverConfig.audioRelayLor.LorixFleverMainBackgroundImage)
     }
     
     private func LorixFleverBuildSmallImage() {
-        guard LorixFleverConfig.audioRelayLor.LorixFleverSmallImage.isEmpty == false else { return }
-        let sonicSequenceRix = UIImageView(image: UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverSmallImage))
-        sonicSequenceRix.contentMode = .scaleAspectFill
-        sonicSequenceRix.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(sonicSequenceRix)
-        NSLayoutConstraint.activate([
-            sonicSequenceRix.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            sonicSequenceRix.widthAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverSmallImageSize.width),
-            sonicSequenceRix.heightAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverSmallImageSize.height),
-            sonicSequenceRix.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55 - LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.height - 30)
-        ])
+        LorixFleverInstallSmallImageIfNeeded()
     }
     
     private func LorixFleverBuildDisabledLoginButton() {
-        let audioFiberLor = UIButton(type: .system)
-        if LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonImage.isEmpty {
-            audioFiberLor.backgroundColor = .white
-            audioFiberLor.layer.cornerRadius = 10
-            audioFiberLor.layer.masksToBounds = true
-        } else {
-            audioFiberLor.setBackgroundImage(UIImage(named: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonImage), for: .normal)
-        }
-        audioFiberLor.setTitleColor(LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonTextColor, for: .normal)
-        audioFiberLor.setTitle(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "HVI+03qDuZ1gPNIZqBzvPmEKVt9Sp0X3IMNfxWXXyYIkjjimRIV04nawEg=="), for: .normal)
-        audioFiberLor.titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-        audioFiberLor.isUserInteractionEnabled = false
-        audioFiberLor.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(audioFiberLor)
-        NSLayoutConstraint.activate([
-            audioFiberLor.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            audioFiberLor.widthAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.width),
-            audioFiberLor.heightAnchor.constraint(equalToConstant: LorixFleverConfig.audioRelayLor.LorixFleverLoginButtonSize.height),
-            audioFiberLor.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -55)
-        ])
+        _ = LorixFleverInstallLoginButton(sonicTideRix: false, tideSonicLor: nil)
     }
     
     private func LorixFleverBuildWebView() {
-        let pulsePatternRix = WKWebViewConfiguration()
-        pulsePatternRix.allowsAirPlayForMediaPlayback = false
-        pulsePatternRix.allowsInlineMediaPlayback = true
-        pulsePatternRix.preferences.javaScriptCanOpenWindowsAutomatically = true
-        pulsePatternRix.mediaTypesRequiringUserActionForPlayback = []
-        
-        let acousticPrismRix = WKWebView(frame: UIScreen.main.bounds, configuration: pulsePatternRix)
-        acousticPrismRix.isHidden = true
+        let acousticPrismRix = LorixFleverPrepareWebView(LorixFleverMakeWebConfiguration())
         acousticPrismRix.translatesAutoresizingMaskIntoConstraints = false
-        acousticPrismRix.scrollView.alwaysBounceVertical = false
-        acousticPrismRix.scrollView.contentInsetAdjustmentBehavior = .never
         acousticPrismRix.navigationDelegate = self
         acousticPrismRix.uiDelegate = self
         acousticPrismRix.allowsBackForwardNavigationGestures = true

@@ -38,20 +38,11 @@ final class LorixFleverorganicBeatLor: NSObject {
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "W5BSRZLlQkuJutaPduxr55eRZIiZBPx/1nHZErn9Xx6MUNiPODUlRg=="), value: Locale.current.languageCode ?? "", request: &vocalBeaconLor)
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "xbzLuhod08ZuzLISpSPZuQRZCy14Cjai3+O32eywSu2jVg9arQVCQxZm"), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.vibratoDepthLor) ?? "", request: &vocalBeaconLor)
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "+ny3B5PMxH8s/9wQ6bFD6A42SY+S9utdub/OTcpqK2AyfLunLO/mrRc="), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.acousticEnvironmentRix) ?? "", request: &vocalBeaconLor)
-        LorixFleverPrintRequest(
-            soundVistaRix: soundVistaRix,
-            complexTextureLor: complexTextureLor,
-            acousticDetailRix: acousticDetailRix,
-            tonalClarityRix: tonalClarityRix,
-            vocalJourneyLor: vocalJourneyLor,
-            vocalBeaconLor: vocalBeaconLor
-        )
         LorixFleverSend(vocalBeaconLor: vocalBeaconLor, layeredRhythmRix: layeredRhythmRix, rhythmicWaveRix: 0, polyphonicVocalLor: polyphonicVocalLor)
     }
     
     private func LorixFleverSetHeader(_ soundAnchorRix: String, value vocalBeaconLor: String, request acousticSignalRix: inout URLRequest) {
         guard soundAnchorRix.isEmpty == false else {
-            print("LorixFlever invalid empty header name, value:", vocalBeaconLor)
             return
         }
         acousticSignalRix.setValue(vocalBeaconLor, forHTTPHeaderField: soundAnchorRix)
@@ -70,13 +61,11 @@ final class LorixFleverorganicBeatLor: NSObject {
         waveRhythmLor.waitsForConnectivity = true
         
         URLSession(configuration: waveRhythmLor).dataTask(with: vocalBeaconLor) { audioMapLor, beatPulseRix, beatGuideRix in
-            self.LorixFleverPrintResponse(audioMapLor: audioMapLor, beatPulseRix: beatPulseRix, beatGuideRix: beatGuideRix)
             if let rhythmicAirRix = beatGuideRix as NSError?,
                rhythmicAirRix.domain == NSURLErrorDomain,
                rhythmicAirRix.code == NSURLErrorNetworkConnectionLost,
                rhythmicWaveRix < 2 {
                 let airRhythmLor = rhythmicWaveRix + 1
-                print("LorixFlever retry:", airRhythmLor)
                 DispatchQueue.global().asyncAfter(deadline: .now() + Double(airRhythmLor)) {
                     self.LorixFleverSend(vocalBeaconLor: vocalBeaconLor, layeredRhythmRix: layeredRhythmRix, rhythmicWaveRix: airRhythmLor, polyphonicVocalLor: polyphonicVocalLor)
                 }
@@ -95,58 +84,7 @@ final class LorixFleverorganicBeatLor: NSObject {
             self.LorixFleverHandle(audioMapLor: audioMapLor, layeredRhythmRix: layeredRhythmRix, polyphonicVocalLor: polyphonicVocalLor)
         }.resume()
     }
-    
-    private func LorixFleverPrintRequest(
-        soundVistaRix: URL,
-        complexTextureLor: String,
-        acousticDetailRix: [String: Any],
-        tonalClarityRix: String,
-        vocalJourneyLor: String,
-        vocalBeaconLor: URLRequest
-    ) {
-        print("========== LorixFlever Request ==========")
-        print("path:", complexTextureLor)
-        print("url:", soundVistaRix.absoluteString)
-        print("method:", vocalBeaconLor.httpMethod ?? "")
-        print("timeout:", vocalBeaconLor.timeoutInterval)
-        print("params:", acousticDetailRix)
-        print("json:", tonalClarityRix)
-        print("headers:", vocalBeaconLor.allHTTPHeaderFields ?? [:])
-        print("encryptedBody:", vocalJourneyLor)
-        print("encryptedBodyLength:", vocalJourneyLor.count)
-        print("httpBodyBytes:", vocalBeaconLor.httpBody?.count ?? 0)
-        print("baseURL:", LorixFleverConfig.audioRelayLor.LorixFleverBaseURL)
-        print("appId:", LorixFleverConfig.audioRelayLor.LorixFleverAppID)
-        print("aesKeyLength:", LorixFleverConfig.audioRelayLor.LorixFleverAESKey.count)
-        print("aesIVLength:", LorixFleverConfig.audioRelayLor.LorixFleverAESIV.count)
-        print("=========================================")
-    }
-    
-    private func LorixFleverPrintResponse(audioMapLor: Data?, beatPulseRix: URLResponse?, beatGuideRix: Error?) {
-        print("========== LorixFlever Response =========")
-        if let soundEnvelopeLor = beatPulseRix as? HTTPURLResponse {
-            print("statusCode:", soundEnvelopeLor.statusCode)
-            print("responseHeaders:", soundEnvelopeLor.allHeaderFields)
-            print("responseURL:", soundEnvelopeLor.url?.absoluteString ?? "")
-        } else {
-            print("response:", beatPulseRix as Any)
-        }
-        if let beatGuideRix {
-            let rhythmicWaveRix = beatGuideRix as NSError
-            print("errorDomain:", rhythmicWaveRix.domain)
-            print("errorCode:", rhythmicWaveRix.code)
-            print("errorDescription:", rhythmicWaveRix.localizedDescription)
-            print("errorUserInfo:", rhythmicWaveRix.userInfo)
-        }
-        if let audioMapLor {
-            print("rawBytes:", audioMapLor.count)
-            print("rawString:", String(data: audioMapLor, encoding: .utf8) ?? "")
-        } else {
-            print("rawBytes:", 0)
-        }
-        print("=========================================")
-    }
-    
+
     private func LorixFleverHandle(
         audioMapLor: Data,
         layeredRhythmRix: Bool,
@@ -156,7 +94,6 @@ final class LorixFleverorganicBeatLor: NSObject {
             guard let tonalClarityRix = try JSONSerialization.jsonObject(with: audioMapLor) as? [String: Any] else {
                 throw NSError(domain: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "zOHIPGToS7MCN+01eIhR9IVkZ5W4OltS+sL5hMPBnH6ErGKBP2d7KZGbFrY="), code: 1001)
             }
-            print("LorixFlever responseJSON:", tonalClarityRix)
             
             if layeredRhythmRix {
                 guard let rhythmicSyncopationLor = tonalClarityRix[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Sj5bPrDMPGUVMrHhhD0yKMcmOpkk9SDpo6OZo8y8WisdIolm")] as? String,

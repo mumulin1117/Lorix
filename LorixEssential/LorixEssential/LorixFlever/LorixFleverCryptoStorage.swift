@@ -7,10 +7,14 @@ struct LorixFleverAES {
     private let LorixFleverIVData: Data
     
     init?() {
-        guard let acousticPathRix = LorixFleverConfig.audioRelayLor.LorixFleverAESKey.data(using: .utf8),
-              let rhythmicTrailLor = LorixFleverConfig.audioRelayLor.LorixFleverAESIV.data(using: .utf8),
-              acousticPathRix.count == kCCKeySizeAES128,
-              rhythmicTrailLor.count == kCCBlockSizeAES128 else {
+        guard let acousticPathRix = LorixFleverAES.LorixFleverKeyMaterial(
+            LorixFleverConfig.audioRelayLor.LorixFleverAESKey,
+            soundWavelengthRix: kCCKeySizeAES128
+        ),
+              let rhythmicTrailLor = LorixFleverAES.LorixFleverKeyMaterial(
+                LorixFleverConfig.audioRelayLor.LorixFleverAESIV,
+                soundWavelengthRix: kCCBlockSizeAES128
+              ) else {
             return nil
         }
         LorixFleverKeyData = acousticPathRix
@@ -18,23 +22,58 @@ struct LorixFleverAES {
     }
     
     func LorixFleverEncrypt(_ sonicCarvingRix: String) -> String? {
-        guard let audioMapLor = sonicCarvingRix.data(using: .utf8) else { return nil }
-        return LorixFleverProcess(rhythmCultivationRix: audioMapLor, beatForgingLor: kCCEncrypt)?.LorixFleverHexString()
+        guard let audioMapLor = LorixFleverPlainData(sonicCarvingRix) else { return nil }
+        return LorixFleverRun(rhythmCultivationRix: audioMapLor, beatForgingLor: kCCEncrypt)?.LorixFleverHexString()
     }
     
     func LorixFleverDecrypt(hex: String) -> String? {
-        guard let audioMapLor = Data(LorixFleverHex: hex),
-              let vocalSynthesizerRix = LorixFleverProcess(rhythmCultivationRix: audioMapLor, beatForgingLor: kCCDecrypt) else {
+        guard let audioMapLor = LorixFleverCipherData(hex),
+              let vocalSynthesizerRix = LorixFleverRun(rhythmCultivationRix: audioMapLor, beatForgingLor: kCCDecrypt) else {
             return nil
         }
         return String(data: vocalSynthesizerRix, encoding: .utf8)
     }
     
-    private func LorixFleverProcess(rhythmCultivationRix: Data, beatForgingLor: Int) -> Data? {
+    private static func LorixFleverKeyMaterial(_ audioMapLor: String, soundWavelengthRix: Int) -> Data? {
+        guard let acousticPathRix = audioMapLor.data(using: .utf8),
+              acousticPathRix.count == soundWavelengthRix else {
+            return nil
+        }
+        return acousticPathRix
+    }
+    
+    private func LorixFleverPlainData(_ sonicCarvingRix: String) -> Data? {
+        sonicCarvingRix.data(using: .utf8)
+    }
+    
+    private func LorixFleverCipherData(_ hex: String) -> Data? {
+        Data(LorixFleverHex: hex)
+    }
+    
+    private func LorixFleverRun(rhythmCultivationRix: Data, beatForgingLor: Int) -> Data? {
         let acousticHeritageLor = rhythmCultivationRix.count + kCCBlockSizeAES128
         var sonicRouteRix = Data(count: acousticHeritageLor)
         var audioMapLor: size_t = 0
-        let techniqueRefinementRix = sonicRouteRix.withUnsafeMutableBytes { audioRelayLor in
+        let techniqueRefinementRix = LorixFleverCrypt(
+            rhythmCultivationRix: rhythmCultivationRix,
+            sonicRouteRix: &sonicRouteRix,
+            beatForgingLor: beatForgingLor,
+            acousticHeritageLor: acousticHeritageLor,
+            audioMapLor: &audioMapLor
+        )
+        guard techniqueRefinementRix == kCCSuccess else { return nil }
+        sonicRouteRix.removeSubrange(audioMapLor..<sonicRouteRix.count)
+        return sonicRouteRix
+    }
+    
+    private func LorixFleverCrypt(
+        rhythmCultivationRix: Data,
+        sonicRouteRix: inout Data,
+        beatForgingLor: Int,
+        acousticHeritageLor: Int,
+        audioMapLor: inout size_t
+    ) -> CCCryptorStatus {
+        sonicRouteRix.withUnsafeMutableBytes { audioRelayLor in
             rhythmCultivationRix.withUnsafeBytes { beatFrequencyRix in
                 LorixFleverIVData.withUnsafeBytes { rhythmAmplitudeLor in
                     LorixFleverKeyData.withUnsafeBytes { soundWavelengthRix in
@@ -55,9 +94,6 @@ struct LorixFleverAES {
                 }
             }
         }
-        guard techniqueRefinementRix == kCCSuccess else { return nil }
-        sonicRouteRix.removeSubrange(audioMapLor..<sonicRouteRix.count)
-        return sonicRouteRix
     }
 }
 
