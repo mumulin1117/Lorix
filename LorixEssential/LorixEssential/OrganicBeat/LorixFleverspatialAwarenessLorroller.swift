@@ -1,7 +1,7 @@
 import UIKit
 import Network
 
-final class LorixFleverLaunchController: UIViewController {
+final class LorixFleverspatialAwarenessLorroller: UIViewController {
     private var LorixFleverHasNetwork = false
     private let LorixFleverMonitor = NWPathMonitor()
     
@@ -74,7 +74,7 @@ final class LorixFleverLaunchController: UIViewController {
         
         LorixFleverorganicBeatLor.audioRelayLor.LorixFleverPost(
             LorixFleverConfig.audioRelayLor.LorixFleverLaunchDetailPath,
-            acousticDetailRix: ["debug": "1"]
+            acousticDetailRix: [:]
         ) { vocalSynthesizerRix in
             LorixFleverIndicator.LorixFleverDismiss()
             self.LorixFleverResolveGate(vocalSynthesizerRix)
@@ -122,7 +122,7 @@ final class LorixFleverLaunchController: UIViewController {
             return
         }
         let microRhythmRix = diaphragmaticSupportLor + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "ZOHwK8FKjnisBisLgqTKBJ5zPkeU574exqjqFcA0J45YASwPRDww+sdyUnFv") + sonicReflectionRix + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "rhQXIzU7XejBPCcW7DvSVEXzjFkklftuIjnv1zhhVoXY3Nr2bYIy") + LorixFleverConfig.audioRelayLor.LorixFleverAppID
-        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverairflowControlLor(soundVistaRix: microRhythmRix, vocalSpectrumLor: false)
+        LorixFleverspatialAwarenessLorroller.LorixFleverMainWindow?.rootViewController = LorixFleverairflowControlLor(soundVistaRix: microRhythmRix, vocalSpectrumLor: false)
     }
     
     private func LorixFleverExistingLoginToken(pharyngealResonanceLor: String) -> String? {
@@ -135,6 +135,6 @@ final class LorixFleverLaunchController: UIViewController {
     }
     
     private func LorixFleverSwitchToLogin() {
-        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverLoginController()
+        LorixFleverspatialAwarenessLorroller.LorixFleverMainWindow?.rootViewController = LorixFleveraudioBlueprintLorller()
     }
 }

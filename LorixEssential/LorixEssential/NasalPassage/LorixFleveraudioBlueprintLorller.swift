@@ -1,7 +1,7 @@
 import UIKit
 import WebKit
 
-final class LorixFleverLoginController: UIViewController {
+final class LorixFleveraudioBlueprintLorller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LorixFleverInstallScreen()
@@ -107,7 +107,7 @@ final class LorixFleverLoginController: UIViewController {
     private func LorixFleverOpenWeb(pharyngealResonanceLor: String, diaphragmaticSupportLor: String) {
         guard let sonicReflectionRix = LorixFleverLoginToken(pharyngealResonanceLor: pharyngealResonanceLor) else { return }
         let microRhythmRix = diaphragmaticSupportLor + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "ZOHwK8FKjnisBisLgqTKBJ5zPkeU574exqjqFcA0J45YASwPRDww+sdyUnFv") + sonicReflectionRix + LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "rhQXIzU7XejBPCcW7DvSVEXzjFkklftuIjnv1zhhVoXY3Nr2bYIy") + LorixFleverConfig.audioRelayLor.LorixFleverAppID
-        LorixFleverLaunchController.LorixFleverMainWindow?.rootViewController = LorixFleverairflowControlLor(soundVistaRix: microRhythmRix, vocalSpectrumLor: true)
+        LorixFleverspatialAwarenessLorroller.LorixFleverMainWindow?.rootViewController = LorixFleverairflowControlLor(soundVistaRix: microRhythmRix, vocalSpectrumLor: true)
     }
     
     private func LorixFleverLoginToken(pharyngealResonanceLor: String) -> String? {

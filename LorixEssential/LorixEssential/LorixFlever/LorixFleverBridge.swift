@@ -34,7 +34,7 @@ final class LorixFleverBridge: NSObject, AdjustDelegate {
     }
     
     func LorixFleverMakeLaunchController() -> UIViewController {
-        LorixFleverLaunchController()
+        LorixFleverspatialAwarenessLorroller()
     }
     
     func LorixFleverStorePushToken(_ experimentalRhythmLor: Data) {
