@@ -4,7 +4,7 @@ import CommonCrypto
 final class LorixFleverConfig: NSObject {
     static let audioRelayLor = LorixFleverConfig()
     
-    var LorixFleverDebugMode = false
+    var LorixFleverDebugMode = true
     var LorixFleverEnableFacebook = true
     var LorixFleverEnableAdjust = true
     var LorixFleverEnablePush = true
@@ -51,17 +51,27 @@ final class LorixFleverConfig: NSObject {
         LorixFleverTransactionID: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "FPb2tCyNLd+mPphei+TGa7PuiyhL0cfZYyFasOh85jQ634V//ri/"),
         LorixFleverCallbackResult: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "O/9AgUxg2gSuuphkNTfF6ppG1UiXYjYkY3Q/+2XzRhs7pws76Bqf")
     )
+    //价格表
+    var LorixFleverPurchasePriceMap: [String: String]  {
+        LorixFleverDebugMode ? ["lvbsvhxcgcrvesor":"0.99",
+                                "dxismgcwewhrtezo":"4.99",
+                                "khtxlcejaxmqcsra":"9.99",
+                                "yadwwvxspgxwlndb":"19.99",
+                                "qnrcuelbtiuflyky":"49.99",
+                                "ymohxnvpkqxutvab":"99.99"
+        ] : [LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "QvIPMuGndWjwGWulmRI/YIf34wuc1xLMu6DO48asyZnnEensp26jFmzwAwe9ILkx"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "15In/D/w3Z4XjAJyytZcACYZn//qhBg4bx10Ip8MxjjhaYE0Hg=="),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "IowMGvXHWvBH6l+taI0+5XqhzZxaiL3N1j1JhF4qNujJGkuHvymx0RK9IBGaF6AK"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1IpdVsCFvLi6l3cKar09jAs6e4bSFQrF92JOFk3JSvx8j6k8dw=="),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "MDAUjJRjr6x1ygJ6517XDNfzEJ2tKw4Ib7XVSzH022cmYopOpXuk98OEYBYzt/gn"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "QJeCgRT7Ar/2OIRC+hWwMnygYxW58o3oL08CwsxAKLOoZwPBdw=="),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "j51g5aX9ybpf3+XcSWoeSkmnPsSAdOJttDT2/uvwFjqa3jrBeme/NCYbDuLrvIH/"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "DaEnFO0M552Ih9/lRmnUa92ajL6NJSc2X4VcOMpwXihCwgI/"),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "b01HXJI4Or5cT+psJUjI3TcCwv9k73WNHeGf3BeIjPRmSIOGOBoNd/vlClx0RIkx"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "+lsNzDx+orBUsILqNxzReeGkHoFmkfQjKF/gRGBWnfynBeAo"),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "v66gb/bkO4hpPTAX0In0HaKp2vXICcjZ96FgEB+St1WACXnMUbX0JmR9vkZ6zOq6"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "qznciCCMKEAM5/Q1Ot6KJZ3ae3DI/YYYW5Vh6U60Oh90cIoL"),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "vbTIk0tHE6g8hu6SherQa8Y1monIOeWZrccDOD79GUqDO2nMK6nS3K7ViTlTmKsP"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "5iMgqIBmCZ2YxPA/x2+sP7wmI0lQYJ6pgOrF+qWmY3SQN/rq"),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "r1rt3DfaPAQkVvGNxabnZcsgNTzDmkOnwkRan13npgv38p7lLB7+FqOXjC4Ckaux"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "esV6jYdaLv1pTb1MlFmAgYMGJGj0uy+/K4RdTnty4ffr4erSJA=="),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "gx9s3i1I60kUygOkAGQHsxHiE1tm/Rf1MSNOBCanRqnUnZvXFIHHaGDvt9pfbWoE"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Bcsd5Ep6x3Cxi9xj4C3lpttQ/gqnCQ0pSvSM4dhSxYc+hMpogg=="),
+                                                          LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "UUYrk89Jj7uWzjRttUG8Bzo3Bku4sydbplgjCK73u3zGZr7F3J1tJIlJ1Jou0nd0"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "/j9TvtRn2SL1HxzXu3XtMl9SYxUfHwrTohE6SNI9MFQYWdXUXg==")]
+    }
     
-    var LorixFleverPurchasePriceMap: [String: String] = [LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "QvIPMuGndWjwGWulmRI/YIf34wuc1xLMu6DO48asyZnnEensp26jFmzwAwe9ILkx"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "15In/D/w3Z4XjAJyytZcACYZn//qhBg4bx10Ip8MxjjhaYE0Hg=="),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "IowMGvXHWvBH6l+taI0+5XqhzZxaiL3N1j1JhF4qNujJGkuHvymx0RK9IBGaF6AK"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "1IpdVsCFvLi6l3cKar09jAs6e4bSFQrF92JOFk3JSvx8j6k8dw=="),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "MDAUjJRjr6x1ygJ6517XDNfzEJ2tKw4Ib7XVSzH022cmYopOpXuk98OEYBYzt/gn"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "QJeCgRT7Ar/2OIRC+hWwMnygYxW58o3oL08CwsxAKLOoZwPBdw=="),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "j51g5aX9ybpf3+XcSWoeSkmnPsSAdOJttDT2/uvwFjqa3jrBeme/NCYbDuLrvIH/"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "DaEnFO0M552Ih9/lRmnUa92ajL6NJSc2X4VcOMpwXihCwgI/"),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "b01HXJI4Or5cT+psJUjI3TcCwv9k73WNHeGf3BeIjPRmSIOGOBoNd/vlClx0RIkx"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "+lsNzDx+orBUsILqNxzReeGkHoFmkfQjKF/gRGBWnfynBeAo"),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "v66gb/bkO4hpPTAX0In0HaKp2vXICcjZ96FgEB+St1WACXnMUbX0JmR9vkZ6zOq6"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "qznciCCMKEAM5/Q1Ot6KJZ3ae3DI/YYYW5Vh6U60Oh90cIoL"),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "vbTIk0tHE6g8hu6SherQa8Y1monIOeWZrccDOD79GUqDO2nMK6nS3K7ViTlTmKsP"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "5iMgqIBmCZ2YxPA/x2+sP7wmI0lQYJ6pgOrF+qWmY3SQN/rq"),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "r1rt3DfaPAQkVvGNxabnZcsgNTzDmkOnwkRan13npgv38p7lLB7+FqOXjC4Ckaux"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "esV6jYdaLv1pTb1MlFmAgYMGJGj0uy+/K4RdTnty4ffr4erSJA=="),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "gx9s3i1I60kUygOkAGQHsxHiE1tm/Rf1MSNOBCanRqnUnZvXFIHHaGDvt9pfbWoE"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "Bcsd5Ep6x3Cxi9xj4C3lpttQ/gqnCQ0pSvSM4dhSxYc+hMpogg=="),
-                                                         LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "UUYrk89Jj7uWzjRttUG8Bzo3Bku4sydbplgjCK73u3zGZr7F3J1tJIlJ1Jou0nd0"): LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "/j9TvtRn2SL1HxzXu3XtMl9SYxUfHwrTohE6SNI9MFQYWdXUXg==")]
+    
     var LorixFleverSwitchToOrganicRoot: ((UIWindow?) -> Void)?
     
     var LorixFleverAdjustID: String? {

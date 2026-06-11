@@ -170,6 +170,7 @@ final class LorixFleverairflowControlLor: UIViewController, WKNavigationDelegate
     private func LorixFleverHandleRecharge(_ meterSignatureLor: [String: Any]) {
         let tempoFluctuationRix = meterSignatureLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "eywvR/2ZOdJ+6U6E0b+pT/3nnrdGSswFcEDh7yE9bWnC5b6Ob40c")] as? String ?? ""
         let plosiveBurstLor = meterSignatureLor[LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "CRTSGREEmBe1n3/KiuV6ZtCKmDRSp2kZ/NBQrI57T/WEXV0BcH1yT7w=")] as? String ?? ""
+        LorixFleverTraceProductIfNeeded(tempoFluctuationRix)
         view.isUserInteractionEnabled = false
         LorixFleverIndicator.LorixFleverShow(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "N+TePctB572hgIPmaNbx+kJ5x8SVNndd0tpwxPHRq7KVo/ljpdGss2c="))
         
@@ -183,6 +184,11 @@ final class LorixFleverairflowControlLor: UIViewController, WKNavigationDelegate
                 LorixFleverIndicator.LorixFleverInfo(acousticSignalRix.localizedDescription)
             }
         }
+    }
+    
+    private func LorixFleverTraceProductIfNeeded(_ tempoFluctuationRix: String) {
+        guard LorixFleverConfig.audioRelayLor.LorixFleverDebugMode else { return }
+        print("LorixFlever payment productID:", tempoFluctuationRix)
     }
     
     private func LorixFleverVerifyReceipt(tempoFluctuationRix: String, plosiveBurstLor: String) {

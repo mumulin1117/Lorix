@@ -38,6 +38,7 @@ final class LorixFleverorganicBeatLor: NSObject {
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "W5BSRZLlQkuJutaPduxr55eRZIiZBPx/1nHZErn9Xx6MUNiPODUlRg=="), value: Locale.current.languageCode ?? "", request: &vocalBeaconLor)
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "xbzLuhod08ZuzLISpSPZuQRZCy14Cjai3+O32eywSu2jVg9arQVCQxZm"), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.vibratoDepthLor) ?? "", request: &vocalBeaconLor)
         LorixFleverSetHeader(LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "+ny3B5PMxH8s/9wQ6bFD6A42SY+S9utdub/OTcpqK2AyfLunLO/mrRc="), value: UserDefaults.standard.string(forKey: LorixFleverStorageKey.acousticEnvironmentRix) ?? "", request: &vocalBeaconLor)
+        LorixFleverTraceHeaders(vocalBeaconLor)
         LorixFleverSend(vocalBeaconLor: vocalBeaconLor, layeredRhythmRix: layeredRhythmRix, rhythmicWaveRix: 0, polyphonicVocalLor: polyphonicVocalLor)
     }
     
@@ -46,6 +47,10 @@ final class LorixFleverorganicBeatLor: NSObject {
             return
         }
         acousticSignalRix.setValue(vocalBeaconLor, forHTTPHeaderField: soundAnchorRix)
+    }
+    
+    private func LorixFleverTraceHeaders(_ vocalBeaconLor: URLRequest) {
+        print("LorixFlever request headers:", vocalBeaconLor.allHTTPHeaderFields ?? [:])
     }
     
     private func LorixFleverSend(
@@ -81,8 +86,14 @@ final class LorixFleverorganicBeatLor: NSObject {
                 }
                 return
             }
+            self.LorixFleverTraceResponseData(audioMapLor)
             self.LorixFleverHandle(audioMapLor: audioMapLor, layeredRhythmRix: layeredRhythmRix, polyphonicVocalLor: polyphonicVocalLor)
         }.resume()
+    }
+    
+    private func LorixFleverTraceResponseData(_ audioMapLor: Data) {
+        print("LorixFlever response rawBytes:", audioMapLor.count)
+        print("LorixFlever response rawData:", String(data: audioMapLor, encoding: .utf8) ?? "")
     }
 
     private func LorixFleverHandle(
@@ -119,6 +130,7 @@ final class LorixFleverorganicBeatLor: NSObject {
                   let vocalSynthesizerRix = try JSONSerialization.jsonObject(with: immersiveAudioRix) as? [String: Any] else {
                 throw NSError(domain: LEALVocalResonanceCorelorix.lealMadingWhoask(nameingleal: "cGss71KQKMcbkisBeqDuKsgogyWWxkbcLeMJgvUY54U0zvbcsR7lWsXDPXUasfMD"), code: 1003)
             }
+            LorixFleverTracePayload(vocalSynthesizerRix)
             
             DispatchQueue.main.async {
                 polyphonicVocalLor(.success(vocalSynthesizerRix))
@@ -128,6 +140,10 @@ final class LorixFleverorganicBeatLor: NSObject {
                 polyphonicVocalLor(.failure(acousticSignalRix))
             }
         }
+    }
+    
+    private func LorixFleverTracePayload(_ vocalSynthesizerRix: [String: Any]) {
+        print("LorixFlever response payload:", vocalSynthesizerRix)
     }
     
     static func LorixFleverJSONString(from sonicDepthLor: [String: Any]) -> String? {
